@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "definitions": {
+    "protection_type": {
+      "docHint": "enum",
+      "type": "string",
+      "anyOf": [
+        {"const": "9NPH", "description": "Nepožadování jistoty při placení v hotovoti"},
+        {"const": "9110", "description": "Souborná jistota povolená v České republice"},
+        {"const": "9120", "description": "Souborná jistota povolená v jiném členském státě Evropské unie"},
+        {"const": "92ZL", "description": "Jednotlivá jistota s použitím záruční listiny"},
+        {"const": "93CJ", "description": "Celní jistota složením hotovosti na účet celního orgánu"},
+        {"const": "9ZD1", "description": "Jednotlivá jistota s použitím záručního dokladu povolená v České republice"},
+        {"const": "9ZD2", "description": "Jednotlivá jistota s použitím záručního dokladu povolená v jiném členském státě Evropské unie"},
+        {"const": "95ZP", "description": "Poskytnutí jistoty zřízením zástavního práva podlěe daňového řádu"},
+        {"const": "9N01", "description": "Nepožadování jistoty podle čl. 51 nebo 88 celního kodexu"},
+        {"const": "9NCK", "description": "Nepožadování jistoty podle čl. 189 celního kodexu"},
+        {"const": "9NPV", "description": "Nezajišťování celního dluhu při jeho vyměřování formou výměru"},
+        {"const": "9NPP", "description": "Nepožadování jistoty při jeho úhradě před propuštění zboží"},
+        {"const": "9NJZ", "description": "Nepožadování jistoty z jiného důvodu"}
+      ]
+    }
+  }
+}

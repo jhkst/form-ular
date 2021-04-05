@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "definitions": {
+    "transport_type": {
+      "docHint": "enum",
+      "type": "integer",
+      "anyOf": [
+        {"const": 1, "description": "1 - námořní doprava"},
+        {"const": 2, "description": "2 - železniční doprava"},
+        {"const": 3, "description": "3 - silniční doprava"},
+        {"const": 4, "description": "4 - letecká doprava"},
+        {"const": 5, "description": "5 - poštovní doprava"},
+        {"const": 7, "description": "7 - doprava potrubím a vedením"},
+        {"const": 8, "description": "8 - říční doprava"},
+        {"const": 9, "description": "9 - vlastní pohon"}
+      ]
+    }
+  }
+}

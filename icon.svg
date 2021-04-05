@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   width="26.386353mm"
+   height="37.907974mm"
+   viewBox="0 0 26.386353 37.907974"
+   version="1.1"
+   id="svg8">
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lstart"
+       refX="0"
+       refY="0"
+       orient="auto">
+      <path
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path882" />
+    </marker>
+  </defs>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     transform="translate(-21.82476,-22.791019)">
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect833"
+       width="24.636353"
+       height="36.157974"
+       x="22.69976"
+       y="23.666019"
+       ry="4.5053611" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect837"
+       width="16.740776"
+       height="4.7374487"
+       x="26.540844"
+       y="28.59783"
+       ry="2.3687243" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect837-3"
+       width="16.740776"
+       height="4.7374487"
+       x="26.540842"
+       y="36.780342"
+       ry="2.3687243" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect868"
+       width="8.4714651"
+       height="4.6505289"
+       x="26.540842"
+       y="44.57423"
+       ry="2.2641559" />
+  </g>
+</svg>

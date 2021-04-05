@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="cs" style="height: 100%">
+<head>
+    <title>JSD 14312 - Jednotný správní doklad (dovoz)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="referrer" content="no-referrer">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" integrity="sha384-OXVF05DQEe311p6ohU11NwlnX08FzMCsyoXzGOaL+83dKAb3qS17yZJxESl8YrJQ" crossorigin="anonymous">
+
+    <link href="css/form-ular.css" rel="stylesheet" />
+
+</head>
+<body style="height: 100%;">
+
+<nav class="navbar navbar-expand-md navbar-dark bg-success">
+    <span class="navbar-brand">
+        <img style="filter: invert(100%);" src="icon.svg" width="30" height="30" alt="">
+    </span>
+    <span class="navbar-brand mb-0 h1">JSD 14312 - Jednotný správní doklad (dovoz)</span>
+</nav>
+
+<main role="main">
+    <div class="container mt-1 flex-column d-flex flex-fill">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="button-area mb-1 flex-shrink-0">
+                    <button type="button" class="btn btn-warning" id="startWizard" title="Použít průvodce formulářem">🧙 Průvodce</button>
+                    <button type="button" class="btn btn-info" id="uploadJSON" title="Nahrát soubor JSON">⇧ JSON 📂</button>
+                    <input type="file" accept="application/json" id="upload-json-file" style="display:none"/>
+                    <button type="button" class="btn btn-info" id="uploadXML" title="Nahrát soubor XML(CZ415A)">⇧ XML(CZ415A)</button>
+                    <input type="file" accept="text/xml" id="upload-xml-file" style="display:none"/>
+                    <button type="button" class="btn btn-danger" id="cleanForm" title="Smazat celý formulář">🗑 Vymazat</button>
+                </div>
+                <div id="form-place" class="flex-fill">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="span6">
+                    <div class="button-area mb-1">
+                        <button type="button" class="btn btn-success" id="downloadPDF" title="Stáhnout vyplněný formulář v PDF bez tiskopisu">⇩ PDF 🗎⃠</button>
+                        <button type="button" class="btn btn-secondary" id="downloadPDFform" title="Stáhnout vyplněný formulář v PDF s tiskopisem">⇩ PDF 🗎</button>
+                        <button type="button" class="btn btn-primary" id="downloadJSON" title="Stáhnout soubor JSON">⇩ JSON 💾</button>
+                        <button type="button" class="btn btn-primary" id="downloadXML" title="Stáhnout soubor XML">⇩ XML(CZ415A)</button>
+                    </div>
+                    <div id="preview-pane" class="flex-column flex-fill"><!-- style="height: 650px;position:relative; z-index:999; font-family: 'DejaVu Sans',serif;" -->
+                        <div id="preview" style="border: 1px solid black;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="footer-container">
+        <span class="text-muted">Form-Ular <a href="https://github.com/jhkst/form-ular" target="_blank">zdroj na GitHabu</a></span>
+    </div>
+</footer>
+
+<!-- Modal warning -->
+<div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-labelledby="warningModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="warningModalTitle">Upozornění</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="warning-no" class="btn btn-secondary" data-dismiss="modal">Zavřít</button>
+                <button type="button" id="warning-yes" class="btn btn-danger">⚠ Pokračovat</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
+<!-- bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js" integrity="sha384-d3UHjPdzJkZuk5H3qKYMLRyWLAQBJbby2yr2Q58hXXtAGF8RSNO9jpLDlKKPv5v3" crossorigin="anonymous"></script>
+
+<!-- pdf-lib -->
+<script src="https://unpkg.com/@pdf-lib/fontkit@0.0.4" integrity="sha384-9fpcLcBAZkqk+tKJTXAJP07DQZjk71P7bFnOntCqIJiQBn3c3SouYLr2NUZcK83A" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/pdf-lib@1.4.0/dist/pdf-lib.min.js" integrity="sha384-YmeCSD7/QxqSjaieqkBiGZwmsOBhVDcrd9yQwI4yzD+W2k/PgQRtEky9KiIWgDJx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha384-Am74NQ3uTJzrL9/oVeHH9mtj2Vabxh7LjdkDS0pzqNgZ9MSYl3DrklSXtv+/4+CE" crossorigin="anonymous"></script>
+
+<!-- for Evaluator -->
+<script src="https://cdn.jsdelivr.net/npm/jsep@0.4.0/build/jsep.min.js" integrity="sha384-89PRdfFVlT2bC9VxvLdvlByyVGml9l14DjpPqZYVI9umfvV24KPZ5dY6qBOeKf2z" crossorigin="anonymous"></script>
+
+<!-- local -->
+<script src="lib/ast-traverse.js"></script>
+<script src="lib/evaluator.js"></script>
+<script src="lib/json-schema.js"></script>
+<script src="lib/json-data.js"></script>
+<script src="fu-pdf.js"></script>
+<script src="fu-svg.js"></script>
+<script src="fu-uiform.js"></script>
+<script>
+
+    function uc(url) {
+        return `${url}?${Date.now()}`;
+    }
+
+    function modalWarning(text, okCallback) {
+        let warningModal = $('#warningModal');
+        $('.modal-body', warningModal).text(text);
+        warningModal.modal('show');
+        let warningYes = $('#warning-yes', warningModal);
+        warningYes.click(evt => {
+            warningYes.off('click');
+            okCallback(evt)
+                .then(() => $('#warningModal').modal('hide'));
+        });
+    }
+
+    function doAction(acceptCallback, modalMsg = null) {
+        if(modalMsg != null) {
+            modalWarning(modalMsg, acceptCallback);
+        } else {
+            acceptCallback();
+        }
+    }
+
+    $(document).ready(async function() {
+        let formId = window.location.search.substr(1);
+
+        let formSpec = await fetch(`forms/${formId}/form-spec.json`)
+            .then(res => res.json())
+            .catch(err => console.log(`Unknown form "${formId}"`, err));
+
+        if(!formSpec) {
+            alert(`Formulář "${formId}" nenalezen!`);
+            window.history.back();
+        }
+
+        let localStoreKey = formSpec["id"];
+        let jsonDataObj = new JsonData(); // place where data are stored
+        let jsonSchemaObj = await new JsonSchema().loadFile(formSpec["data-schema"]);
+        let paperSchemaJson = await fetch(uc(formSpec["paper-schema"])).then(res => res.json());
+
+        let uiFormObj = new FuUiform(await fetch(uc(formSpec["ui-form"])).then(res => res.json()), jsonSchemaObj);
+        let pdfFonts = await Promise.all(
+            formSpec["fonts"].map(async fontSpec => ({
+                name: fontSpec.name,
+                data: await fetch(fontSpec.url).then(res => res.arrayBuffer())
+            }))
+        );
+
+        let pdfBackground = await fetch(formSpec["pdf-background"]).then((res) => res.arrayBuffer());
+
+        let svgForm = await fetch(formSpec["svg-background"]).then(res => res.text());
+
+        let preview = $('#preview');
+        preview.html(svgForm);
+        let svg = $('svg', preview).css({'width': '100%', 'height': '100%'});
+
+        let evaluator = new Evaluator(formSpec["locale"]);
+
+        FuSvg.attachFontsToHtmlHead(formSpec["fonts"]);
+
+        let jsdSVG = new FuSvg(svg, paperSchemaJson, evaluator);
+        jsdSVG.updateAll(jsonDataObj);
+
+        let jsdPDF = new FuPdf(paperSchemaJson, evaluator, pdfBackground, pdfFonts);
+
+        $('#downloadPDF').click(evt => {
+            let accept = (e) => {
+                jsonDataObj.set('@form-background', false);
+                return jsdPDF.createPdf(jsonDataObj).then(bytes => {
+                    saveAs(new Blob([bytes], {type: "application/pdf"}), "jsd-filled.pdf");
+                });
+            };
+            doAction(accept, formSpec.warnings["downloadPDF"]);
+
+        });
+        $('#downloadPDFform').click(evt => {
+            let accept = (e) => {
+                jsonDataObj.set('@form-background', true);
+                return jsdPDF.createPdf(jsonDataObj).then(bytes => {
+                    saveAs(new Blob([bytes], { type: "application/pdf"}), "jsd-filled.pdf");
+                });
+            };
+            doAction(accept, formSpec.warnings["downloadPDF"]);
+        });
+        $('#downloadJSON').click(evt => {
+            let accept = (e) => {
+                const str = JSON.stringify(jsonDataObj.data());
+                const bytes = new TextEncoder().encode(str);
+                const blob = new Blob([bytes], { type: "application/json;charset=utf-8" });
+
+                saveAs(blob, uc("jsd-filled.json"));
+                //todo: return promise
+            };
+            doAction(accept, formSpec.warnings["downloadJSON"]);
+
+        });
+        $('#downloadXML').click(evt => {
+            let accept = (e) => {
+                return Promise.resolve(null)
+            };
+            doAction(accept, formSpec.warnings["downloadXML"]);
+        })
+        $('#uploadJSON').click(evt => {
+            let accept = (e) => {
+                $('#upload-json-file').trigger('click');
+                return Promise.resolve(null);
+            };
+            doAction(accept, formSpec.warnings["uploadJSON"]);
+        });
+        $('#upload-json-file').change(evt => {
+            let fileReader = new FileReader();
+            fileReader.onload = (evt) => {
+                let data = fileReader.result;
+                fetch(data)
+                    .then(res => res.json())
+                    .then(json => jsonDataObj.data(json))
+                    .then(_ => jsonDataObj.localStore(localStoreKey))
+                    .then(_ => uiFormObj.fillForm(jsonDataObj));
+            };
+            fileReader.readAsDataURL($('#upload-json-file').prop('files')[0]);
+
+        });
+        $('#uploadXML').click(evt => {
+            let accept = (e) => {
+                return Promise.resolve(null);
+            };
+            doAction(accept, formSpec.warnings["uploadXML"]);
+        });
+
+        $('#upload-xml-file').change(evt => {
+            let fileReader = new FileReader();
+            fileReader.onload = function () {
+                let data = fileReader.result;
+                fetch(data)
+                    .then(res => res.text())
+                    .then(text => (new window.DOMParser()).parseFromString(text, "text/xml"))
+                    .then(xml => console.log(xml));
+            };
+            fileReader.readAsDataURL($('#upload-xml-file').prop('files')[0]);
+        });
+        $('#cleanForm').click(evt => {
+            let accept = (e) => {
+                jsonDataObj.clean();
+                return Promise.resolve(uiFormObj.fillForm(jsonDataObj));
+            };
+            doAction(accept, formSpec.warnings["cleanForm"]);
+        });
+        $('#startWizard').click(evt => {
+            let accept = (e) => {
+                return Promise.resolve(null);
+            };
+            doAction(accept, formSpec.warnings["startWizard"]);
+        })
+
+
+        let formPlace = $('#form-place');
+
+        formPlace.append(await uiFormObj.createFormWithNav((id, val) => {
+            jsonDataObj.set(id, val);
+            jsonDataObj.localStore(localStoreKey);
+            jsdSVG.updateText(id, jsonDataObj);
+        }));
+
+        jsonDataObj.localGet(localStoreKey);
+        uiFormObj.fillForm(jsonDataObj);
+
+
+    });
+
+</script>
+
+</body>
+</html>

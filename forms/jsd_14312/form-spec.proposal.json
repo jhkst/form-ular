@@ -1,0 +1,78 @@
+{
+  "title": "Jednotný správní doklad - dovoz",
+  "abbrev": "JSD - dovoz",
+  "pages": {
+    "count": 1,
+    "unit": "mm",
+    "size": "A4"
+  },
+  "locale": "cs-CZ",
+  "fonts": [
+    {
+      "name": "Liberation Sans",
+      "file": "fonts/LiberationSans-Regular.ttf"
+    },
+    {
+      "name": "TeX Gyre Heros",
+      "file": "fonts/texgyreheros-regular.otf"
+    },
+    {
+      "name": "TeX Gyre Heros Bold",
+      "file": "fonts/texgyreheros-bold.otf"
+    },
+    {
+      "name": "TeX Gyre Heros Cn",
+      "file": "fonts/texgyreheroscn-regular.otf"
+    },
+    {
+      "name": "TeX Gyre Heros Cn Bold",
+      "file": "fonts/texgyreheroscn-bold.otf"
+    }
+  ],
+  "background-form": {
+    "svg": {
+      "file": "./jsd_plain_curves.svg"
+    },
+    "pdf": {
+      "file": "./jsd.png"
+    }
+  },
+  "data-schema": "jsd-schema.json",
+  "ui-form": "jsd-ui-form.json",
+  "page-schema": "jsd-paper-schema.json",
+  "data": {
+    "schema": "jsd-schema.json",
+    "empty": "jsd-empty.json"
+  },
+  "export": {
+    "PDF \uD83D\uDDCE\u20E0": {
+      "id": "downloadPDF",
+      "bootstrap-class": ["btn-success"],
+      "warning": "Dokument se tiskne na průpisovém tiskopisu JSD 14312. Pouze jehličkové tiskárny umožňují tisk na takový papír."
+    },
+    "PDF \uD83D\uDDCE": {
+      "id": "downloadPDFform",
+      "bootstrap-class": ["btn-secondary"],
+      "warning": "Celní správa příjmá dokument pouze na originílním tiskopise! Tento dokument slouží jen pro náhled. Vytisknutý je k ničemu."
+    },
+    "JSON": {
+      "id": "downloadJSON",
+      "bootstrap-class": ["btn-primary"]
+    },
+    "XML(CZ415A)": {
+      "id": "downloadXML",
+      "bootstrap-class": ["btn-primary"],
+      "warning": "XML dle specifikace. Do souboru nejsou ukládány všechny položky a může dojít ke ztrátě dat!"
+    }
+  },
+  "import": {
+    "JSON": {
+      "id": "uploadJSON",
+      "bootstrap-class": ["btn-primary"]
+    },
+    "XML(CZ415A)": {
+      "id": "uploadXML",
+      "bootstrap-class": ["btn-primary"]
+    }
+  }
+}

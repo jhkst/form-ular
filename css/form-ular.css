@@ -1,0 +1,50 @@
+.form-nav-anchor {
+    border-radius: 27px;
+    background: #d0e2d7;
+    width: 29px;
+    text-align: center;
+    margin: 0;
+    height: 16px;
+    padding-top: 2px;
+    font-size: 0.5em;
+}
+
+.form-nav-highlight {
+    background: #82ba97;
+    /*color: white;*/
+}
+
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    background-color: #f5f5f5;
+    font-size: 0.8em;
+    text-align: right;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20px; /* Set the fixed height of the footer here */
+    line-height: 20px; /* Vertically center the text there */
+    background-color: #f5f5f5;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.footer-container {
+    width: auto;
+    max-width: 100%;
+    padding: 0 15px;
+}

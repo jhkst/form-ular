@@ -1,0 +1,26 @@
+{
+  "id": "JSD14312",
+  "data-schema": "forms/jsd_14312/jsd-schema.json",
+  "ui-form": "forms/jsd_14312/jsd-ui-form.json",
+  "svg-background": "forms/jsd_14312/jsd_plain_curves.svg",
+  "pdf-background": "forms/jsd_14312/jsd.pdf",
+  "paper-schema": "forms/jsd_14312/jsd-paper-schema.json",
+  "locale": "cs-CZ",
+  "fonts": [
+    {"name": "TeX Gyre Heros Cn", "style": "normal", "weight": "400", "url": "forms/jsd_14312/fonts/texgyreheroscn-regular.otf"},
+    {"name": "TeX Gyre Heros Cn Bold", "style": "normal", "weight": "700", "url": "forms/jsd_14312/fonts/texgyreheroscn-bold.otf"},
+    {"name": "TeX Gyre Heros", "style": "normal", "weight": "400", "url": "forms/jsd_14312/fonts/texgyreheros-regular.otf"},
+    {"name": "TeX Gyre Heros Bold", "style": "normal", "weight": "700", "url": "forms/jsd_14312/fonts/texgyreheros-bold.otf"},
+    {"name": "Liberation Sans", "style": "normal", "weight": "400", "url": "forms/jsd_14312/fonts/LiberationSans-Regular.ttf"}
+  ],
+  "warnings": {
+    "downloadPDF": "Dokument se tiskne na originálním průpisovém tiskopisu JSD 14312. Pouze jehličkové tiskárny umožňují tisk na takový papír. Podklady je možné vytisknout na každý ze čtyř tiskopisů zvlášť, avšak není zaručené, že to celní úřad příjme. Při tisku je potřeba zrušit nastavení všech okrajů a zrušit zvětšení nebo zmenšení. Pokud je text posunut, je potřeba si pohrát s nastavením tisku.",
+    "downloadPDFform": "Tisk dokumentu s podkladem je pouze pro testovací účely nebo náhled. Celní úřad nepřijímá vytisknutý formulář a je potřeba jej vytisknout na originálním průpisovém tiskopisu JSD 14312",
+    "downloadJSON": null,
+    "downloadXML": "Export do XML(CZ415A) není ještě implementován. Sorry jako.",
+    "uploadJSON": null,
+    "uploadXML": "Import z XML(CZ415A) není ještě implementován. Sorry jako.",
+    "cleanForm": "Opravdu chcete smazat všechna data ve formulři?",
+    "startWizard": "Průvodce vyplněním formuláře ještě není implementován! Sorry jako."
+  }
+}

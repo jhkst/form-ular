@@ -1,0 +1,30 @@
+{
+  "sad": {
+    "en": "SAD",
+    "fr": "DAU",
+    "cs": "JSD",
+    "sk": "JCD",
+    "pl": "JDA",
+    "ca": "DÚA"
+  },
+  "": {
+    "en": "Single Administrative Document",
+    "fr": "Document administratif unique",
+    "cs": "Jednotný správní doklad",
+    "sk": "Jednotný colný doklad",
+    "pl": "Jednolity Dokument Administracyjny",
+    "ca": "Document únic administratiu"
+  },
+  "declaration": {
+    "en": "Declaration",
+    "fr": "Declaration",
+    "cs": "Prohlášení",
+    "sk": "Deklarácie"
+  },
+  "consignor_exporter": {
+    "en": "Consignor/exporter",
+    "fr": "Expéditeur/exportateur",
+    "cs": "Odesílatel/Vývozce",
+    "sk": "Odosielateľ/vývozca"
+  }
+}
