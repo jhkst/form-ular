@@ -15,3 +15,11 @@ Go to http://jhkst.github.io/form-ular/
 
 ## How to add new form
 * TBD
+
+## Used frameworks
+* Bootstrap
+* JQuery
+* Select2
+* pdf-lib
+* Filesaver
+* jsep
