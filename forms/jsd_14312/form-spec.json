@@ -1,5 +1,7 @@
 {
-  "id": "JSD14312",
+  "id": "jsd_14312",
+  "name": "Jednotný správní doklad (dovoz)",
+  "name-abbrev": "JSD 14312",
   "data-schema": "forms/jsd_14312/jsd-schema.json",
   "ui-form": "forms/jsd_14312/jsd-ui-form.json",
   "svg-background": "forms/jsd_14312/jsd_plain_curves.svg",
@@ -14,6 +16,7 @@
     {"name": "Liberation Sans", "style": "normal", "weight": "400", "url": "forms/jsd_14312/fonts/LiberationSans-Regular.ttf"}
   ],
   "warnings": {
+    "disclaimer": "Tato aplikace slouží primárně ke studijním účelům. Za jakékoli její použití, zejména k tisku formulářů, autor nenese žádnou zodpovědnost a to při jakékoli újmě – ať psychické, finanční či jiné. Autor aktivně nezjišťuje jakým způsobem, v jaké formě a jak správně vyplňěný příjmá celní úřad tento dokument a toto je ponecháno na uživateli, pokud se k vypnění rozhodne. Aplikace neukládá žádná data na server (GitHub toto ani neumožňuje) včetně cookies a veškerá data jsou přítomna pouze ve Vašem prohlížeči či v souboru po uložení. Pokud nesouhlasíte, aplikaci nedůvěřujete, nebo nechcete nést zodpovědnost, opusťte stránku a aplikaci nepoužívejte.",
     "downloadPDF": "Dokument se tiskne na originálním průpisovém tiskopisu JSD 14312. Pouze jehličkové tiskárny umožňují tisk na takový papír. Podklady je možné vytisknout na každý ze čtyř tiskopisů zvlášť, avšak není zaručené, že to celní úřad příjme. Při tisku je potřeba zrušit nastavení všech okrajů a zrušit zvětšení nebo zmenšení. Pokud je text posunut, je potřeba si pohrát s nastavením tisku.",
     "downloadPDFform": "Tisk dokumentu s podkladem je pouze pro testovací účely nebo náhled. Celní úřad nepřijímá vytisknutý formulář a je potřeba jej vytisknout na originálním průpisovém tiskopisu JSD 14312",
     "downloadJSON": null,
