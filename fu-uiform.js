@@ -74,9 +74,9 @@ class FuUiform {
             let val = jsonDataObj.get(id);
 
             if ($el.attr('type') === 'date') {
-                val = val ? FuUiform.formatDate(new Date(val)) : '';
+                val = val ? FuUiform.formatDate(val) : '';
             } else if ($el.attr('type') === 'datetime-local') {
-                val = val ? FuUiform.formatDateTime(new Date(val)) : '';
+                val = val ? FuUiform.formatDateTime(val) : '';
             }
             $el.val(val).trigger('change');
         });
@@ -97,7 +97,8 @@ class FuUiform {
 
     static setChangeCallback(form, callback) {
         $(':input', form).on('keyup change paste', function (evt) {
-            let val = $(this).val();
+            let origVal = $(this).val();
+            let val = origVal;
             let type = $(this).data('type');
 
             switch (type) {
@@ -118,19 +119,19 @@ class FuUiform {
                     break;
             }
 
-            callback($(this).attr('id'), val);
+            callback($(this).attr('id'), val, origVal);
         });
     }
 
     static formatDate(date) {
-        if(!FuUiform.dateValid()) {
+        if(!FuUiform.dateValid(date)) {
             return '';
         }
         return `${date.getFullYear()}-${this.pad0(date.getMonth() + 1)}-${date.getDate()}`;
     }
 
     static formatDateTime(dt) {
-        if(!FuUiform.dateValid()) {
+        if(!FuUiform.dateValid(dt)) {
             return '';
         }
         return `${dt.getFullYear()}-${this.pad0(dt.getMonth() + 1)}-${this.pad0(dt.getDate())}T${this.pad0(dt.getHours())}:${this.pad0(dt.getMinutes())}:${this.pad0(dt.getSeconds())}.${this.pad0(dt.getMilliseconds(), 3)}`;

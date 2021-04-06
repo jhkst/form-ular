@@ -822,7 +822,7 @@
               "docHint": "enum",
               "anyOf": [
                 {"const": "A", "description": "při platbě v hotovosti zaměstnancům celní správy, pověřeným celním úřadem přijímat platby v hotovosti ve výši stanovené zvláštním právním předpisem"},
-                {"const": "B", "description": "WTF? karta?"},
+                {"const": "B", "description": "platba kartou"},
                 {"const": "C", "description": "platba šekem, jehož proplacení je zaručeno bankou"},
                 {"const": "E", "description": "odklad platby"},
                 {"const": "H", "description": "elektronický převod (= bezhotovostní převod z účtu na účet)"},
