@@ -28,48 +28,54 @@
     <meta name="msapplication-config" content="favicon/browserconfig.xml">
 
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" integrity="sha384-OXVF05DQEe311p6ohU11NwlnX08FzMCsyoXzGOaL+83dKAb3qS17yZJxESl8YrJQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+          integrity="sha384-OXVF05DQEe311p6ohU11NwlnX08FzMCsyoXzGOaL+83dKAb3qS17yZJxESl8YrJQ" crossorigin="anonymous">
 
-    <link href="css/form-ular.css" rel="stylesheet" />
+    <link href="css/form-ular.css" rel="stylesheet"/>
 
 </head>
-<body style="height: 100%;">
-
+<body>
 <nav class="navbar navbar-expand-md navbar-dark bg-success">
     <a class="navbar-brand" href="./">
-        <img style="filter: invert(100%);" src="icon.svg" width="30" height="30" class="d-inline-block align-top" alt="logo"/>
+        <img style="filter: invert(100%);" src="icon.svg" width="30" height="30" class="d-inline-block align-top"
+             alt="logo"/>
         <span id="title">FORMULÁŘ</span>
     </a>
-
 </nav>
 
 <main role="main">
-    <div class="container mt-1 flex-column d-flex flex-fill">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="button-area mb-1 flex-shrink-0">
-                    <button type="button" class="btn btn-warning" id="startWizard" title="Použít průvodce formulářem">🧙 Průvodce</button>
-                    <button type="button" class="btn btn-info" id="uploadJSON" title="Nahrát soubor JSON">⇧ JSON 📂</button>
+    <div class="container fill">
+        <ul class="nav nav-tabs device-small" role="tablist" id="panel-nav">
+            <li role="presentation" class="nav-item active"><a href="#left" class="nav-link" aria-controls="left" role="tab" data-toggle="tab">Formulář</a></li>
+            <li role="presentation" class="nav-item"><a href="#right" class="nav-link" aria-controls="right" role="tab" data-toggle="tab">Náhled</a></li>
+        </ul>
+        <div class="tab-content">
+            <div id="left" role="tabpanel" class="tab-pane active col col-md-12 col-lg-6">
+                <div id="left-buttons">
+                    <button type="button" class="btn btn-warning" id="startWizard" title="Použít průvodce formulářem"><i class="button-icon icon-wizard"></i> Průvodce</button>
+                    <button type="button" class="btn btn-info" id="uploadJSON" title="Nahrát soubor JSON"><i class="button-icon icon-open invert-icon"></i> JSON</button>
                     <input type="file" accept="application/json" id="upload-json-file" style="display:none"/>
-                    <button type="button" class="btn btn-info" id="uploadXML" title="Nahrát soubor XML(AIS - CZ415A - D_N_PODD)">⇧ XML (CZ415A)</button>
+                    <button type="button" class="btn btn-info" id="uploadXML" title="Nahrát soubor XML(AIS - CZ415A - D_N_PODD)"><i class="button-icon icon-xml invert-icon"></i> XML (CZ415A)</button>
                     <input type="file" accept="text/xml" id="upload-xml-file" style="display:none"/>
-                    <button type="button" class="btn btn-danger" id="cleanForm" title="Smazat celý formulář">🗑 Vymazat</button>
+                    <button type="button" class="btn btn-danger" id="cleanForm" title="Smazat celý formulář"><i class="button-icon icon-delete invert-icon"></i> Vymazat</button>
                 </div>
-                <div id="form-place" class="flex-fill">
+                <div id="form-with-navigation">
+                    <div id="form-navigation">
+                    </div>
+                    <div id="form">
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="span6">
-                    <div class="button-area mb-1">
-                        <button type="button" class="btn btn-success" id="downloadPDF" title="Stáhnout vyplněný formulář v PDF bez tiskopisu">⇩ PDF 🗎⃠</button>
-                        <button type="button" class="btn btn-secondary" id="downloadPDFForm" title="Stáhnout vyplněný formulář v PDF s tiskopisem">⇩ PDF 🗎</button>
-                        <button type="button" class="btn btn-primary" id="downloadJSON" title="Stáhnout soubor JSON">⇩ JSON 💾</button>
-                        <button type="button" class="btn btn-primary" id="downloadXML" title="Stáhnout soubor XML(AIS- CZ415A - D_N_PODD)">⇩ XML (CZ415A)</button>
-                    </div>
-                    <div id="preview-pane" class="flex-column flex-fill">
-                        <div id="preview" style="border: 1px solid black;"></div>
-                    </div>
+            <div id="right" role="tabpanel" class="tab-pane col-md-12 col-lg-6">
+                <div id="right-buttons">
+                    <button type="button" class="btn btn-success" id="downloadPDF" title="Stáhnout vyplněný formulář v PDF bez tiskopisu"><i class="button-icon icon-document-ol invert-icon"></i> PDF</button>
+                    <button type="button" class="btn btn-secondary" id="downloadPDFForm" title="Stáhnout vyplněný formulář v PDF s tiskopisem"><i class="button-icon icon-document invert-icon"></i> PDF</button>
+                    <button type="button" class="btn btn-primary" id="downloadJSON" title="Stáhnout soubor JSON"><i class="button-icon icon-save invert-icon"></i> JSON</button>
+                    <button type="button" class="btn btn-primary" id="downloadXML" title="Stáhnout soubor XML(AIS- CZ415A - D_N_PODD)"><i class="button-icon icon-xml invert-icon"></i> XML (CZ415A)</button>
+                </div>
+                <div id="preview">
                 </div>
             </div>
         </div>
@@ -78,9 +84,11 @@
 
 <footer class="footer">
     <div class="footer-container">
-        <span class="text-muted">Form-Ular <a href="https://github.com/jhkst/form-ular" target="_blank">zdroj na GitHubu</a></span>
+        <span class="text-muted">Form-Ular <a href="https://github.com/jhkst/form-ular"
+                                              target="_blank">zdroj na GitHubu</a></span>
     </div>
 </footer>
+
 
 <!-- Modal warning -->
 <div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-labelledby="warningModalTitle" aria-hidden="true">
@@ -142,6 +150,7 @@
 <script src="fu-svg.js"></script>
 <script src="fu-uiform.js"></script>
 <script src="form-ular.js"></script>
+
 
 </body>
 </html>

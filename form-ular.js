@@ -1,17 +1,29 @@
+const d_warningModal = $('#warningModal');
+const btn_downloadPdf = $('#downloadPDF');
+const btn_downloadPdfForm = $('#downloadPDFForm');
+const btn_downloadJSON = $('#downloadJSON');
+const btn_downloadXML = $('#downloadXML');
+const btn_uploadJSON = $('#uploadJSON');
+const upload_JSON = $('#upload-json-file');
+const btn_uploadXML = $('#uploadXML');
+const upload_XML = $('#upload-xml-file');
+const btn_cleanForm = $('#cleanForm');
+const btn_startForm = $('#startWizard');
+const form_root = $('#form-place');
+
 function uc(url) {
     return (document.location.hash === '#uncache') ?  `${url}?${Date.now()}` : url;
 }
 
 function modalWarning(text, okCallback) {
-    let warningModal = $('#warningModal');
-    $('.modal-body', warningModal).text(text);
-    let warningYes = $('#warning-yes', warningModal);
+    $('.modal-body', d_warningModal).text(text);
+    let warningYes = $('#warning-yes', d_warningModal);
     warningYes.click(evt => {
         warningYes.off('click');
         okCallback(evt)
             .then(() => $('#warningModal').modal('hide'));
     });
-    warningModal.modal('show');
+    d_warningModal.modal('show');
 }
 
 function doAction(acceptCallback, modalMsg = null) {
@@ -85,7 +97,7 @@ $(document).ready(async function() {
 
     let jsdPDF = new FuPdf(paperSchemaJson, evaluator, pdfBackground, pdfFonts);
 
-    $('#downloadPDF').click(evt => {
+    btn_downloadPdf.click(evt => {
         let accept = (e) => {
             jsonDataObj.set('@form-background', false);
             return jsdPDF.createPdf(jsonDataObj).then(bytes => {
@@ -95,7 +107,7 @@ $(document).ready(async function() {
         doAction(accept, formSpec.warnings["downloadPDF"]);
 
     });
-    $('#downloadPDFForm').click(evt => {
+    btn_downloadPdfForm.click(evt => {
         let accept = (e) => {
             jsonDataObj.set('@form-background', true);
             return jsdPDF.createPdf(jsonDataObj).then(bytes => {
@@ -104,7 +116,7 @@ $(document).ready(async function() {
         };
         doAction(accept, formSpec.warnings["downloadPDF"]);
     });
-    $('#downloadJSON').click(evt => {
+    btn_downloadJSON.click(evt => {
         let accept = (e) => {
             const str = jsonDataObj.stringify();
             const bytes = new TextEncoder().encode(str);
@@ -116,7 +128,7 @@ $(document).ready(async function() {
         doAction(accept, formSpec.warnings["downloadJSON"]);
 
     });
-    $('#downloadXML').click(evt => {
+    btn_downloadXML.click(evt => {
         let accept = async (e) => {
             let jsonXml = jsonDataObj.toXml();
             let xsltProcessor = new XSLTProcessor();
@@ -137,14 +149,14 @@ $(document).ready(async function() {
         };
         doAction(accept, formSpec.warnings["downloadXML"]);
     })
-    $('#uploadJSON').click(evt => {
+    btn_uploadJSON.click(evt => {
         let accept = (e) => {
             $('#upload-json-file').trigger('click');
             return Promise.resolve(null);
         };
         doAction(accept, formSpec.warnings["uploadJSON"]);
     });
-    $('#upload-json-file').change(evt => {
+    upload_JSON.change(evt => {
         let fileReader = new FileReader();
         fileReader.onload = (evt) => {
             let data = fileReader.result;
@@ -157,14 +169,14 @@ $(document).ready(async function() {
         fileReader.readAsDataURL($('#upload-json-file').prop('files')[0]);
 
     });
-    $('#uploadXML').click(evt => {
+    btn_uploadXML.click(evt => {
         let accept = (e) => {
             return Promise.resolve(null);
         };
         doAction(accept, formSpec.warnings["uploadXML"]);
     });
 
-    $('#upload-xml-file').change(evt => {
+    upload_XML.change(evt => {
         let fileReader = new FileReader();
         fileReader.onload = function () {
             let data = fileReader.result;
@@ -175,28 +187,26 @@ $(document).ready(async function() {
         };
         fileReader.readAsDataURL($('#upload-xml-file').prop('files')[0]);
     });
-    $('#cleanForm').click(evt => {
+    btn_cleanForm.click(evt => {
         let accept = (e) => {
             jsonDataObj.clean();
             return Promise.resolve(uiFormObj.fillForm(jsonDataObj));
         };
         doAction(accept, formSpec.warnings["cleanForm"]);
     });
-    $('#startWizard').click(evt => {
+    btn_startForm.click(evt => {
         let accept = (e) => {
             return Promise.resolve(null);
         };
         doAction(accept, formSpec.warnings["startWizard"]);
     })
 
-
-    let formPlace = $('#form-place');
-
-    formPlace.append(await uiFormObj.createFormWithNav((id, val, origVal) => {
+    await uiFormObj.createFormAndNav($('#form'), $('#form-navigation'), (id, val, origVal) => {
         jsonDataObj.set(id, val);
         jsonDataObj.localStore(localStoreKey);
         jsdSVG.updateText(id, jsonDataObj);
-    }));
+    });
+
 
     jsonDataObj.localGet(localStoreKey);
     uiFormObj.fillForm(jsonDataObj);

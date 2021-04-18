@@ -1,9 +1,120 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tab-content {
+    flex-grow: 1;
+    display: flex;
+}
+
+#left {
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+#left-buttons, #right-buttons {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#right {
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+#form-with-navigation {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    height: 0;
+}
+
+#form-navigation {
+    flex-shrink: 0;
+    overflow: auto;
+}
+
+.form-core {
+    margin-right: 10px;
+}
+
+#form {
+    overflow: auto;
+}
+
+#preview {
+}
+
+/* --------------- Responsive Fixes --------------- */
+/* small device */
+@media (max-width: 991px) {
+    .device-big {
+        display: none;
+    }
+    .device-small {
+        /*display: block;*/
+    }
+    .tab-content > .tab-pane {
+        display: none;
+    }
+    .tab-content > .active {
+        display: flex;
+    }
+
+}
+/* big device */
+@media only screen and (min-width : 992px) {
+    .device-big, .tab-content > .tab-pane {
+        display: block;
+    }
+    .device-small {
+        display: none;
+    }
+    .tab-content {
+        display: flex;
+        flex-direction: row;
+    }
+    .tab-content > .tab-pane {
+        display: flex;
+    }
+
+}
+/* --------------- / Responsive Fixes --------------- */
+
+
+.footer {
+    background-color: #f5f5f5;
+    font-size: 0.8em;
+    text-align: right;
+}
+
+
 .form-nav-anchor {
     border-radius: 27px;
     background: #d0e2d7;
     width: 29px;
     text-align: center;
-    margin: 0;
+    margin: 0 3px 0 0;
+
     height: 16px;
     padding-top: 2px;
     font-size: 0.5em;
@@ -14,37 +125,51 @@
     /*color: white;*/
 }
 
-
-html {
-    position: relative;
-    min-height: 100%;
-}
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 20px;
-    line-height: 20px;
-    background-color: #f5f5f5;
-    font-size: 0.8em;
-    text-align: right;
+/*     ICONS     */
+.button-icon {
+    background-size: cover;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    vertical-align: -2px;
 }
 
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 20px; /* Set the fixed height of the footer here */
-    line-height: 20px; /* Vertically center the text there */
-    background-color: #f5f5f5;
+.invert-icon {
+    filter: invert(100%);
 }
 
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
+.icon-save {
+    background-image : url("../icons/content-save.svg");
+}
 
-.footer-container {
-    width: auto;
-    max-width: 100%;
-    padding: 0 15px;
+.icon-delete {
+    background-image : url("../icons/delete.svg");
+}
+
+.icon-download {
+    background-image : url("../icons/download.svg");
+}
+
+.icon-open {
+    background-image : url("../icons/folder-open.svg");
+}
+
+.icon-upload {
+    background-image : url("../icons/upload.svg");
+}
+
+.icon-wizard {
+    background-image : url("../icons/wizard-hat.svg");
+}
+
+.icon-document {
+    background-image : url("../icons/file-document.svg");
+}
+
+.icon-document-ol {
+    background-image : url("../icons/file-document-outline.svg");
+}
+
+.icon-xml {
+    background-image : url("../icons/xml.svg");
 }

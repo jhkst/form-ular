@@ -9,8 +9,7 @@
     <xsl:template match="object[@name='UCD']"/><!-- ignore - not part of record -->
     <xsl:template match="string[@name='$schema']"/><!-- ignore - not part of record -->
     <xsl:template match="string[@name='$comment']"/><!-- ignore - not part of record -->
-<!--    <xsl:template match="*[not(node())]"/> &lt;!&ndash; don't include empty nodes &ndash;&gt;-->
-    <xsl:template match="*[not(descendant-or-self::*[text()[normalize-space()]])]"/>
+    <xsl:template match="*[not(descendant-or-self::*[text()[normalize-space()]])]"/><!-- clean empty nodes -->
 
     <!-- not used nodes -->
     <xsl:template match="string[@name='TCR07']"/>
@@ -106,12 +105,10 @@
     </xsl:template>
 
     <xsl:template match="boolean[.='true']">
-        <xsl:message>boolean - true</xsl:message>
         <xsl:element name="{@name}">1</xsl:element>
     </xsl:template>
 
     <xsl:template match="boolean[.='false']">
-        <xsl:message>boolean - true</xsl:message>
         <xsl:element name="{@name}">0</xsl:element>
     </xsl:template>
 

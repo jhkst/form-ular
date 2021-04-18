@@ -5,19 +5,16 @@ class FuUiform {
         this.form = null;
     }
 
-    async createFormWithNav(changeCallback) {
-        let container = $('<div class="row">');
-        container.append(this.createNav());
-        this.form = await this.createForm();
-        container.append(this.form);
+    async createFormAndNav(formEl, navEl, changeCallback) {
+        $(navEl).append(this.createNav(formEl));
+        this.form = await this.createForm(formEl);
+        $(formEl).append(this.form);
 
         FuUiform.addSelect2(this.form);
-        FuUiform.setChangeCallback(this.form, changeCallback)
-
-        return container;
+        FuUiform.setChangeCallback(this.form, changeCallback);
     }
 
-    async createForm() {
+    async createForm(parentEl) {
         let form = $('<form class="form-core">');
 
         for (let pageItem of this.uiForm['pages']) {
@@ -48,8 +45,8 @@ class FuUiform {
 
             form.append(card);
         }
-        let scrollableDiv = $('<div class="col-md-11 form-scrollable-area bg-light">').css({'height': '630px', 'overflow': 'auto'}).append(form);
-        scrollableDiv.scroll(() => {
+
+        parentEl.scroll(() => {
             let onAnchor = Array.from($('.anchor-point'))
                 .find(item => $(item).position().top >= 0);
             let formNavAnchor = $('.form-nav-anchor');
@@ -64,7 +61,7 @@ class FuUiform {
         });
 
             // console.log(text(), $('.anchor-point').position().top);
-        return scrollableDiv;
+        return form;
     }
 
     fillForm(jsonDataObj) {
@@ -148,7 +145,7 @@ class FuUiform {
         return num.toString().padStart(digits, '0');
     }
 
-    createNav() {
+    createNav(scrollableEl) {
         let root = $('<ul class="nav flex-column form-nav">');
         for (let pageItem of this.uiForm['pages']) {
             let title = pageItem['nav']['title'];
@@ -165,11 +162,12 @@ class FuUiform {
                 // console.log('offset.top', $(`#${this.navAnchor(pageItem)}`).offset().top);
                 // console.log('position.top', $(`#${this.navAnchor(pageItem)}`).position().top);
 
-                let scrollableArea = $('.form-scrollable-area');
+                let scrollableArea = $(scrollableEl);
 
                 scrollableArea.scrollTop(
                     scrollableArea.scrollTop() +
                     $(`#${this._navAnchor(pageItem)}`).position().top);
+                //TODO: adjust navigation position
 
             });
 
