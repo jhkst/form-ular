@@ -1,12 +1,12 @@
 {
   "pages": [
     {
-      "title": "1. Prohlášení",
+      "title": "Prohlášení",
       "nav":  { "title": "1" },
       "items": ["CZ415A[H][H03A]", "CZ415A[H][H03B]"]
     },
     {
-      "title": "2. Odesílatel nebo vývozce",
+      "title": "Odesílatel nebo vývozce",
       "nav":  { "title": "2" },
       "items": [
         { "id": "CZ415A[TCR][TCR01]", "type": "textarea" },
@@ -15,27 +15,27 @@
       ]
     },
     {
-      "title": "3. Tiskopisy",
+      "title": "Tiskopisy",
       "nav":  { "title": "3" },
       "items": ["UCD[fm3][count]", "UCD[fm3][total]"]
     },
     {
-      "title": "5. Položky",
+      "title": "Položky",
       "nav":  { "title": "5" },
       "items": ["CZ415A[H][H43]"]
     },
     {
-      "title": "6. Nákladové kusy celkem",
+      "title": "Nákladové kusy celkem",
       "nav":  { "title": "6" },
       "items": ["CZ415A[H][H44]"]
     },
     {
-      "title": "7. Referenční číslo",
+      "title": "Referenční číslo",
       "nav":  { "title": "7" },
       "items": ["CZ415A[H][H06]"]
     },
     {
-      "title": "8. Příjemce",
+      "title": "Příjemce",
       "nav":  { "title": "8" },
       "clickFill": [{ "title": "Různí", "fill": ["různí 00200", "", "", "", "", null, null]}],
       "items": [
@@ -45,84 +45,84 @@
       ]
     },
     {
-      "title": "12. Údaje o hodnotě",
+      "title": "Údaje o hodnotě",
       "nav":  { "title": "12" },
       "items": ["CZ415A[H][QH57]"]
     },
     {
       "$comment": "TODO:",
-      "title": "14. Deklarant / zástupce",
+      "title": "Deklarant / zástupce",
       "nav":  { "title": "14" },
       "clickFill": [{ "title": "Příjemce", "fill": [null, "PŘÍJEMCE 00500", "", "", "", "", null, ""]}],
       "items": ["CZ415A[H][H16N]", "CZ415A[TDKL][TDKL01]", "CZ415A[TDKL][TDKL02]", "CZ415A[TDKL][TDKL03]", "CZ415A[TDKL][TDKL04]", "CZ415A[TDKL][TDKL05]", "CZ415A[TDKL][TDKL07]", "CZ415A[TDKL][TDKL09]"]
     },
     {
-      "title": "15a. Kód země odeslání / vývozu",
+      "title": "Kód země odeslání / vývozu",
       "nav":  { "title": "15a" },
       "items": ["CZ415A[H][H09]"]
     },
     {
-      "title": "17a. Kód země určení",
+      "title": "Kód země určení",
       "nav":  { "title": "17a" },
       "items": ["CZ415A[H][H04]"]
     },
     {
-      "title": "18. Poznávací značka a státní příslušnost dopravního prostředku při příjezdu",
+      "title": "Poznávací značka a státní příslušnost dopravního prostředku při příjezdu",
       "nav":  { "title": "18" },
       "items": ["CZ415A[DOPRPR][0][DOPRPR01]", "CZ415A[DOPRPR][0][DOPRPR02]"]
     },
     {
-      "title": "19. Kontejner (Kont.)",
+      "title": "Kontejner (Kont.)",
       "nav":  { "title": "19" },
       "items": ["CZ415A[H][H25]"]
     },
     {
-      "title": "20. Dodací podmínky",
+      "title": "Dodací podmínky",
       "nav":  { "title": "20" },
       "items": ["CZ415A[DODP][DODP01]", "CZ415A[DODP][DODP02]", "CZ415A[DODP][DODP03]"]
     },
     {
-      "title": "22. Měna a fakturovaná částka",
+      "title": "Měna a fakturovaná částka",
       "nav":  { "title": "22" },
       "items": ["CZ415A[TRAN][TRAN01]", "CZ415A[TRAN][TRAN02]"]
     },
     {
-      "title": "23. Směnný kurz",
+      "title": "Směnný kurz",
       "nav":  { "title": "23" },
       "items": ["CZ415A[TRAN][TRAN03]"]
     },
     {
-      "title": "24. Druh obchodu",
+      "title": "Druh obchodu",
       "nav":  { "title": "24" },
       "items": ["CZ415A[TRAN][TRAN04]"]
     },
     {
-      "title": "25. Druh dopravy na hranici",
+      "title": "Druh dopravy na hranici",
       "nav":  { "title": "25" },
       "items": ["CZ415A[H][H17H]"]
     },
     {
-      "title": "26. Druh dopravy ve vnitrozemí",
+      "title": "Druh dopravy ve vnitrozemí",
       "nav":  { "title": "26" },
       "items": ["CZ415A[H][H17]"]
     },
     {
-      "title": "30. Umístění zboží",
+      "title": "Umístění zboží",
       "nav":  { "title": "30" },
       "items": ["CZ415A[H][H78]"]
     },
     {
-      "title": "31. Nákladové kusy a popis zboží, značky a čísla, číslo (čísla) kontejneru, počet a druh",
+      "title": "Nákladové kusy a popis zboží, značky a čísla, číslo (čísla) kontejneru, počet a druh",
       "nav":  { "title": "31" },
       "items": [{"id" : "CZ415A[G][0][G04]", "type": "textarea", "rows": 4}]
     },
     {
-      "title": "32. Pořadové číslo položky",
+      "title": "Pořadové číslo položky",
       "nav":  { "title": "32" },
       "items": ["CZ415A[G][0][G01]"]
     },
     {
-      "title": "33. Zbožový kód",
+      "title": "Zbožový kód",
       "nav":  { "title": "33" },
       "items": ["CZ415A[G][0][GZB][GZB01]", "CZ415A[G][0][GZB][GZB02]", "CZ415A[G][0][GZB][GZB03]", "CZ415A[G][0][GZB][GZB04]",
         "CZ415A[G][0][GZB][GZB05]", "CZ415A[G][0][GZB][GZB06]", "CZ415A[G][0][GZB][GZB07]", "CZ415A[G][0][GZB][GZB08]"],
@@ -131,79 +131,79 @@
         "items": ["CZ415A[G][0][GZB][GZB03]", "CZ415A[G][0][GZB][GZB04]", "CZ415A[G][0][GZB][GZB05]", "CZ415A[G][0][GZB][GZB06]", "CZ415A[G][0][GZB][GZB07]", "CZ415A[G][0][GZB][GZB08]"] }]
     },
     {
-      "title": "34a. Kód země původu",
+      "title": "Kód země původu",
       "nav":  { "title": "34a" },
       "items": ["CZ415A[G][0][G21]"]
     },
     {
-      "title": "35. Hrubá hmotnost (kg)",
+      "title": "Hrubá hmotnost (kg)",
       "nav":  { "title": "35" },
       "items": ["CZ415A[G][0][G06]"]
     },
     {
-      "title": "36. Preference",
+      "title": "Preference",
       "nav":  { "title": "36" },
       "items": ["CZ415A[G][0][G12]"]
     },
     {
-      "title": "37. Režim",
+      "title": "Režim",
       "nav":  { "title": "37" },
       "$comment": "complex!!",
       "items": ["CZ415A[G][0][G23]", "CZ415A[G][0][G24]", "CZ415A[G][0][G25]"]
     },
     {
-      "title": "38. Vlastní hmotnost (kg)",
+      "title": "Vlastní hmotnost (kg)",
       "nav":  { "title": "38" },
       "items": ["CZ415A[G][0][G08]"]
     },
     {
-      "title": "39. Kvóta",
+      "title": "Kvóta",
       "nav":  { "title": "39" },
       "items": ["CZ415A[G][0][GKV][GKV04]"]
     },
     {
-      "title": "40. Souhrnné prohlášení nebo předchozí doklad",
+      "title": "Souhrnné prohlášení nebo předchozí doklad",
       "nav":  { "title": "40" },
       "items": ["CZ415A[G][0][GPA][0][GPA03]","CZ415A[G][0][GPA][0][GPA01]", "CZ415A[G][0][GPA][0][GPA02]", "CZ415A[G][0][GPA][0][GPA04]",
       "CZ415A[G][0][GPA][0][QGPA01]", "CZ415A[G][0][GPA][0][QGPA02]", "CZ415A[G][0][GPA][0][QGPA03]", "CZ415A[G][0][GPA][0][QGPA04]", "CZ415A[G][0][GPA][0][QGPA15]"],
       "$comment": "fold: CZ415A[G][0][GPA][0][GPA04], CZ415A[G][0][GPA][0][QGPA01]. CZ415A[G][0][GPA][0][QGPA03], CZ415A[G][0][GPA][0][QGPA15]"
     },
     {
-      "title": "41. Doplňkové měrné jednotky",
+      "title": "Doplňkové měrné jednotky",
       "nav":  { "title": "41" },
       "items": ["CZ415A[G][0][GMJ][GMJ02]", "CZ415A[G][0][GMJ][GMJ01]", "CZ415A[G][0][GMJ][GMJ03]"],
       "$comment": "fold CZ415A[G][0][GMJ][GMJ01] CZ415A[G][0][GMJ][GMJ03]"
     },
     {
-      "title": "42. Cena na položku",
+      "title": "Cena na položku",
       "nav":  { "title": "42" },
       "items": ["CZ415A[G][0][G13]"]
     },
     {
-      "title": "43. Kód způsobu hodnocení",
+      "title": "Kód způsobu hodnocení",
       "nav":  { "title": "43" },
       "items": ["CZ415A[G][0][G14]"]
     },
     {
-      "title": "44. Zvláštní záznamy, předložené doklady, osvědčení a povolení",
+      "title": "Zvláštní záznamy, předložené doklady, osvědčení a povolení",
       "nav":  { "title": "44" },
       "items": ["CZ415A[GU][GU01]", {"id": "UCD[fm44][documents]", "type": "textarea", "rows": 4}],
       "$comment": "TODO: add to svg/pdf"
     },
     {
-      "title": "46. Statistická hodnota",
-      "nav":  { "title": "44" },
+      "title": "Statistická hodnota",
+      "nav":  { "title": "46" },
       "items": ["CZ415A[G][0][G27]"]
     },
     {
-      "title": "47. Výpočet poplatků - Cla pro průmyslové výrobky",
+      "title": "Výpočet poplatků - Cla pro průmyslové výrobky",
       "nav":  { "title": "47-A00" },
       "items": [
         "UCD[fm47][A00][base]", "UCD[fm47][A00][rate]", "UCD[fm47][A00][amount]", "UCD[fm47][A00][paymethod]"
       ]
     },
     {
-      "title": "47. Výpočet poplatků - DPH",
+      "title": "Výpočet poplatků - DPH",
       "nav":  { "title": "47-B00" },
       "items": [
         "UCD[fm47][B00][base]", "UCD[fm47][B00][rate]", "UCD[fm47][B00][amount]", "UCD[fm47][B00][paymethod]"
@@ -212,77 +212,77 @@
 
 
     {
-      "title": "47. Výpočet poplatků  - Cla pro zemědělské produkty",
+      "title": "Výpočet poplatků  - Cla pro zemědělské produkty",
       "nav":  { "title": "47-A10" },
       "items": [
         "UCD[fm47][A10][base]", "UCD[fm47][A10][rate]", "UCD[fm47][A10][amount]", "UCD[fm47][A10][paymethod]"
       ]
     },
     {
-      "title": "47. Výpočet poplatků - Dodatečná cla",
+      "title": "Výpočet poplatků - Dodatečná cla",
       "nav":  { "title": "47-A20" },
       "items": [
         "UCD[fm47][A20][base]", "UCD[fm47][A20][rate]", "UCD[fm47][A20][amount]", "UCD[fm47][A20][paymethod]"
       ]
     },
     {
-      "title": "47. Výpočet poplatků  - Konečná antidumpingová cla",
+      "title": "Výpočet poplatků  - Konečná antidumpingová cla",
       "nav":  { "title": "47-A30" },
       "items": [
         "UCD[fm47][A30][base]", "UCD[fm47][A30][rate]", "UCD[fm47][A30][amount]", "UCD[fm47][A30][paymethod]"
       ]
     },
     {
-      "title": "47. Výpočet poplatků - Prozatímní antidumpingová cla",
+      "title": "Výpočet poplatků - Prozatímní antidumpingová cla",
       "nav":  { "title": "47-A35" },
       "items": [
         "UCD[fm47][A35][base]", "UCD[fm47][A35][rate]", "UCD[fm47][A35][amount]", "UCD[fm47][A35][paymethod]"
       ]
     },
     {
-      "title": "47. Výpočet poplatků  - Konečná vyrovnávací cla",
+      "title": "Výpočet poplatků  - Konečná vyrovnávací cla",
       "nav":  { "title": "47-A40" },
       "items": [
         "UCD[fm47][A40][base]", "UCD[fm47][A40][rate]", "UCD[fm47][A40][amount]", "UCD[fm47][A40][paymethod]"
       ]
     },
     {
-      "title": "47. Výpočet poplatků - Prozatímní vyrovnávací cla",
+      "title": "Výpočet poplatků - Prozatímní vyrovnávací cla",
       "nav":  { "title": "47-A45" },
       "items": [
         "UCD[fm47][A45][base]", "UCD[fm47][A45][rate]", "UCD[fm47][A45][amount]", "UCD[fm47][A45][paymethod]"
       ]
     },
     {
-      "title": "47. Výpočet poplatků  - Vyrovnávací úroky (DPH)",
+      "title": "Výpočet poplatků  - Vyrovnávací úroky (DPH)",
       "nav":  { "title": "47-B10" },
       "items": [
         "UCD[fm47][B10][base]", "UCD[fm47][B10][rate]", "UCD[fm47][B10][amount]", "UCD[fm47][B10][paymethod]"
       ]
     },
     {
-      "title": "47. Výpočet poplatků  - Úroky z prodlení (DPH)",
+      "title": "Výpočet poplatků  - Úroky z prodlení (DPH)",
       "nav":  { "title": "47-B20" },
       "items": [
         "UCD[fm47][B20][base]", "UCD[fm47][B20][rate]", "UCD[fm47][B20][amount]", "UCD[fm47][B20][paymethod]"
       ]
     },
     {
-      "title": "47. Výpočet poplatků  - Úroky z prodlení",
+      "title": "Výpočet poplatků  - Úroky z prodlení",
       "nav":  { "title": "47-D00" },
       "items": [
         "UCD[fm47][D00][base]", "UCD[fm47][D00][rate]", "UCD[fm47][D00][amount]", "UCD[fm47][D00][paymethod]"
       ]
     },
     {
-      "title": "47. Výpočet poplatků (Vyrovnávací úroky (např. aktivní zušlechťovací styk))",
+      "title": "Výpočet poplatků (Vyrovnávací úroky (např. aktivní zušlechťovací styk))",
       "nav":  { "title": "47-D10" },
       "items": [
         "UCD[fm47][D10][base]", "UCD[fm47][D10][rate]", "UCD[fm47][D10][amount]", "UCD[fm47][D10][paymethod]"
       ]
     },
     {
-      "title": "47. Výpočet poplatků  - Cla vybíraná jménem jiných zemí",
+      "title": "Výpočet poplatků  - Cla vybíraná jménem jiných zemí",
       "nav":  { "title": "47-E00" },
       "items": [
         "UCD[fm47][E00][base]", "UCD[fm47][E00][rate]", "UCD[fm47][E00][amount]", "UCD[fm47][E00][paymethod]"
@@ -290,7 +290,7 @@
     },
 
     {
-      "title": "54. Místo a datum, podpis a jméno deklaranta nebo jeho zástupce",
+      "title": "Místo a datum, podpis a jméno deklaranta nebo jeho zástupce",
       "nav": { "title": "54", "descritpion": "Místo a datum, podpis a jméno deklaranta nebo jeho zástupce"},
       "items": ["CZ415A[H][H48]", "CZ415A[REP][REP01]", "CZ415A[REP][REP02]", "CZ415A[QPOD][QPOD01]"],
       "$comment": "fold: CZ415[REP][REP02]"

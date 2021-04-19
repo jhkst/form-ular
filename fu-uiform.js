@@ -19,7 +19,7 @@ class FuUiform {
 
         for (let pageItem of this.uiForm['pages']) {
             let card = $('<div class="form-card">');
-            let title = $('<legend>').addClass('fs-title').addClass('anchor-point').attr('id', this._navAnchor(pageItem)).text(pageItem.title);
+            let title = $('<legend>').addClass('fs-title').addClass('anchor-point').attr('id', this._navAnchor(pageItem)).text(`${pageItem.nav.title}. ${pageItem.title}`);
             card.append(title);
             for (let itemRec of pageItem.items) {
                 let group = $('<div class="form-group">');

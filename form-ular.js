@@ -45,10 +45,6 @@ function onLoadModal(text, redirectUrl) {
     onloadModal.modal('show');
 }
 
-$(window).on('load', function () {
-
-});
-
 $(document).ready(async function() {
 
     let formId = window.location.search.substr(1);
@@ -172,6 +168,7 @@ $(document).ready(async function() {
     });
     btn_uploadXML.click(evt => {
         let accept = (e) => {
+            $('#upload-xml-file').trigger('click');
             return Promise.resolve(null);
         };
         doAction(accept, formSpec.warnings["uploadXML"]);
@@ -179,14 +176,33 @@ $(document).ready(async function() {
 
     upload_XML.change(evt => {
         let fileReader = new FileReader();
-        fileReader.onload = function () {
+        fileReader.onload = async function () {
             let data = fileReader.result;
-            fetch(data)
+            let xml = await fetch(data)
                 .then(res => res.text())
-                .then(text => (new window.DOMParser()).parseFromString(text, "text/xml"))
-                .then(xml => console.log(xml));
+                .then(text => (new window.DOMParser()).parseFromString(text, "text/xml"));
+            let xsltProcessor = new XSLTProcessor();
+            await fetch(uc('forms/jsd_14312/jsd_CZ415A2Json.xslt'))
+                .then(res => res.text())
+                .then(txt => new DOMParser().parseFromString(txt, "text/xml"))
+                .then(xslt => xsltProcessor.importStylesheet(xslt));
+
+            let pad = (number) => (number < 10) ? `0${number}` : number;
+            let tzo = new Date().getTimezoneOffset();
+            let timeZone = (tzo >= 0 ? '-' : '+') + pad(Math.abs(tzo) / 60) + ':' + pad(Math.abs(tzo) % 60);
+
+            xsltProcessor.setParameter(null, "timezone", timeZone); //FixMe: TimeZone should be set according to date in xml (e.g. daylight saving tz is different for different dates and not the same as today)
+            let jsonStrDoc = xsltProcessor.transformToDocument(xml);
+            let jsonStr = jsonStrDoc.children[0].textContent;
+
+            jsonDataObj.parse(jsonStr);
+            jsonDataObj.localStore(localStoreKey);
+            uiFormObj.fillForm(jsonDataObj);
+
         };
         fileReader.readAsDataURL($('#upload-xml-file').prop('files')[0]);
+
+
     });
     btn_cleanForm.click(evt => {
         let accept = (e) => {

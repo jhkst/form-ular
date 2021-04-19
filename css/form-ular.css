@@ -130,6 +130,10 @@ main {
     /*color: white;*/
 }
 
+.select2-dropdown li {
+    white-space: pre-line;
+}
+
 /*     ICONS     */
 .button-icon {
     background-size: cover;

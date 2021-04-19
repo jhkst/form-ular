@@ -25,6 +25,7 @@
             },
             "QH68": {
               "title": "Datum vzniku CD",
+              "type": "string",
               "$comment": "format:yyyyMMdd",
               "description": "Datum vzniku celního dluhu",
               "format": "date"
@@ -43,9 +44,9 @@
               "description": "Do levé části této kolonky se uvádí kód:\n\nIM \n- pro obchod ze zeměmi a územími mimo celní území Společenství, kromě zemí ESVO;\n- pro propuštění zboží do jednoho z celních režimů uvedených v příloze č. 38\n- pro propuštění zboží, které není zbožím Společenství, do celního režimu v rámci obchodu mezi členskými státy;\n\nEU \n- v rámci obchodu se zeměmi ESVO;\n- pro propuštění zboží do jednoho z celních režimů uvedených v příloze č. 38\n\nCO\n- pro zboží Společenství podléhajícímu zvláštním opatřením v průběhu přechodného období po přistoupení nových členských států;\n- pro umístění předfinancovaného zboží do celního skladu nebo svobodného pásma.\n- pro zboží Společenství v rámci obchodu mezi částmi celního území Společenství, na které se vztahuje směrnice 2006/112/ES, a částmi tohoto území, na která se uvedená směrnice\nnevztahuje, nebo v rámci obchodu mezi částmi tohoto území, na které se uvedená směrnice\nnevztahuje.\n\n\nPovinný pro všechny dovozní režimy.\n\nPozn. do „zemí ESVO“ se počítají i členské země Úmluvy o společném tranzitu a Úmluvy o zjednodušení formalit ve zbožovém styku VYJMA ZEMÍ SPOLEČENSTVÍ.",
               "docHint": "enum",
               "anyOf": [
-                {"const": "IM", "description": "pro obchod ze zeměmi a územími mimo celní území Společenství, kromě zemí ESVO; pro propuštění zboží do jednoho z celních režimů uvedenýchve sloupcích H až Ktabulky vpříloze č. 37 hlavě I oddílu B PPCK; pro propuštění zboží, které není zbožím Společenství, do celního režimu v rámci obchodu mezi členskými státy"},
-                {"const": "EU", "description": "v rámci obchodu se zeměmi ESVO; pro propuštění zboží do jednoho z celních režimů uvedených ve sloupcích H až Ktabulky vpříloze č. 37 hlavě I oddílu B PPCK"},
-                {"const": "CO", "description": "pro zboží Společenství podléhajícímu zvláštním opatřením vprůběhu přechodného období po přistoupení nových členských států; pro umístěnízboží vcelním skladu scílem získat zvláštní vývozní náhrady před vývozem nebo výroba pod celním dohledem a celní kontrolou před vývozem a platbou vývozních náhrad; pro zboží Společenství vrámci obchodu mezi částmi celního území Společenství, na které se vztahuje směrnice 2006/112/ES, a částmi tohoto území, na která se uvedená směrnice nevztahuje, nebo vrámci obchodu mezi částmi tohoto území, na které se uvedená směrnice nevztahuje"}
+                {"const": "IM", "description": "pro obchod ze zeměmi a územími mimo celní území Společenství, kromě zemí ESVO\n- pro propuštění zboží do jednoho z celních režimů uvedenýchve sloupcích H až K tabulky vpříloze č. 37 hlavě I oddílu B PPCK\n- pro propuštění zboží, které není zbožím Společenství, do celního režimu v rámci obchodu mezi členskými státy"},
+                {"const": "EU", "description": "v rámci obchodu se zeměmi ESVO\n- pro propuštění zboží do jednoho z celních režimů uvedených ve sloupcích H až K tabulky vpříloze č. 37 hlavě I oddílu B PPCK"},
+                {"const": "CO", "description": "pro zboží Společenství podléhajícímu zvláštním opatřením vprůběhu přechodného období po přistoupení nových členských států\n- pro umístění zboží v celním skladu s cílem získat zvláštní vývozní náhrady před vývozem nebo výroba pod celním dohledem a celní kontrolou před vývozem a platbou vývozních náhrad\npro zboží Společenství vrámci obchodu mezi částmi celního území Společenství, na které se vztahuje směrnice 2006/112/ES, a částmi tohoto území, na která se uvedená směrnice nevztahuje, nebo vrámci obchodu mezi částmi tohoto území, na které se uvedená směrnice nevztahuje"}
               ]
             },
             "H03B": {
@@ -2032,7 +2033,7 @@
           "docHint": "enum",
           "anyOf": [
             {"const": "A", "description": "při platbě v hotovosti zaměstnancům celní správy, pověřeným celním úřadem přijímat platby v hotovosti ve výši stanovené zvláštním právním předpisem"},
-            {"const": "B", "description": "WTF? karta?"},
+            {"const": "B", "description": "při platbě kartou"},
             {"const": "C", "description": "platba šekem, jehož proplacení je zaručeno bankou"},
             {"const": "E", "description": "odklad platby"},
             {"const": "H", "description": "elektronický převod (= bezhotovostní převod z účtu na účet)"},
