@@ -62,6 +62,11 @@ main {
 }
 
 #preview {
+    border: 1px solid black;
+}
+
+.modal {
+    position: absolute;
 }
 
 /* --------------- Responsive Fixes --------------- */

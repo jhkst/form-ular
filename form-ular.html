@@ -41,7 +41,7 @@
     <a class="navbar-brand" href="./">
         <img style="filter: invert(100%);" src="icon.svg" width="30" height="30" class="d-inline-block align-top"
              alt="logo"/>
-        <span id="title">FORMULÁŘ</span>
+        <span id="title-abbrev" class="d-inline d-sm-none"></span><span id="title-full" class="d-none d-sm-inline">FORMULÁŘ</span>
     </a>
 </nav>
 
@@ -54,12 +54,12 @@
         <div class="tab-content">
             <div id="left" role="tabpanel" class="tab-pane active col col-md-12 col-lg-6">
                 <div id="left-buttons">
-                    <button type="button" class="btn btn-warning" id="startWizard" title="Použít průvodce formulářem"><i class="button-icon icon-wizard"></i> Průvodce</button>
-                    <button type="button" class="btn btn-info" id="uploadJSON" title="Nahrát soubor JSON"><i class="button-icon icon-open invert-icon"></i> JSON</button>
+                    <button type="button" class="btn btn-warning" id="startWizard" title="Použít průvodce formulářem"><i class="button-icon icon-wizard"></i><span class="d-none d-sm-inline"> Průvodce</span></button>
+                    <button type="button" class="btn btn-info" id="uploadJSON" title="Nahrát soubor JSON"><i class="button-icon icon-open invert-icon"></i><span class="d-none d-sm-inline"> JSON</span></button>
                     <input type="file" accept="application/json" id="upload-json-file" style="display:none"/>
-                    <button type="button" class="btn btn-info" id="uploadXML" title="Nahrát soubor XML(AIS - CZ415A - D_N_PODD)"><i class="button-icon icon-xml invert-icon"></i> XML (CZ415A)</button>
+                    <button type="button" class="btn btn-info" id="uploadXML" title="Nahrát soubor XML(AIS - CZ415A - D_N_PODD)"><i class="button-icon icon-xml invert-icon"></i><span class="d-none d-sm-inline"> XML (CZ415A)</span></button>
                     <input type="file" accept="text/xml" id="upload-xml-file" style="display:none"/>
-                    <button type="button" class="btn btn-danger" id="cleanForm" title="Smazat celý formulář"><i class="button-icon icon-delete invert-icon"></i> Vymazat</button>
+                    <button type="button" class="btn btn-danger" id="cleanForm" title="Smazat celý formulář"><i class="button-icon icon-delete invert-icon"></i><span class="d-none d-sm-inline"> Vymazat</span></button>
                 </div>
                 <div id="form-with-navigation">
                     <div id="form-navigation">
@@ -70,10 +70,10 @@
             </div>
             <div id="right" role="tabpanel" class="tab-pane col-md-12 col-lg-6">
                 <div id="right-buttons">
-                    <button type="button" class="btn btn-success" id="downloadPDF" title="Stáhnout vyplněný formulář v PDF bez tiskopisu"><i class="button-icon icon-document-ol invert-icon"></i> PDF</button>
-                    <button type="button" class="btn btn-secondary" id="downloadPDFForm" title="Stáhnout vyplněný formulář v PDF s tiskopisem"><i class="button-icon icon-document invert-icon"></i> PDF</button>
-                    <button type="button" class="btn btn-primary" id="downloadJSON" title="Stáhnout soubor JSON"><i class="button-icon icon-save invert-icon"></i> JSON</button>
-                    <button type="button" class="btn btn-primary" id="downloadXML" title="Stáhnout soubor XML(AIS- CZ415A - D_N_PODD)"><i class="button-icon icon-xml invert-icon"></i> XML (CZ415A)</button>
+                    <button type="button" class="btn btn-success" id="downloadPDF" title="Stáhnout vyplněný formulář v PDF bez tiskopisu"><i class="button-icon icon-document-ol invert-icon"></i><span class="d-none d-sm-inline"> PDF</span></button>
+                    <button type="button" class="btn btn-secondary" id="downloadPDFForm" title="Stáhnout vyplněný formulář v PDF s tiskopisem"><i class="button-icon icon-document invert-icon"></i><span class="d-none d-sm-inline"> PDF</span></button>
+                    <button type="button" class="btn btn-primary" id="downloadJSON" title="Stáhnout soubor JSON"><i class="button-icon icon-save invert-icon"></i><span class="d-none d-sm-inline"> JSON</span></button>
+                    <button type="button" class="btn btn-primary" id="downloadXML" title="Stáhnout soubor XML(AIS- CZ415A - D_N_PODD)"><i class="button-icon icon-xml invert-icon"></i><span class="d-none d-sm-inline"> XML (CZ415A)</span></button>
                 </div>
                 <div id="preview">
                 </div>

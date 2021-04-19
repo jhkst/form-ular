@@ -57,7 +57,8 @@ $(document).ready(async function() {
         .then(res => res.json())
         .catch(err => console.log(`Unknown form "${formId}"`, err));
 
-    $('#title').text(`${formSpec["name-abbrev"]} - ${formSpec["name"]}`);
+    $('#title-abbrev').text(formSpec["name-abbrev"]);
+    $('#title-full').text(`${formSpec["name-abbrev"]} - ${formSpec["name"]}`);
     document.title = `${formSpec["name-abbrev"]} - ${formSpec["name"]}`;
 
     onLoadModal(formSpec.warnings["disclaimer"], 'https://github.com/');
