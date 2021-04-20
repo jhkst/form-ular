@@ -228,6 +228,7 @@ $(document).ready(async function() {
     await uiFormObj.createFormAndNav($('#form'), $('#form-navigation'), (id, val, origVal) => {
         jsonDataObj.set(id, val);
         jsonDataObj.localStore(localStoreKey);
+        uiFormObj.updateFilledNav(id, val);
         jsdSVG.updateText(id, jsonDataObj);
     });
 

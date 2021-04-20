@@ -115,7 +115,7 @@ main {
 
 .form-nav-anchor {
     border-radius: 27px;
-    background: #d0e2d7;
+    background-color: #d0e2d7;
     width: 29px;
     text-align: center;
     margin: 0 3px 0 0;
@@ -126,9 +126,12 @@ main {
     font-size: 0.5em;
 }
 
+.form-nav-filled {
+    background-color: #f0f5f2;
+}
+
 .form-nav-highlight {
-    background: #82ba97;
-    /*color: white;*/
+    background-color: #82ba97;
 }
 
 .form-label-text {
