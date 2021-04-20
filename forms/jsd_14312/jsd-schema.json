@@ -71,7 +71,7 @@
               "title": "Země určení",
               "type": "string",
               "$comment": "form:17a",
-              "description": "Dvoumístný kód země dle Nařízení komise č. 1833/2006 (aktualizováno dle potřeby).\nČlenský stát (Společenství) určení zboží známý v okamžiku dovozu.\n\nPoslední známá země  určení ve společenství.\n\nNení -li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden pro všechny dovozní režimy.",
+              "description": "Dvoumístný kód země dle Nařízení komise č. 1833/2006 (aktualizováno dle potřeby).\nČlenský stát (Společenství) určení zboží známý v okamžiku dovozu.\n\nPoslední známá země  určení ve společenství.\n\nNení-li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden pro všechny dovozní režimy.",
               "$ref": "../../codebooks/country_codes_1833_2006.json#/definitions/country_code"
             },
             "H06": {
@@ -85,7 +85,7 @@
               "title": "Země odeslání",
               "type": "string",
               "$comment": "form:15a",
-              "description": "Dvoumístný kód země dle Nařízení komise č. 1833/2006 (aktualizováno dle potřeby).\nPokud nedošlo při přepravě ze země odeslání do země určení ke zdržení z jiných důvodů než přepravních, uvede se v poli 15a příslušný kód Společenství z přílohy 38 pro zemi, ze které bylo zboží původně odesláno do členského státu dovozu. Pokud k takovému zadržení nebo zásahu došlo, považuje se za zemi odeslání nebo vývozu  ta země, ve které došlo ke zdržení z jiných důvodů než přepravních. V praxi se však toto zdržení, a tudíž i země, těžko zjišťuje i prokazuje.\n\n\nZemě kde byla zahájena přeprava zboží - vhodné pro statistiky, ale nemusí být pravdivý.\n\nPovinné pro všechny dovozní režimy.\n\nNení -li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden.\n",
+              "description": "Dvoumístný kód země dle Nařízení komise č. 1833/2006 (aktualizováno dle potřeby).\nPokud nedošlo při přepravě ze země odeslání do země určení ke zdržení z jiných důvodů než přepravních, uvede se v poli 15a příslušný kód Společenství z přílohy 38 pro zemi, ze které bylo zboží původně odesláno do členského státu dovozu. Pokud k takovému zadržení nebo zásahu došlo, považuje se za zemi odeslání nebo vývozu  ta země, ve které došlo ke zdržení z jiných důvodů než přepravních. V praxi se však toto zdržení, a tudíž i země, těžko zjišťuje i prokazuje.\n\n\nZemě kde byla zahájena přeprava zboží - vhodné pro statistiky, ale nemusí být pravdivý.\n\nPovinné pro všechny dovozní režimy.\n\nNení-li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden.\n",
               "$ref": "../../codebooks/country_codes_1833_2006.json#/definitions/country_code"
             },
             "H16N": {
@@ -163,13 +163,13 @@
               "title": "Sjednané umístění zboží při příjezdu",
               "type": "string",
               "$comment": "form:30",
-              "description": "Uvede se přesné místo, kde může být zboží kontrolováno\nNepovinné pro všechny dovozní režimy.\n\nNení -li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden."
+              "description": "Uvede se přesné místo, kde může být zboží kontrolováno\nNepovinné pro všechny dovozní režimy.\n\nNení-li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden."
             },
             "H63": {
               "title": "Kód schváleného umístění zboží při příjezdu",
               "type": "string",
               "$comment": "form:30",
-              "description": "Uvede se přesné místo, kde může být zboží kontrolováno\nNepovinné pro všechny dovozní režimy.\n\nNení -li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden."
+              "description": "Uvede se přesné místo, kde může být zboží kontrolováno\nNepovinné pro všechny dovozní režimy.\n\nNení-li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden."
             },
             "H65": {
               "title": "Zjednodušený postup MŘ na CÚ dovozu",
@@ -180,7 +180,7 @@
               "title": "Pracoviště celního úřadu při příjezdu",
               "type": "string",
               "$comment": "form:30",
-              "description": "Uvede se přesné místo, kde může být zboží kontrolováno\nNepovinné pro všechny dovozní režimy.\n\nNení -li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden."
+              "description": "Uvede se přesné místo, kde může být zboží kontrolováno\nNepovinné pro všechny dovozní režimy.\n\nNení-li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden."
             },
             "H86": {
               "title": "Zboží nepředloženo na základě povolení",
@@ -465,7 +465,7 @@
           "title": "DODACÍ PODMÍNKY",
           "type": "object",
           "$comment": "form:20",
-          "description": "Pomocí odpovídajících kódů Společenství a položek z přílohy 38 se uvedou údaje o podmínkách obchodní smlouvy.\n\nPovinné pro režimy H ( propuštění do volného oběhu) a  I (umístění do celního režimu s ekonomickým účinkem jiným než režim uskladňování v celním skladu (aktivní zušlechťovací styk v podmíněném systému, dočasné použití, přepracování pod celním dohledem)\nnevyplňuje se pro J a K (umístění do celního skladu typu D).\nPro ostatní celní sklady se neuvádí\n\nNení -li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden.",
+          "description": "Pomocí odpovídajících kódů Společenství a položek z přílohy 38 se uvedou údaje o podmínkách obchodní smlouvy.\n\nPovinné pro režimy H ( propuštění do volného oběhu) a  I (umístění do celního režimu s ekonomickým účinkem jiným než režim uskladňování v celním skladu (aktivní zušlechťovací styk v podmíněném systému, dočasné použití, přepracování pod celním dohledem)\nnevyplňuje se pro J a K (umístění do celního skladu typu D).\nPro ostatní celní sklady se neuvádí\n\nNení-li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden.",
           "required": ["DODP01", "DODP02", "DODP03"],
           "properties": {
             "DODP01": {
@@ -527,19 +527,20 @@
             },
             "TRAN02": {
               "title": "Fakturovaná částka",
+              "description": "Fakturovaná částka",
               "type": "number"
             },
             "TRAN03": {
               "title": "Směnný kurz",
               "type": "number",
               "$comment": "form:23,https://www.celnisprava.cz/cz/aplikace/Stranky/kurzy.aspx",
-              "description": "Toto pole obsahuje platný směnný kurz mezi měnou faktury a měnou daného členského státu.\n\nKurz se uvádí s přesností na tři desetinná místa, k případným dalším místům za desetinnou čárkou se nepřihlíží. Pokud je za zboží placeno nebo inkasováno v korunách českých, uvádí se zde číslice 1. Doplňován automaticky z číselníku kurz.\n\nNení -li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden.\nhttps://www.celnisprava.cz/cz/aplikace/Stranky/kurzy.aspx"
+              "description": "Toto pole obsahuje platný směnný kurz mezi měnou faktury a měnou daného členského státu.\n\nKurz se uvádí s přesností na tři desetinná místa, k případným dalším místům za desetinnou čárkou se nepřihlíží. Pokud je za zboží placeno nebo inkasováno v korunách českých, uvádí se zde číslice 1. Doplňován automaticky z číselníku kurz.\n\nNení-li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden.\nhttps://www.celnisprava.cz/cz/aplikace/Stranky/kurzy.aspx"
             },
             "TRAN04": {
               "title": "Druh obchodu",
               "type": "integer",
               "$comment": "form:24.1",
-              "description": "Pomocí odpovídajícího kódu Společenství se uvede druh dotyčné transakce.\nPři ukončení PZS:\n51 - Zpracování podle smlouvy\n52 - Opravy a údržba za úhradu\n53 - Opravy a údržba bez úhrady\n\nPři AZS:\n41 - Zpracování podle smlouvy\n42 - Opravy a údržba za úhradu\n43 - Opravy a údržba bez úhrady\n\nPovinné pro režimy H (-propuštění do volného oběhu) a  I (umístění do celního režimu s ekonomickým účinkem jiným než režim uskladňování v celním skladu (aktivní zušlechťovací styk v podmíněném systému, dočasné použití, přepracování pod celním dohledem)), a K - pro propuštění do celního skladu typu D.\nPro sklady se nepoužije.\n\n\nNení -li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden.",
+              "description": "Pomocí odpovídajícího kódu Společenství se uvede druh dotyčné transakce.\nPři ukončení PZS:\n51 - Zpracování podle smlouvy\n52 - Opravy a údržba za úhradu\n53 - Opravy a údržba bez úhrady\n\nPři AZS:\n41 - Zpracování podle smlouvy\n42 - Opravy a údržba za úhradu\n43 - Opravy a údržba bez úhrady\n\nPovinné pro režimy H (-propuštění do volného oběhu) a  I (umístění do celního režimu s ekonomickým účinkem jiným než režim uskladňování v celním skladu (aktivní zušlechťovací styk v podmíněném systému, dočasné použití, přepracování pod celním dohledem)), a K - pro propuštění do celního skladu typu D.\nPro sklady se nepoužije.\n\n\nNení-li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden.",
               "anyOf": [
                 {"const": 1, "description": "1 - Transakce zahrnující skutečný nebo zamýšlený převod vlastnictví z rezidenta na nerezidenta za finanční či jiné protiplnění (s výjimkou transakcí uvedených v bodech 2, 7 a 8)"},
                 {"const": 2, "description": "2 - Vrácení zboží a bezplatná náhrada za zboží po registraci původní transakce"},
@@ -907,7 +908,7 @@
                 "title": "Preference",
                 "type": "string",
                 "$comment": "form:36",
-                "description": "Tato kolonka je pro třímístné číselné kódy složené z jednociferného znaku z odstavce 1 a dvouciferného znaku z odstavce 2.\n\nPříslušné kódy jsou uvedeny níže:\n1. První číslice kódu\n\n1)  celní zacházení „erga omnes“;\n2)  systém všeobecných preferencí (SVP);  (musí prokazovat původ zboží)\n3)  celní preference, jiné než uvedené pod kódem 2; (musí prokazovat původ zboží)\n4)  neuplatňování cel podle ustanovení dohod o celní unii, které uzavřelo Společenství;\n\n2. Následující dvě číslice kódu:\n\n00  žádný z následujících případů;\n10  dočasné osvobození od cla;\n15  dočasné osvobození od cla se zvláštním použitím;\n18  dočasné osvobození od cla s osvědčením o zvláštní povaze produktu;\n19  dočasné osvobození od cla pro zboží dovážené s osvědčením letové způsobilosti;\n20  celní kvóta*;\n23  celní kvóta se zvláštním použitím*;\n25  celní kvóta s osvědčením o zvláštní povaze produktu*;\n28  celní kvóta po pasivním zušlechťovacím styku*;\n40  zvláštní použití vyplývající ze společného celního sazebníku;\n50  osvědčení o zvláštní povaze produktu.\n\nJe-li celní kvóta, která je předmětem žádosti , vyčerpána, mohou členské státy stanovit, že se žádost považuje za žádost o kteroukoliv jinou existující preferenci.\n\nTato kolonka obsahuje údaje o sazebním zacházení se zbožím. Pokud je její použití uvedeno v tabulce v hlavě I oddílu B, je nutno ji použít i v případě, že se žádné preferenční sazební zacházení nepožaduje. Tato kolonka však nesmí být použita v rámci obchodu mezi částmi celního území Společenství (odst. 1 kód \"CO\"), na které se vztahuje směrnice 2006/112 ES, a částmi tohoto území, na které se uvedená směrnice nevztahuje. Uvede se odpovídající kód Společenství z přílohy 38.\nKomise bude pravidelně zveřejňovat v řadě C Úředního věstníku Evropské unie seznam kombinací kódů, které lze použít, spolu s příklady a vysvětlivkami.\n\nPovinné pro režimy H ( propuštění do volného oběhu) a  I (umístění do celního režimu s ekonomickým účinkem jiným než režim uskladňování v celním skladu (aktivní zušlechťovací styk v podmíněném systému, dočasné použití, přepracování pod celním dohledem)), a K pro propuštění do celního skladu typu D.\n\nNeuvádí se J u celních skladů.\n\nNení -li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden.\n\nPokud bude vyplněn box 39 tak musí mít preference na druhém místě \"2\".",
+                "description": "Tato kolonka je pro třímístné číselné kódy složené z jednociferného znaku z odstavce 1 a dvouciferného znaku z odstavce 2.\n\nPříslušné kódy jsou uvedeny níže:\n1. První číslice kódu\n\n1)  celní zacházení „erga omnes“;\n2)  systém všeobecných preferencí (SVP);  (musí prokazovat původ zboží)\n3)  celní preference, jiné než uvedené pod kódem 2; (musí prokazovat původ zboží)\n4)  neuplatňování cel podle ustanovení dohod o celní unii, které uzavřelo Společenství;\n\n2. Následující dvě číslice kódu:\n\n00  žádný z následujících případů;\n10  dočasné osvobození od cla;\n15  dočasné osvobození od cla se zvláštním použitím;\n18  dočasné osvobození od cla s osvědčením o zvláštní povaze produktu;\n19  dočasné osvobození od cla pro zboží dovážené s osvědčením letové způsobilosti;\n20  celní kvóta*;\n23  celní kvóta se zvláštním použitím*;\n25  celní kvóta s osvědčením o zvláštní povaze produktu*;\n28  celní kvóta po pasivním zušlechťovacím styku*;\n40  zvláštní použití vyplývající ze společného celního sazebníku;\n50  osvědčení o zvláštní povaze produktu.\n\nJe-li celní kvóta, která je předmětem žádosti , vyčerpána, mohou členské státy stanovit, že se žádost považuje za žádost o kteroukoliv jinou existující preferenci.\n\nTato kolonka obsahuje údaje o sazebním zacházení se zbožím. Pokud je její použití uvedeno v tabulce v hlavě I oddílu B, je nutno ji použít i v případě, že se žádné preferenční sazební zacházení nepožaduje. Tato kolonka však nesmí být použita v rámci obchodu mezi částmi celního území Společenství (odst. 1 kód \"CO\"), na které se vztahuje směrnice 2006/112 ES, a částmi tohoto území, na které se uvedená směrnice nevztahuje. Uvede se odpovídající kód Společenství z přílohy 38.\nKomise bude pravidelně zveřejňovat v řadě C Úředního věstníku Evropské unie seznam kombinací kódů, které lze použít, spolu s příklady a vysvětlivkami.\n\nPovinné pro režimy H ( propuštění do volného oběhu) a  I (umístění do celního režimu s ekonomickým účinkem jiným než režim uskladňování v celním skladu (aktivní zušlechťovací styk v podmíněném systému, dočasné použití, přepracování pod celním dohledem)), a K pro propuštění do celního skladu typu D.\n\nNeuvádí se J u celních skladů.\n\nNení-li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden.\n\nPokud bude vyplněn box 39 tak musí mít preference na druhém místě \"2\".",
                 "pattern": "[1-4](00|10|15|18|19|20|23|25|28|40|50)"
               },
               "G13": {
@@ -952,7 +953,7 @@
                 "title": "Země původu",
                 "type": "string",
                 "$comment": "form:34a",
-                "description": "Dvoumístný kód země dle Nařízení komise č. 1833/2006 (aktualizováno dle potřeby).\nV poli 34a se uvede odpovídající kód pro zemi země původu podle definice v hlavě II kodexu.\n\nPovinné pro všechny dovozní režimy.\n\nNení -li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden.",
+                "description": "Dvoumístný kód země dle Nařízení komise č. 1833/2006 (aktualizováno dle potřeby).\nV poli 34a se uvede odpovídající kód pro zemi země původu podle definice v hlavě II kodexu.\n\nPovinné pro všechny dovozní režimy.\n\nNení-li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden.",
                 "$ref": "../../codebooks/country_codes_1833_2006.json#/definitions/country_code"
               },
               "G23": {
@@ -979,7 +980,7 @@
                 "title": "Statistická hodnota",
                 "type": "integer",
                 "$comment": "form:46",
-                "description": "Do této kolonky se uvádí statistická hodnota dováženého zboží v celých korunách českých zaokrouhleně vždy směrem nahoru. Statistickou hodnotou se při dovozu rozumí hodnota zboží v místě a čase, v němž zboží vstupuje na statistické území dovážejícího členského státu; stanoví se při prodeji nebo nákupu na základě fakturované ceny zboží,\nv ostatních případech na základě ceny, která by byla fakturována při prodeji nebo koupi.\n\nStatistická hodnota musí zahrnovat pouze vedlejší výdaje, týkající se dopravy, která se uskutečnila mimo statistické území dovážejícího členského státu. Statistická hodnota nezahrnuje daně splatné při dovozu, jako jsou celní poplatky, daň z přidané hodnoty, spotřební\ndaň, dávky nebo jiné podobné daně.\n\nPři zpětném dovozu vraceného zboží, včetně toho, které se nacházelo v zahraničí za účelem finančního leasingu, se uvádí statistická hodnota shodná s tou, která byla vykázána při dočasném vývozu tohoto zboží.\n\nU zboží, za které není jeho dodavatelem požadována úhrada, ale naopak je za ně odběrateli placeno (např. při dovozu odpadů), se namísto  statistické hodnoty uvádí do této kolonky číslice 0.\n\nPovinné pro všechny dovozní režimy.\n\nNení -li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden."
+                "description": "Do této kolonky se uvádí statistická hodnota dováženého zboží v celých korunách českých zaokrouhleně vždy směrem nahoru. Statistickou hodnotou se při dovozu rozumí hodnota zboží v místě a čase, v němž zboží vstupuje na statistické území dovážejícího členského státu; stanoví se při prodeji nebo nákupu na základě fakturované ceny zboží,\nv ostatních případech na základě ceny, která by byla fakturována při prodeji nebo koupi.\n\nStatistická hodnota musí zahrnovat pouze vedlejší výdaje, týkající se dopravy, která se uskutečnila mimo statistické území dovážejícího členského státu. Statistická hodnota nezahrnuje daně splatné při dovozu, jako jsou celní poplatky, daň z přidané hodnoty, spotřební\ndaň, dávky nebo jiné podobné daně.\n\nPři zpětném dovozu vraceného zboží, včetně toho, které se nacházelo v zahraničí za účelem finančního leasingu, se uvádí statistická hodnota shodná s tou, která byla vykázána při dočasném vývozu tohoto zboží.\n\nU zboží, za které není jeho dodavatelem požadována úhrada, ale naopak je za ně odběrateli placeno (např. při dovozu odpadů), se namísto  statistické hodnoty uvádí do této kolonky číslice 0.\n\nPovinné pro všechny dovozní režimy.\n\nNení-li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden."
               },
               "G34": {
                 "title": "Dovozní CIF cena",
@@ -1032,6 +1033,7 @@
                   },
                   "GZB02": {
                     "title": "Taric kód",
+                    "description": "Taric kód",
                     "type": "string",
                     "$comment": "form:33.2"
                   },
@@ -1039,32 +1041,35 @@
                     "title": "TARIC první EU přídavný kód",
                     "type": "string",
                     "$comment": "form:33.3",
-                    "description": "se uvede první doplňkový kód TARICu, byl-li stanoven."
+                    "description": "Uvede se první doplňkový kód TARICu, byl-li stanoven."
                   },
                   "GZB04": {
                     "title": "TARIC druhý EU přídavný kód",
                     "type": "string",
                     "$comment": "form:33.4",
-                    "description": "se uvede druhý doplňkový kód TARICu, byl-li stanoven."
+                    "description": "Uvede se druhý doplňkový kód TARICu, byl-li stanoven."
                   },
                   "GZB05": {
                     "title": "Národní přídavný kód",
                     "type": "string",
                     "$comment": "form:33.5",
-                    "description": "se uvádí národní přídavný kód, pokud je stanoven. Pokud je zboží popsáno dvěma a více národními kódy, uvede deklarant jeden z těchto kódů do této části kolonky 33 a další z těchto kódů do kolonky 31 Tiskopisu nebo Doplňkového listu."
+                    "description": "Uvádí se národní přídavný kód, pokud je stanoven. Pokud je zboží popsáno dvěma a více národními kódy, uvede deklarant jeden z těchto kódů do této části kolonky 33 a další z těchto kódů do kolonky 31 Tiskopisu nebo Doplňkového listu."
                   },
                   "GZB06": {
                     "title": "2. národní přídavný kód",
+                    "description": "2. národní přídavný kód",
                     "type": "string",
                     "$comment": "form:33.6"
                   },
                   "GZB07": {
                     "title": "3. národní přídavný kód",
+                    "description": "3. národní přídavný kód",
                     "type": "string",
                     "$comment": "form:33.7"
                   },
                   "GZB08": {
                     "title": "Další národní přídavný kód",
+                    "description": "Další národní přídavný kód",
                     "type": "string",
                     "$comment": "form:33.8"
                   }
@@ -1116,7 +1121,7 @@
               "GPA": {
                 "title": "PŘEDCHOZÍ DOKLADY",
                 "type": "array",
-                "description": "Do této kolonky se uvádí údaje o předchozích dokladech, které mají vztah\nk deklarovanému zboží, zejména rozhodnutí celních orgánů, jimiž bylo deklarovanému zboží přiděleno celně schválené určení předcházející režimu, který je navrhován.\n\n1. První složka (a1):\nsouhrnné celní prohlášení, zastoupené znakem „X“,    (hmotnost/nákladové kusy pro odpis)  (předchozí režim 00)\njiný předchozí doklad, zastoupený znakem „Z“,  (ekonomická MJ pro odpis)\n\n2. Druhá složka (an..3):\nZvolte zkratku pro doklad ze „seznamu zkratek dokladů“. Tento seznam zahrnuje kód „CLE“, který znamená „datum a odkaz na zápis zboží do protokolu“ (čl. 76 odst. 1 písm. c) kodexu). Datum je kódováno takto: yyyymmdd (y = rok, m = měsíc, d = den).\n\n3.  Třetí složka (an..20):\nZde se uvádí identifikační číslo nebo jiný rozlišitelný odkaz na doklad.\nPříklady:\n– předchozí doklad je tranzitní doklad T1, kterému úřad místa určení přidělil číslo „238544“. Kód proto bude „Z-821-238544“. („Z“ pro předchozí doklad, „821“ pro tranzitní režim a „238544“ pro registrační číslo dokladu (nebo MRN pro operace NCTS));\n– cargo manifest označený číslem „2222“ se použije jako souhrnné celní prohlášení. Kód bude „X-785-2222“.(„X“ pro souhrnné celní prohlášení, „785“ pro cargo manifest a „2222“ pro identifikační číslo manifestu);\n– zboží bylo zapsáno do protokolu dne 14. února 2002. Kód proto bude „Y-CLE-20020214-5“ („Y“ znamená, že se jedná o počáteční celní prohlášení, „CLE“ znamená „zápis do protokolu“, „20020214“ pro datum zápisu, „2002“ je rok, „02“ měsíc, „14“ den a „5“ je odkaz na zápis do protokolu).\n\nSeznam zkratek dokladů viz. Příloha č.38\n\n\n\nPokud je výše uvedený doklad vystaven na základě JSD, obsahuje zkratka kódy specifikované pro první pododdíl kolonky 1. (IM, EX, CO a EU)\n\nPovinné pro všechny dovozní režimy\n\nPokud je odpis z RHU, uvede se Množství a ek. měrná jednotka.\n\nNení -li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden.",
+                "description": "Do této kolonky se uvádí údaje o předchozích dokladech, které mají vztah\nk deklarovanému zboží, zejména rozhodnutí celních orgánů, jimiž bylo deklarovanému zboží přiděleno celně schválené určení předcházející režimu, který je navrhován.\n\n1. První složka (a1):\nsouhrnné celní prohlášení, zastoupené znakem „X“,    (hmotnost/nákladové kusy pro odpis)  (předchozí režim 00)\njiný předchozí doklad, zastoupený znakem „Z“,  (ekonomická MJ pro odpis)\n\n2. Druhá složka (an..3):\nZvolte zkratku pro doklad ze „seznamu zkratek dokladů“. Tento seznam zahrnuje kód „CLE“, který znamená „datum a odkaz na zápis zboží do protokolu“ (čl. 76 odst. 1 písm. c) kodexu). Datum je kódováno takto: yyyymmdd (y = rok, m = měsíc, d = den).\n\n3.  Třetí složka (an..20):\nZde se uvádí identifikační číslo nebo jiný rozlišitelný odkaz na doklad.\nPříklady:\n– předchozí doklad je tranzitní doklad T1, kterému úřad místa určení přidělil číslo „238544“. Kód proto bude „Z-821-238544“. („Z“ pro předchozí doklad, „821“ pro tranzitní režim a „238544“ pro registrační číslo dokladu (nebo MRN pro operace NCTS));\n– cargo manifest označený číslem „2222“ se použije jako souhrnné celní prohlášení. Kód bude „X-785-2222“.(„X“ pro souhrnné celní prohlášení, „785“ pro cargo manifest a „2222“ pro identifikační číslo manifestu);\n– zboží bylo zapsáno do protokolu dne 14. února 2002. Kód proto bude „Y-CLE-20020214-5“ („Y“ znamená, že se jedná o počáteční celní prohlášení, „CLE“ znamená „zápis do protokolu“, „20020214“ pro datum zápisu, „2002“ je rok, „02“ měsíc, „14“ den a „5“ je odkaz na zápis do protokolu).\n\nSeznam zkratek dokladů viz. Příloha č.38\n\n\n\nPokud je výše uvedený doklad vystaven na základě JSD, obsahuje zkratka kódy specifikované pro první pododdíl kolonky 1. (IM, EX, CO a EU)\n\nPovinné pro všechny dovozní režimy\n\nPokud je odpis z RHU, uvede se Množství a ek. měrná jednotka.\n\nNení-li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden.",
                 "maxItems": 9999,
                 "items": {
                   "type": "object",
@@ -1129,6 +1134,7 @@
                     "GPA01": {
                       "title": "Druh předchozího dokladu",
                       "type": "string",
+                      "description": "Zvolte zkratku pro doklad ze „seznamu zkratek dokladů“. Tento seznam zahrnuje kód „CLE“, který znamená „datum a odkaz na zápis zboží do protokolu“ (čl. 76 odst. 1 písm. c) kodexu). Datum je kódováno takto: yyyymmdd (y = rok, m = měsíc, d = den)",
                       "$comment": "form:40",
                       "docHint": "enum",
                       "anyOf": [
@@ -1170,13 +1176,13 @@
                       "title": "Označení předchozího dokladu",
                       "type": "string",
                       "$comment": "form:40",
-                      "description": "MRN nebo jiné označení dokladu"
+                      "description": "MRN nebo jiné označení dokladu.\nZde se uvádí identifikační číslo nebo jiný rozlišitelný odkaz na doklad."
                     },
                     "GPA03": {
                       "title": "Kategorie předchozího dokladu",
                       "type": "string",
                       "$comment": "form:40",
-                      "description": "X Souhrnné celní prohlášení\n\nY Původní celní prohlášení\n\nZ Předchozí doklad",
+                      "description": "Souhrnné celní prohlášení, zastoupené znakem „X“,    (hmotnost/nákladové kusy pro odpis)  (předchozí režim 00)\njiný předchozí doklad, zastoupený znakem „Z“,  (ekonomická MJ pro odpis)",
                       "docHint": "enum",
                       "anyOf": [
                         {"const": "X", "description": "Souhrnné celní prohlášení"},
@@ -1186,27 +1192,32 @@
                     },
                     "GPA04": {
                       "title": "Doplňující informace k předchozímu dokladu",
+                      "description": "Doplňující informace k předchozímu dokladu",
                       "type": "string",
                       "$comment": "form:40"
                     },
                     "QGPA01": {
                       "title": "Množství v odpisové měrné jednotce",
+                      "description": "Množství v odpisové měrné jednotce",
                       "type": "number",
                       "$comment": "form:40"
                     },
                     "QGPA02": {
                       "title": "Datum vystavení",
+                      "description": "Datum vystavení",
                       "type": "string",
                       "$comment": "form:40",
                       "format": "date"
                     },
                     "QGPA03": {
                       "title": "Odpisová měrná jednotka",
+                      "description": "Odpisová měrná jednotka",
                       "type": "string",
                       "$comment": "form:40"
                     },
                     "QGPA04": {
                       "title": "Číslo položky předchozího dokladu",
+                      "description": "Číslo položky předchozího dokladu",
                       "type": "integer",
                       "$comment": "form:40"
                     },
@@ -1294,13 +1305,13 @@
                           "title": "Preference",
                           "type": "string",
                           "$comment": "form:36",
-                          "description": "Tato kolonka je pro třímístné číselné kódy složené z jednociferného znaku z odstavce 1 a dvouciferného znaku z odstavce 2.\n\nPříslušné kódy jsou uvedeny níže:\n1. První číslice kódu\n\n1)  celní zacházení „erga omnes“;\n2)  systém všeobecných preferencí (SVP);  (musí prokazovat původ zboží)\n3)  celní preference, jiné než uvedené pod kódem 2; (musí prokazovat původ zboží)\n4)  neuplatňování cel podle ustanovení dohod o celní unii, které uzavřelo Společenství;\n\n2. Následující dvě číslice kódu:\n\n00  žádný z následujících případů;\n10  dočasné osvobození od cla;\n15  dočasné osvobození od cla se zvláštním použitím;\n18  dočasné osvobození od cla s osvědčením o zvláštní povaze produktu;\n19  dočasné osvobození od cla pro zboží dovážené s osvědčením letové způsobilosti;\n20  celní kvóta*;\n23  celní kvóta se zvláštním použitím*;\n25  celní kvóta s osvědčením o zvláštní povaze produktu*;\n28  celní kvóta po pasivním zušlechťovacím styku*;\n40  zvláštní použití vyplývající ze společného celního sazebníku;\n50  osvědčení o zvláštní povaze produktu.\n\nJe-li celní kvóta, která je předmětem žádosti , vyčerpána, mohou členské státy stanovit, že se žádost považuje za žádost o kteroukoliv jinou existující preferenci.\n\nTato kolonka obsahuje údaje o sazebním zacházení se zbožím. Pokud je její použití uvedeno v tabulce v hlavě I oddílu B, je nutno ji použít i v případě, že se žádné preferenční sazební zacházení nepožaduje. Tato kolonka však nesmí být použita v rámci obchodu mezi částmi celního území Společenství (odst. 1 kód \"CO\"), na které se vztahuje směrnice 2006/112 ES, a částmi tohoto území, na které se uvedená směrnice nevztahuje. Uvede se odpovídající kód Společenství z přílohy 38.\nKomise bude pravidelně zveřejňovat v řadě C Úředního věstníku Evropské unie seznam kombinací kódů, které lze použít, spolu s příklady a vysvětlivkami.\n\nPovinné pro režimy H ( propuštění do volného oběhu) a  I (umístění do celního režimu s ekonomickým účinkem jiným než režim uskladňování v celním skladu (aktivní zušlechťovací styk v podmíněném systému, dočasné použití, přepracování pod celním dohledem)), a K pro propuštění do celního skladu typu D.\n\nNeuvádí se J u celních skladů.\n\nNení -li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden.\n\nPokud bude vyplněn box 39 tak musí mít preference na druhém místě \"2\"."
+                          "description": "Tato kolonka je pro třímístné číselné kódy složené z jednociferného znaku z odstavce 1 a dvouciferného znaku z odstavce 2.\n\nPříslušné kódy jsou uvedeny níže:\n1. První číslice kódu\n\n1)  celní zacházení „erga omnes“;\n2)  systém všeobecných preferencí (SVP);  (musí prokazovat původ zboží)\n3)  celní preference, jiné než uvedené pod kódem 2; (musí prokazovat původ zboží)\n4)  neuplatňování cel podle ustanovení dohod o celní unii, které uzavřelo Společenství;\n\n2. Následující dvě číslice kódu:\n\n00  žádný z následujících případů;\n10  dočasné osvobození od cla;\n15  dočasné osvobození od cla se zvláštním použitím;\n18  dočasné osvobození od cla s osvědčením o zvláštní povaze produktu;\n19  dočasné osvobození od cla pro zboží dovážené s osvědčením letové způsobilosti;\n20  celní kvóta*;\n23  celní kvóta se zvláštním použitím*;\n25  celní kvóta s osvědčením o zvláštní povaze produktu*;\n28  celní kvóta po pasivním zušlechťovacím styku*;\n40  zvláštní použití vyplývající ze společného celního sazebníku;\n50  osvědčení o zvláštní povaze produktu.\n\nJe-li celní kvóta, která je předmětem žádosti , vyčerpána, mohou členské státy stanovit, že se žádost považuje za žádost o kteroukoliv jinou existující preferenci.\n\nTato kolonka obsahuje údaje o sazebním zacházení se zbožím. Pokud je její použití uvedeno v tabulce v hlavě I oddílu B, je nutno ji použít i v případě, že se žádné preferenční sazební zacházení nepožaduje. Tato kolonka však nesmí být použita v rámci obchodu mezi částmi celního území Společenství (odst. 1 kód \"CO\"), na které se vztahuje směrnice 2006/112 ES, a částmi tohoto území, na které se uvedená směrnice nevztahuje. Uvede se odpovídající kód Společenství z přílohy 38.\nKomise bude pravidelně zveřejňovat v řadě C Úředního věstníku Evropské unie seznam kombinací kódů, které lze použít, spolu s příklady a vysvětlivkami.\n\nPovinné pro režimy H ( propuštění do volného oběhu) a  I (umístění do celního režimu s ekonomickým účinkem jiným než režim uskladňování v celním skladu (aktivní zušlechťovací styk v podmíněném systému, dočasné použití, přepracování pod celním dohledem)), a K pro propuštění do celního skladu typu D.\n\nNeuvádí se J u celních skladů.\n\nNení-li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden.\n\nPokud bude vyplněn box 39 tak musí mít preference na druhém místě \"2\"."
                         },
                         "GV21": {
                           "title": "Země původu",
                           "type": "string",
                           "$comment": "form:34a",
-                          "description": "Dvoumístný kód země dle Nařízení komise č. 1833/2006 (aktualizováno dle potřeby).\nV poli 34a se uvede odpovídající kód pro zemi země původu podle definice v hlavě II kodexu.\n\nPovinné pro všechny dovozní režimy.\n\nNení -li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden.",
+                          "description": "Dvoumístný kód země dle Nařízení komise č. 1833/2006 (aktualizováno dle potřeby).\nV poli 34a se uvede odpovídající kód pro zemi země původu podle definice v hlavě II kodexu.\n\nPovinné pro všechny dovozní režimy.\n\nNení-li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden.",
                           "$ref": "../../codebooks/country_codes_1833_2006.json#/definitions/country_code"
                         },
                         "GV38": {
@@ -1547,7 +1558,7 @@
               "GTCR": {
                 "title": "ODESÍLATEL (položka)",
                 "type": "object",
-                "description": "Do této kolonky se uvádí název nebo obchodní firma a sídlo, je-li prodávajícím právnická osoba, nebo příjmení a jméno, popřípadě jména, a adresa místa pobytu, je-li prodávajícím fyzická osoba; za prodávajícího se považuje poslední prodejce zboží před tím, než bylo dovezeno na území Společenství. \nNení-li zboží ze zahraničí nakupováno, uvádí se osoba, která je jako odesílatel uvedena v dokladech přiložených k zásilce anebo ve státu\nodeslání (mimo Společenství). Pokud ze žádných průvodních dokladů ani z obalů zboží není možno zjistit původního prodávajícího nebo odesílatele, může být v této kolonce uveden prodávající nebo odesílatel, který má sídlo ve Společenství.\n\nPro VO a RHU je povinný, u skladů se zatím nepoužívá (možná kvůli příloze 30A bude volitelné)\nJe trošku problém s režimem 71 - tam se zatím neuvádí vůbec\n\nNení -li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden.",
+                "description": "Do této kolonky se uvádí název nebo obchodní firma a sídlo, je-li prodávajícím právnická osoba, nebo příjmení a jméno, popřípadě jména, a adresa místa pobytu, je-li prodávajícím fyzická osoba; za prodávajícího se považuje poslední prodejce zboží před tím, než bylo dovezeno na území Společenství. \nNení-li zboží ze zahraničí nakupováno, uvádí se osoba, která je jako odesílatel uvedena v dokladech přiložených k zásilce anebo ve státu\nodeslání (mimo Společenství). Pokud ze žádných průvodních dokladů ani z obalů zboží není možno zjistit původního prodávajícího nebo odesílatele, může být v této kolonce uveden prodávající nebo odesílatel, který má sídlo ve Společenství.\n\nPro VO a RHU je povinný, u skladů se zatím nepoužívá (možná kvůli příloze 30A bude volitelné)\nJe trošku problém s režimem 71 - tam se zatím neuvádí vůbec\n\nNení-li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden.",
                 "required": [],
                 "properties": {
                   "GTCR01": {
@@ -1757,16 +1768,19 @@
                 "properties": {
                   "GMJ01": {
                     "title": "Měrná jednotka",
+                    "description": "Měrná jednotka",
                     "type": "string",
                     "$comment": "form:41"
                   },
                   "GMJ02": {
                     "title": "Množství zboží v měrné jednotce",
+                    "description": "Množství zboží v měrné jednotce",
                     "type": "number",
                     "$comment": "form:41"
                   },
                   "GMJ03": {
                     "title": "Upřesnění měrné jednotky",
+                    "description": "Upřesnění měrné jednotky",
                     "type": "string",
                     "$comment": "form:41",
                     "pattern": "[A-Za-z]*"
@@ -1872,16 +1886,20 @@
         "fm3": {
           "title": "Tiskopisy",
           "$comment": "form:3",
-          "description": "(16)Uvede se pořadové číslo tiskopisu ve vztahu k celkovému počtu použitých formulářů Tiskopis a Doplňkový list. Například při předložení jednoho formuláře Tiskopis a dvou formulářů Doplňkový list (tj. 5 až 7 deklarovaných položek zboží) se uvede na formuláři Tiskopis „1/3“, na prvním formuláři Doplňkový list „2/3“ a na druhém formuláři Doplňkový list „3/3“.\n(17)Maximální počet formulářů, tj. Tiskopisu a Doplňkových listů, je 333.\n(18)Je-li prohlášení podáváno pouze na jednu položku zboží (tj. má být vyplněna pouze jedna kolonka „Popis zboží“), MUSÍ kolonka 3 zůstat prázdná, ale do kolonky 5 se POVINNĚ uvede číslice 1.",
+          "description": "(16) Uvede se pořadové číslo tiskopisu ve vztahu k celkovému počtu použitých formulářů Tiskopis a Doplňkový list. Například při předložení jednoho formuláře Tiskopis a dvou formulářů Doplňkový list (tj. 5 až 7 deklarovaných položek zboží) se uvede na formuláři Tiskopis „1/3“, na prvním formuláři Doplňkový list „2/3“ a na druhém formuláři Doplňkový list „3/3“.\n(17) Maximální počet formulářů, tj. Tiskopisu a Doplňkových listů, je 333.\n(18) Je-li prohlášení podáváno pouze na jednu položku zboží (tj. má být vyplněna pouze jedna kolonka „Popis zboží“), MUSÍ kolonka 3 zůstat prázdná, ale do kolonky 5 se POVINNĚ uvede číslice 1.",
           "type": "object",
           "properties": {
             "count": {
+              "title": "Tiskopisy - pořadové číslo",
               "type": "integer",
+              "description": "(16) Uvede se pořadové číslo tiskopisu ve vztahu k celkovému počtu použitých formulářů Tiskopis a Doplňkový list. Například při předložení jednoho formuláře Tiskopis a dvou formulářů Doplňkový list (tj. 5 až 7 deklarovaných položek zboží) se uvede na formuláři Tiskopis „1/3“, na prvním formuláři Doplňkový list „2/3“ a na druhém formuláři Doplňkový list „3/3“.\n(17) Maximální počet formulářů, tj. Tiskopisu a Doplňkových listů, je 333.\n(18) Je-li prohlášení podáváno pouze na jednu položku zboží (tj. má být vyplněna pouze jedna kolonka „Popis zboží“), MUSÍ kolonka 3 zůstat prázdná, ale do kolonky 5 se POVINNĚ uvede číslice 1.",
               "minimum": 1,
               "maximum": 333
             },
             "total": {
+              "title": "Tiskopisy - celkový počet",
               "type": "integer",
+              "description": "(16) Uvede se pořadové číslo tiskopisu ve vztahu k celkovému počtu použitých formulářů Tiskopis a Doplňkový list. Například při předložení jednoho formuláře Tiskopis a dvou formulářů Doplňkový list (tj. 5 až 7 deklarovaných položek zboží) se uvede na formuláři Tiskopis „1/3“, na prvním formuláři Doplňkový list „2/3“ a na druhém formuláři Doplňkový list „3/3“.\n(17) Maximální počet formulářů, tj. Tiskopisu a Doplňkových listů, je 333.\n(18) Je-li prohlášení podáváno pouze na jednu položku zboží (tj. má být vyplněna pouze jedna kolonka „Popis zboží“), MUSÍ kolonka 3 zůstat prázdná, ale do kolonky 5 se POVINNĚ uvede číslice 1.",
               "minimum": 1,
               "maximum": 333
             }
@@ -1894,6 +1912,7 @@
           "properties": {
             "deliveryAddress": {
               "title": "Adresa doručení, pokud se liší",
+              "description": "Adresa doručení, pokud se liší",
               "type": "string",
               "$comment": "form:8"
             }
@@ -1920,6 +1939,7 @@
           "properties": {
             "documents": {
               "title": "Zvláštní záznamy, předložené doklady, osvědčení a povolení",
+              "description": "Zvláštní záznamy, předložené doklady, osvědčení a povolení",
               "type": "string"
             },
             "vat": {
@@ -2017,18 +2037,22 @@
       "properties": {
         "base": {
           "title": "Základ pro vyměření poplatku",
+          "description": "Základ pro vyměření poplatku",
           "type": "integer"
         },
         "rate": {
           "title": "Sazba",
+          "description": "Sazba",
           "type": "number"
         },
         "amount": {
           "title": "Částka",
+          "description": "Částka",
           "type": "number"
         },
         "paymethod": {
           "title": "Způsob platby",
+          "description": "Způsob platby",
           "type": "string",
           "docHint": "enum",
           "anyOf": [

@@ -1,6 +1,7 @@
 class FuUiform {
     constructor(uiForm, jsonSchema) {
         this.uiForm = uiForm;
+        this.uiFormNav = null;
         this.jsonSchema = jsonSchema;
         this.form = null;
     }
@@ -27,16 +28,29 @@ class FuUiform {
                 let schemaItem = this.getSchemaItem(formItem.id);
 
                 let type = schemaItem['type'];
-                let label = $('<label>').attr('for', formItem.id).text(schemaItem['title']);
+                let helpId = `help-modal-${formItem.id}`;
+                let helpIcon = $('<i>').addClass(['button-icon', 'icon-help'])
+                    .attr('role', 'button')
+                    .attr('data-toggle', 'modal')
+                    .attr('data-target', `#${helpId}`);
+                helpIcon.click((evt) => {
+                    $(document.getElementById(helpId)).modal({
+                        show: true,
+                        closeOnEscape: true
+                    });
+                });
+
+                let label = $('<label>').attr('for', formItem.id);
+                let labelSpan = $('<span>').addClass('form-label-text').text(schemaItem['title']);
+                label.append(helpIcon);
+                label.append(labelSpan)
                 let formInput = this.createFormInputForSchema(schemaItem, formItem);
 
-                let documentation = $('<div>').addClass('d-none').addClass('form-item-description')
-                    .css({'white-space': 'pre-wrap'})
-                    .text(schemaItem['description']);
+                let documentation = FuUiform._createHelpModal(helpId, schemaItem['title'], schemaItem['description']);
 
                 group.append(label);
                 group.append(formInput);
-                group.append(documentation);
+                $('body').append(documentation); //putting modal in the root
 
 
                 card.append(group);
@@ -62,6 +76,27 @@ class FuUiform {
 
             // console.log(text(), $('.anchor-point').position().top);
         return form;
+    }
+
+    static _createHelpModal(helpId, title, text) {
+        let modal = $('<div>').addClass(['modal', 'modal-bottom', 'fade'])
+            .attr('id', helpId)
+            .attr('tabindex', '-1').attr('role', 'dialog').attr('aria-labelledby', helpId);
+        let modalDialog = $('<div>').addClass('modal-dialog').attr('role', 'document');
+        let modalContent = $('<div>').addClass('modal-content');
+        let modalHeader = $('<div>').addClass('modal-header');
+        let modalTitle = $('<h5>').addClass('modal-title').text(title);
+        let closeButton = $('<div>').attr('type', 'button').addClass('close').attr('data-dismiss', 'modal').attr('aria-label', 'Close');
+        let closeButtonSpan = $('<span>').attr('aria-hidden', 'true').text('×');
+        let modalBody = $('<div>').addClass(['modal-body', 'help-text']).text(text);
+        modal.append(modalDialog);
+        modalDialog.append(modalContent);
+        modalContent.append(modalHeader);
+        modalContent.append(modalBody);
+        modalHeader.append(modalTitle);
+        modalHeader.append(closeButton);
+        closeButton.append(closeButtonSpan);
+        return modal;
     }
 
     fillForm(jsonDataObj) {

@@ -131,6 +131,16 @@ main {
     /*color: white;*/
 }
 
+.form-label-text {
+    margin-left: 0.2em;
+}
+
+.help-text {
+    white-space: pre-wrap;
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
 .select2-dropdown li {
     white-space: pre-line;
 }
@@ -149,37 +159,41 @@ main {
 }
 
 .icon-save {
-    background-image : url("../icons/content-save.svg");
+    background-image: url("../icons/content-save.svg");
 }
 
 .icon-delete {
-    background-image : url("../icons/delete.svg");
+    background-image: url("../icons/delete.svg");
 }
 
 .icon-download {
-    background-image : url("../icons/download.svg");
+    background-image: url("../icons/download.svg");
 }
 
 .icon-open {
-    background-image : url("../icons/folder-open.svg");
+    background-image: url("../icons/folder-open.svg");
 }
 
 .icon-upload {
-    background-image : url("../icons/upload.svg");
+    background-image: url("../icons/upload.svg");
 }
 
 .icon-wizard {
-    background-image : url("../icons/wizard-hat.svg");
+    background-image: url("../icons/wizard-hat.svg");
 }
 
 .icon-document {
-    background-image : url("../icons/file-document.svg");
+    background-image: url("../icons/file-document.svg");
 }
 
 .icon-document-ol {
-    background-image : url("../icons/file-document-outline.svg");
+    background-image: url("../icons/file-document-outline.svg");
 }
 
 .icon-xml {
-    background-image : url("../icons/xml.svg");
+    background-image: url("../icons/xml.svg");
+}
+
+.icon-help {
+    background-image: url("../icons/help-circle.svg");
 }
