@@ -119,6 +119,7 @@ main {
     width: 29px;
     text-align: center;
     margin: 0 3px 0 0;
+    white-space: nowrap;
 
     height: 16px;
     padding-top: 2px;

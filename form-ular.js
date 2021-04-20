@@ -11,6 +11,13 @@ const btn_cleanForm = $('#cleanForm');
 const btn_startForm = $('#startWizard');
 const form_root = $('#form-place');
 
+// hack for browsers not supporting replaceAll
+if(typeof String.prototype.replaceAll !== "function") {
+    String.prototype.replaceAll = function (substr, newSubstr) {
+        return this.split(substr).join(newSubstr);
+    };
+}
+
 function uc(url) {
     return (document.location.hash === '#uncache') ?  `${url}?${Date.now()}` : url;
 }

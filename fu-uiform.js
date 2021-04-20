@@ -74,6 +74,8 @@ class FuUiform {
                 val = val ? FuUiform.formatDate(val) : '';
             } else if ($el.attr('type') === 'datetime-local') {
                 val = val ? FuUiform.formatDateTime(val) : '';
+            } else if (typeof val === 'boolean') {
+                val = val.toString();
             }
             $el.val(val).trigger('change');
         });
