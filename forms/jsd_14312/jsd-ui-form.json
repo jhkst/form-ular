@@ -50,7 +50,6 @@
       "items": ["CZ415A[H][QH57]"]
     },
     {
-      "$comment": "TODO:",
       "title": "Deklarant / zástupce",
       "nav":  { "title": "14" },
       "clickFill": [{ "title": "Příjemce", "fill": [null, "PŘÍJEMCE 00500", "", "", "", "", null, ""]}],

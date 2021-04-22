@@ -18,8 +18,8 @@ class FuUiform {
         let form = $('<form class="form-core">');
 
         for (let pageItem of this.uiForm['pages']) {
-            let card = $('<div class="form-card">').addClass('anchor-point').attr('id', FuUiform._navAnchor(pageItem));
-            let title = $('<legend>').addClass('fs-title').text(`${pageItem.nav.title}. ${pageItem.title}`);
+            let card = $('<div>', {'class': 'form-card anchor-point', 'id': FuUiform._navAnchor(pageItem)});
+            let title = $('<legend>', {'class': 'fs-title'}).text(`${pageItem.nav.title}. ${pageItem.title}`);
             card.append(title);
             for (let itemRec of pageItem.items) {
                 let group = $('<div class="form-group">');
@@ -28,10 +28,7 @@ class FuUiform {
 
                 let type = schemaItem['type'];
                 let helpId = `help-modal-${formItem.id}`;
-                let helpIcon = $('<i>').addClass(['button-icon', 'icon-help'])
-                    .attr('role', 'button')
-                    .attr('data-toggle', 'modal')
-                    .attr('data-target', `#${helpId}`);
+                let helpIcon = $('<i>', {'class': 'button-icon icon-help', 'role': 'button', 'data-toggle': 'modal', 'data-target': `#${helpId}`});
                 helpIcon.click((evt) => {
                     $(document.getElementById(helpId)).modal({
                         show: true,
@@ -39,13 +36,18 @@ class FuUiform {
                     });
                 });
 
-                let label = $('<label>').attr('for', formItem.id);
-                let labelSpan = $('<span>').addClass('form-label-text').text(schemaItem['title']);
+                let label = $('<label>', {'for': formItem.id});
+                let labelSpan = $('<span>', {'class': 'form-label-text'}).text(schemaItem['title']);
                 label.append(helpIcon);
                 label.append(labelSpan)
                 let formInput = this._createFormInputForSchema(schemaItem, formItem);
 
-                let documentation = FuUiform._createHelpModal(helpId, schemaItem['title'], schemaItem['description']);
+                let descriptions = [];
+                let hints = schemaItem['hints'];
+                if(schemaItem['description']) { descriptions.push(schemaItem['description'])}
+                if(Array.isArray(hints)) { descriptions = [...descriptions, ...hints]}
+
+                let documentation = FuUiform._createHelpModal(helpId, schemaItem['title'], descriptions);
 
                 group.append(label);
                 group.append(formInput);
@@ -68,7 +70,7 @@ class FuUiform {
             let onId = $(onAnchor).attr('id');
 
             let toHighlight = Array.from(formNavAnchor).find((item) => $(item).data('href') === onId);
-            $(toHighlight).addClass(formNavHighlightClass);
+            $(toHighlight, {'class': formNavHighlightClass});
 
         });
 
@@ -76,17 +78,19 @@ class FuUiform {
         return form;
     }
 
-    static _createHelpModal(helpId, title, text) {
-        let modal = $('<div>').addClass(['modal', 'modal-bottom', 'fade'])
-            .attr('id', helpId)
-            .attr('tabindex', '-1').attr('role', 'dialog').attr('aria-labelledby', helpId);
-        let modalDialog = $('<div>').addClass('modal-dialog').attr('role', 'document');
-        let modalContent = $('<div>').addClass('modal-content');
-        let modalHeader = $('<div>').addClass('modal-header');
-        let modalTitle = $('<h5>').addClass('modal-title').text(title);
-        let closeButton = $('<div>').attr('type', 'button').addClass('close').attr('data-dismiss', 'modal').attr('aria-label', 'Close');
-        let closeButtonSpan = $('<span>').attr('aria-hidden', 'true').text('×');
-        let modalBody = $('<div>').addClass(['modal-body', 'help-text']).text(text);
+    static _createHelpModal(helpId, title, textsArr) {
+        let modal = $('<div>', {'class': 'modal modal-bottom fade', 'id': helpId, 'tabindex': '-1', 'role': 'dialog', 'aria-labelledby': helpId});
+        let modalDialog = $('<div>', { 'class': 'modal-dialog', 'role': 'document'});
+        let modalContent = $('<div>', { 'class': 'modal-content'});
+        let modalHeader = $('<div>', { 'class': 'modal-header'});
+        let modalTitle = $('<h5>', { 'class': 'modal-title', 'text': title});
+        let closeButton = $('<div>', { 'type': 'button', 'class': 'close', 'data-dismiss': 'modal', 'aria-label': 'Close'});
+        let closeButtonSpan = $('<span>', {'aria-hidden': 'true', text: '×'});
+        let modalBody = $('<div>', { 'class': 'modal-body help-text'});
+
+        textsArr.forEach((v, idx) => { if(idx !== 0) { modalBody.append($('<hr>'))} modalBody.append($.parseHTML(mmd(v))); });
+
+
         modal.append(modalDialog);
         modalDialog.append(modalContent);
         modalContent.append(modalHeader);
@@ -222,7 +226,7 @@ class FuUiform {
                 scrollableArea.scrollTop(
                     scrollableArea.scrollTop()
                     + $(`#${FuUiform._navAnchor(pageItem)}`).position().top
-                    - 49   // magic number adjusted manually
+                    - 86   // magic number adjusted manually
                 );
 
             });
@@ -248,38 +252,36 @@ class FuUiform {
         switch (schemaItem.type) {
             case 'string':
                 if (formItem.type === 'textarea') {
-                    let textarea = $('<textarea>').addClass('form-control');
+                    let textarea = $('<textarea>');
                     FuUiform._condAttr(textarea, 'minlength', schemaItem.minLength);
                     FuUiform._condAttr(textarea, 'maxlength', schemaItem.maxLength);
                     FuUiform._condAttr(textarea, 'pattern', schemaItem.pattern);
                     FuUiform._condAttr(textarea, 'rows', schemaItem.rows, 1);
                     resElem = textarea;
                 } else if (schemaItem['format'] === 'date') {
-                    let input = $('<input>').addClass('form-control').attr('type', 'date').data('type', 'date')
-                        .attr('placeholder', 'yyyy-MM-dd');
+                    let input = $('<input>', {'type': 'date', 'placeholder': 'yyyy-MM-dd'}).data('type', 'date');
                     FuUiform._condAttr(input, 'pattern', schemaItem.pattern);
                     resElem = input;
                 } else if (schemaItem['format'] === 'date-time') {
-                    let input = $('<input>').addClass('form-control').attr('type', 'datetime-local').data('type', 'datetime')
-                        .attr('placeholder', 'yyyy-MM-dd𝐓HH:mm[:ss.fff]');
+                    let input = $('<input>', {'type': 'datetime-local', 'placeholder': 'yyyy-MM-dd𝐓HH:mm[:ss.fff]'}).data('type', 'datetime');
                     FuUiform._condAttr(input, 'pattern', schemaItem.pattern);
                     resElem = input;
                 } else if (schemaItem['enum']) {
-                    let select = $('<select>').addClass('form-control');
+                    let select = $('<select>');
                     FuUiform._addEmptyOption(select);
                     schemaItem['enum'].forEach(opt => {
-                        select.append($('<option>').attr('value', opt).text(opt));
+                        select.append($('<option>', {'value': opt}).text(opt));
                     })
                     resElem = select;
                 } else if (schemaItem['docHint'] === 'enum') {
-                    let select = $('<select>').addClass('form-control');
+                    let select = $('<select>');
                     FuUiform._addEmptyOption(select);
                     schemaItem['anyOf'].forEach(optSpec => {
-                        select.append($('<option>').attr('value', optSpec.const).text(`${optSpec.const} - ${optSpec.description}`));
+                        select.append($('<option>', {'value': optSpec.const}).text(`${optSpec.const} - ${optSpec.description}`));
                     })
                     resElem = select;
                 } else {
-                    let input = $('<input>').addClass('form-control').attr('type', 'text');
+                    let input = $('<input>', {'type': 'text'});
                     FuUiform._condAttr(input, 'minlength', schemaItem.minLength);
                     FuUiform._condAttr(input, 'maxlength', schemaItem.maxLength);
                     FuUiform._condAttr(input, 'pattern', schemaItem.pattern);
@@ -288,50 +290,39 @@ class FuUiform {
                 break;
             case 'integer':
                 if (schemaItem['anyOf']) {
-                    let select = $('<select>')
-                        .addClass('select-no-search')
-                        .addClass('form-control');
+                    let select = $('<select>', {'class': 'select-no-search'});
                     FuUiform._addEmptyOption(select);
                     schemaItem['anyOf'].forEach(optSpec => {
-                        select.append($('<option>').attr('value', optSpec['const']).text(optSpec['description']));
+                        select.append($('<option>', {'value': optSpec['const']}).text(optSpec['description']));
                     });
                     resElem = select;
                 } else {
-                    let input = $('<input>')
-                        .addClass('form-control')
-                        .attr('type', 'number')
-                        .attr('step', 1);
+                    let input = $('<input>', {'class': 'form-control', 'type': 'number', 'step': '1'});
                     FuUiform._condAttr(input, 'min', schemaItem.minimum);
                     FuUiform._condAttr(input, 'max', schemaItem.maximum);
                     resElem = input;
                 }
                 break;
             case 'number':
-                resElem = $('<input>')
-                    .addClass('form-control')
-                    .attr('type', 'number')
-                    .attr('step', 0.001);
+                resElem = $('<input>', {'type': 'number', 'step': '0.001'});
                 break;
             case 'boolean':
                 if (schemaItem['anyOf']) {
-                    let select = $('<select>')
-                        .addClass('select-no-search')
-                        .addClass('form-control');
+                    let select = $('<select>', {'class': 'select-no-search'});
                     FuUiform._addEmptyOption(select);
                     schemaItem['anyOf'].forEach(optSpec => {
-                        select.append($('<option>').attr('value', optSpec['const']).text(optSpec['description']));
+                        select.append($('<option>', {'value': optSpec['const']}).text(optSpec['description']));
                     });
                     resElem = select;
                 } else {
-                    resElem = $('<input>')
-                        .addClass('form-check-input')
-                        .addClass('form-control')
-                        .attr('type', 'checkbox')
+                    resElem = $('<input>', {'class': 'form-check-input', 'type': 'checkbox'});
                 }
                 break;
             default:
                 throw `Unknown schema type "${schemaItem.type}"`;
         }
+
+        resElem.addClass('form-control');
 
         if (!resElem.data('type')) {
             resElem.data('type', schemaItem.type);
@@ -349,6 +340,6 @@ class FuUiform {
     }
 
     static _addEmptyOption(select) {
-        select.append($('<option>').attr('value', '').text(' - prázdné -'));
+        select.append($('<option>', {'value': ''}).text(' - prázdné -'));
     }
 }

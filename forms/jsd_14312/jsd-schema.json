@@ -41,7 +41,7 @@
               "title": "Druh prohlášení - levá část",
               "type": "string",
               "$comment": "form:1.1",
-              "description": "Do levé části této kolonky se uvádí kód:\n\nIM \n- pro obchod ze zeměmi a územími mimo celní území Společenství, kromě zemí ESVO;\n- pro propuštění zboží do jednoho z celních režimů uvedených v příloze č. 38\n- pro propuštění zboží, které není zbožím Společenství, do celního režimu v rámci obchodu mezi členskými státy;\n\nEU \n- v rámci obchodu se zeměmi ESVO;\n- pro propuštění zboží do jednoho z celních režimů uvedených v příloze č. 38\n\nCO\n- pro zboží Společenství podléhajícímu zvláštním opatřením v průběhu přechodného období po přistoupení nových členských států;\n- pro umístění předfinancovaného zboží do celního skladu nebo svobodného pásma.\n- pro zboží Společenství v rámci obchodu mezi částmi celního území Společenství, na které se vztahuje směrnice 2006/112/ES, a částmi tohoto území, na která se uvedená směrnice\nnevztahuje, nebo v rámci obchodu mezi částmi tohoto území, na které se uvedená směrnice\nnevztahuje.\n\n\nPovinný pro všechny dovozní režimy.\n\nPozn. do „zemí ESVO“ se počítají i členské země Úmluvy o společném tranzitu a Úmluvy o zjednodušení formalit ve zbožovém styku VYJMA ZEMÍ SPOLEČENSTVÍ.",
+              "description": "Do levé části této kolonky se uvádí kód:\n\nIM \n\n* pro obchod ze zeměmi a územími mimo celní území Společenství, kromě zemí ESVO;\n* pro propuštění zboží do jednoho z celních režimů uvedených v příloze č. 38\n* pro propuštění zboží, které není zbožím Společenství, do celního režimu v rámci obchodu mezi členskými státy;\n\nEU \n\n* v rámci obchodu se zeměmi ESVO;\n* pro propuštění zboží do jednoho z celních režimů uvedených v příloze č. 38\n\nCO\n\n* pro zboží Společenství podléhajícímu zvláštním opatřením v průběhu přechodného období po přistoupení nových členských států;\n* pro umístění předfinancovaného zboží do celního skladu nebo svobodného pásma.\n* pro zboží Společenství v rámci obchodu mezi částmi celního území Společenství, na které se vztahuje směrnice 2006/112/ES, a částmi tohoto území, na která se uvedená směrnice nevztahuje, nebo v rámci obchodu mezi částmi tohoto území, na které se uvedená směrnice nevztahuje.\n\n\nPovinný pro všechny dovozní režimy.\n\nPozn. do „zemí ESVO“ se počítají i členské země Úmluvy o společném tranzitu a Úmluvy o zjednodušení formalit ve zbožovém styku VYJMA ZEMÍ SPOLEČENSTVÍ.",
               "docHint": "enum",
               "anyOf": [
                 {"const": "IM", "description": "pro obchod ze zeměmi a územími mimo celní území Společenství, kromě zemí ESVO\n- pro propuštění zboží do jednoho z celních režimů uvedených ve sloupcích H až K tabulky v příloze č. 37 hlavě I oddílu B PPCK\n- pro propuštění zboží, které není zbožím Společenství, do celního režimu v rámci obchodu mezi členskými státy"},
@@ -53,7 +53,7 @@
               "title": "Druh prohlášení - střední část",
               "type": "string",
               "$comment": "form:1.2",
-              "description": "A pro běžné celní prohlášení (běžný postup podle článku 62 Kodexu)\nB pro neúplné celní prohlášení (zjednodušený postup podle čl. 76 odst. 1 písm. a) Kodexu)\nC pro zjednodušené celní prohlášení (zjednodušený postup podle čl. 76 odst. 1 písm. b) Kodexu)\nD pro podání běžného celního prohlášení uvedeného pod kódem A dříve, než je deklarant\nschopen zboží předložit\nE pro podání neúplného celního prohlášení uvedeného pod kódem B dříve, než je deklarant\nschopen zboží předložit\nF pro podání zjednodušeného celního prohlášení uvedeného pod kódem C dříve, než je\ndeklarant schopen zboží předložit\nX pro doplňkové celní prohlášení podle zjednodušeného postupu podle kódu B\nY pro doplňkové celní prohlášení podle zjednodušeného postupu podle kódu C\nZ pro doplňkové celní prohlášení podle zjednodušeného postupu podle čl. 76 odst. 1\npísm. c) kodexu (zápis zboží do protokolu)\nKódy D, E a F lze použít pouze v rámci postupu stanoveného v čl. 201 odst. 2, kdy celní\norgány povolí podání celního prohlášení dříve, než je deklarant schopen zboží předložit.\n\nPokud použije B,D,E nebo F, pak se mu pošle pouze potvrzení o registraci (jinak se mu hned pošle potvrzení o přijetí). Potvrzení o přijetí mu systém pošle až po rozhodnutí celníka - nelze tedy tyto kódy kombinovat s MŘD.\n\nPovinný pro všechny dovozní režimy. Nemá vztah k režimu.\n\nUpravit na základě jednání o ZJP (bude se měnit)",
+              "description": "A pro běžné celní prohlášení (běžný postup podle článku 62 Kodexu)\nB pro neúplné celní prohlášení (zjednodušený postup podle čl. 76 odst. 1 písm. a) Kodexu)\nC pro zjednodušené celní prohlášení (zjednodušený postup podle čl. 76 odst. 1 písm. b) Kodexu)\nD pro podání běžného celního prohlášení uvedeného pod kódem A dříve, než je deklarant schopen zboží předložit\nE pro podání neúplného celního prohlášení uvedeného pod kódem B dříve, než je deklarant schopen zboží předložit\nF pro podání zjednodušeného celního prohlášení uvedeného pod kódem C dříve, než je deklarant schopen zboží předložit\nX pro doplňkové celní prohlášení podle zjednodušeného postupu podle kódu B\nY pro doplňkové celní prohlášení podle zjednodušeného postupu podle kódu C\nZ pro doplňkové celní prohlášení podle zjednodušeného postupu podle čl. 76 odst. 1 písm. c) kodexu (zápis zboží do protokolu)\n\nKódy D, E a F lze použít pouze v rámci postupu stanoveného v čl. 201 odst. 2, kdy celní orgány povolí podání celního prohlášení dříve, než je deklarant schopen zboží předložit.\n\nPokud použije B,D,E nebo F, pak se mu pošle pouze potvrzení o registraci (jinak se mu hned pošle potvrzení o přijetí). Potvrzení o přijetí mu systém pošle až po rozhodnutí celníka - nelze tedy tyto kódy kombinovat s MŘD.\n\nPovinný pro všechny dovozní režimy. Nemá vztah k režimu.\n\nUpravit na základě jednání o ZJP (bude se měnit)",
               "docHint": "enum",
               "anyOf": [
                 {"const": "A", "description": "běžné celní prohlášení"},
@@ -256,6 +256,7 @@
               "title": "EORI",
               "$comment": "form:14",
               "description": "EORI deklaranta.",
+              "hints": ["Lze vygenerovat ad-hoc zde: [https://www.celnisprava.cz/cz/aplikace/Stranky/eoriadhoc.aspx](https://www.celnisprava.cz/cz/aplikace/Stranky/eoriadhoc.aspx)"],
               "$ref": "#/$defs/$EORI"
             },
             "TDKL09": {
@@ -420,7 +421,8 @@
               "title": "Název, jméno",
               "type": "string",
               "$comment": "form:8",
-              "description": "Uvádí se název nebo obchodní firma  právnické osoby nebo příjmení a jméno, popřípadě jména  fyzické osoby, která je příjemcem dováženého zboží\nSestává-li zásilka ze zboží pro několik příjemců, uvádí se do této kolonky text „Různí“ a kód „00200“; seznam obsahující jejich název nebo obchodní firmu nebo příjmení a jméno, popřípadě jména, sídlo nebo adresu místa pobytu, nebo adresu místa podnikání, doplněné o identifikační číslo, se přikládá v příloze ke každému z výtisků Tiskopisu."
+              "description": "Uvádí se název nebo obchodní firma  právnické osoby nebo příjmení a jméno, popřípadě jména  fyzické osoby, která je příjemcem dováženého zboží\nSestává-li zásilka ze zboží pro několik příjemců, uvádí se do této kolonky text „Různí“ a kód „00200“; seznam obsahující jejich název nebo obchodní firmu nebo příjmení a jméno, popřípadě jména, sídlo nebo adresu místa pobytu, nebo adresu místa podnikání, doplněné o identifikační číslo, se přikládá v příloze ke každému z výtisků Tiskopisu.",
+              "hints": ["Fyzické osoby vyplňují trvalé bydliště. Doručovací adresa, pokud se liší, se vypisuje pod tím (viz adresa doručení)."]
             },
             "TCE02": {
               "title": "Ulice a číslo",
@@ -451,6 +453,7 @@
               "title": "EORI",
               "$comment": "form:8",
               "description": "EORI příjemce.",
+              "hints": ["Lze vygenerovat ad-hoc zde: [https://www.celnisprava.cz/cz/aplikace/Stranky/eoriadhoc.aspx](https://www.celnisprava.cz/cz/aplikace/Stranky/eoriadhoc.aspx)"],
               "$ref": "#/$defs/$EORI"
             },
             "TCE08": {
@@ -533,8 +536,9 @@
             "TRAN03": {
               "title": "Směnný kurz",
               "type": "number",
-              "$comment": "form:23,https://www.celnisprava.cz/cz/aplikace/Stranky/kurzy.aspx",
-              "description": "Toto pole obsahuje platný směnný kurz mezi měnou faktury a měnou daného členského státu.\n\nKurz se uvádí s přesností na tři desetinná místa, k případným dalším místům za desetinnou čárkou se nepřihlíží. Pokud je za zboží placeno nebo inkasováno v korunách českých, uvádí se zde číslice 1. Doplňován automaticky z číselníku kurz.\n\nNení-li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden.\nhttps://www.celnisprava.cz/cz/aplikace/Stranky/kurzy.aspx"
+              "$comment": "form:23",
+              "description": "Toto pole obsahuje platný směnný kurz mezi měnou faktury a měnou daného členského státu.\n\nKurz se uvádí s přesností na tři desetinná místa, k případným dalším místům za desetinnou čárkou se nepřihlíží. Pokud je za zboží placeno nebo inkasováno v korunách českých, uvádí se zde číslice 1. Doplňován automaticky z číselníku kurz.\n\nNení-li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden.",
+              "hints": ["Kurz platný v okamžiku podání formuláře dle [https://www.celnisprava.cz/cz/aplikace/Stranky/kurzy.aspx](https://www.celnisprava.cz/cz/aplikace/Stranky/kurzy.aspx)"]
             },
             "TRAN04": {
               "title": "Druh obchodu",
@@ -768,7 +772,7 @@
               "$ref": "../../codebooks/protection_type_codes.json#/definitions/protection_type"
             },
             "GUF": {
-              "title": " OZNAČENÍ ZAJIŠTĚNÍ",
+              "title": "OZNAČENÍ ZAJIŠTĚNÍ",
               "type": "array",
               "maxItems": 99,
               "items": {
@@ -1029,11 +1033,13 @@
                     "title": "Zbožový kód",
                     "type": "string",
                     "$comment": "form:33.1",
-                    "description": "Do první části kolonky 33 se uvádí prvních 8 číslic sazební podpoložky celního sazebníku."
+                    "description": "Do první části kolonky 33 se uvádí prvních 8 číslic sazební podpoložky celního sazebníku.",
+                    "hints": ["Vyhledejte druh zboží v [TARIC CZ](https://www.celnisprava.cz/cz/aplikace/Stranky/taric-cz.aspx), vepište prvních 8 číslic"]
                   },
                   "GZB02": {
                     "title": "Taric kód",
                     "description": "Taric kód",
+                    "hints": ["Vyhledejte druh zboží v [TARIC CZ](https://www.celnisprava.cz/cz/aplikace/Stranky/taric-cz.aspx), vepište poslední 2 číslice"],
                     "type": "string",
                     "$comment": "form:33.2"
                   },
@@ -1246,6 +1252,7 @@
                     },
                     "QGPA15": {
                       "title": "Celní hodnota odepisovaného množství v MJ",
+                      "description": "Celní hodnota odepisovaného množství v MJ",
                       "type": "integer",
                       "$comment": "form:40"
                     },
@@ -1305,7 +1312,8 @@
                           "title": "Preference",
                           "type": "string",
                           "$comment": "form:36",
-                          "description": "Tato kolonka je pro třímístné číselné kódy složené z jednociferného znaku z odstavce 1 a dvouciferného znaku z odstavce 2.\n\nPříslušné kódy jsou uvedeny níže:\n1. První číslice kódu\n\n1)  celní zacházení „erga omnes“;\n2)  systém všeobecných preferencí (SVP);  (musí prokazovat původ zboží)\n3)  celní preference, jiné než uvedené pod kódem 2; (musí prokazovat původ zboží)\n4)  neuplatňování cel podle ustanovení dohod o celní unii, které uzavřelo Společenství;\n\n2. Následující dvě číslice kódu:\n\n00  žádný z následujících případů;\n10  dočasné osvobození od cla;\n15  dočasné osvobození od cla se zvláštním použitím;\n18  dočasné osvobození od cla s osvědčením o zvláštní povaze produktu;\n19  dočasné osvobození od cla pro zboží dovážené s osvědčením letové způsobilosti;\n20  celní kvóta*;\n23  celní kvóta se zvláštním použitím*;\n25  celní kvóta s osvědčením o zvláštní povaze produktu*;\n28  celní kvóta po pasivním zušlechťovacím styku*;\n40  zvláštní použití vyplývající ze společného celního sazebníku;\n50  osvědčení o zvláštní povaze produktu.\n\nJe-li celní kvóta, která je předmětem žádosti , vyčerpána, mohou členské státy stanovit, že se žádost považuje za žádost o kteroukoliv jinou existující preferenci.\n\nTato kolonka obsahuje údaje o sazebním zacházení se zbožím. Pokud je její použití uvedeno v tabulce v hlavě I oddílu B, je nutno ji použít i v případě, že se žádné preferenční sazební zacházení nepožaduje. Tato kolonka však nesmí být použita v rámci obchodu mezi částmi celního území Společenství (odst. 1 kód \"CO\"), na které se vztahuje směrnice 2006/112 ES, a částmi tohoto území, na které se uvedená směrnice nevztahuje. Uvede se odpovídající kód Společenství z přílohy 38.\nKomise bude pravidelně zveřejňovat v řadě C Úředního věstníku Evropské unie seznam kombinací kódů, které lze použít, spolu s příklady a vysvětlivkami.\n\nPovinné pro režimy H ( propuštění do volného oběhu) a  I (umístění do celního režimu s ekonomickým účinkem jiným než režim uskladňování v celním skladu (aktivní zušlechťovací styk v podmíněném systému, dočasné použití, přepracování pod celním dohledem)), a K pro propuštění do celního skladu typu D.\n\nNeuvádí se J u celních skladů.\n\nNení-li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden.\n\nPokud bude vyplněn box 39 tak musí mít preference na druhém místě \"2\"."
+                          "description": "Tato kolonka je pro třímístné číselné kódy složené z jednociferného znaku z odstavce 1 a dvouciferného znaku z odstavce 2.\n\nPříslušné kódy jsou uvedeny níže:\n1. První číslice kódu\n\n1)  celní zacházení „erga omnes“;\n2)  systém všeobecných preferencí (SVP);  (musí prokazovat původ zboží)\n3)  celní preference, jiné než uvedené pod kódem 2; (musí prokazovat původ zboží)\n4)  neuplatňování cel podle ustanovení dohod o celní unii, které uzavřelo Společenství;\n\n2. Následující dvě číslice kódu:\n\n00  žádný z následujících případů;\n10  dočasné osvobození od cla;\n15  dočasné osvobození od cla se zvláštním použitím;\n18  dočasné osvobození od cla s osvědčením o zvláštní povaze produktu;\n19  dočasné osvobození od cla pro zboží dovážené s osvědčením letové způsobilosti;\n20  celní kvóta*;\n23  celní kvóta se zvláštním použitím*;\n25  celní kvóta s osvědčením o zvláštní povaze produktu*;\n28  celní kvóta po pasivním zušlechťovacím styku*;\n40  zvláštní použití vyplývající ze společného celního sazebníku;\n50  osvědčení o zvláštní povaze produktu.\n\nJe-li celní kvóta, která je předmětem žádosti , vyčerpána, mohou členské státy stanovit, že se žádost považuje za žádost o kteroukoliv jinou existující preferenci.\n\nTato kolonka obsahuje údaje o sazebním zacházení se zbožím. Pokud je její použití uvedeno v tabulce v hlavě I oddílu B, je nutno ji použít i v případě, že se žádné preferenční sazební zacházení nepožaduje. Tato kolonka však nesmí být použita v rámci obchodu mezi částmi celního území Společenství (odst. 1 kód \"CO\"), na které se vztahuje směrnice 2006/112 ES, a částmi tohoto území, na které se uvedená směrnice nevztahuje. Uvede se odpovídající kód Společenství z přílohy 38.\nKomise bude pravidelně zveřejňovat v řadě C Úředního věstníku Evropské unie seznam kombinací kódů, které lze použít, spolu s příklady a vysvětlivkami.\n\nPovinné pro režimy H ( propuštění do volného oběhu) a  I (umístění do celního režimu s ekonomickým účinkem jiným než režim uskladňování v celním skladu (aktivní zušlechťovací styk v podmíněném systému, dočasné použití, přepracování pod celním dohledem)), a K pro propuštění do celního skladu typu D.\n\nNeuvádí se J u celních skladů.\n\nNení-li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden.\n\nPokud bude vyplněn box 39 tak musí mít preference na druhém místě \"2\".",
+                          "hints": ["Lze zjistit také na [TARIC CZ](https://www.celnisprava.cz/cz/aplikace/Stranky/taric-cz.aspx)"]
                         },
                         "GV21": {
                           "title": "Země původu",
@@ -1699,7 +1707,8 @@
                     "title": "Označení kvóty",
                     "type": "number",
                     "$comment": "form:39",
-                    "description": "Do této kolonky se uvádí  označení kvóty, o níž deklarant žádá"
+                    "description": "Do této kolonky se uvádí  označení kvóty, o níž deklarant žádá",
+                    "hints": ["Lze zjistit také na [TARIC CZ](https://www.celnisprava.cz/cz/aplikace/Stranky/taric-cz.aspx)"]
                   }
                 }
               },
@@ -1725,7 +1734,7 @@
                       "title": "VIN kód",
                       "type": "string",
                       "$comment": "form:31",
-                      "description": "VIN kód (číslo karoserie motorového vozidla) – uvádí se alfanumerický kód čísla karoserie motorového vozidla. Pokud nebude možné u motorových vozidel vyplnit číslo karoserie, uvede pověřený pracovník kód „99“\n\nOd r.1980 se používá na 17 znaků\nhttp://en.wikipedia.org/wiki/Vehicle_identification_number\n\nPokud nebude mít vozidlo VIN kód, uvede se nějaká konstanta \"99\"."
+                      "description": "VIN kód (číslo karoserie motorového vozidla) – uvádí se alfanumerický kód čísla karoserie motorového vozidla. Pokud nebude možné u motorových vozidel vyplnit číslo karoserie, uvede pověřený pracovník kód „99“\n\nOd r.1980 se používá na 17 znaků\n[http://en.wikipedia.org/wiki/Vehicle_identification_number](http://en.wikipedia.org/wiki/Vehicle_identification_number)\n\nPokud nebude mít vozidlo VIN kód, uvede se nějaká konstanta \"99\"."
                     }
                   }
                 }
