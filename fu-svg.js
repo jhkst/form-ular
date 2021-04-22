@@ -20,12 +20,13 @@ class FuSvg {
 
         paperSchemaJson.positioning.forEach((val, idx) => {
             if(val["type"] !== "text") return;
+            if(!Array.isArray(val["update-for"])) val["update-for"] = [];
             let newText = document.createElementNS(this.svgNS, "text");
             newText.setAttributeNS(null, "x", (val["pos"].x * this.r) + this.units);
             newText.setAttributeNS(null, "y", (val["pos"].y * this.r) + this.units);
             newText.setAttributeNS(null, "font-size", FuSvg._fnt(val["font-size"] ? val["font-size"] : fontSize));
             newText.setAttributeNS(null, "font-family", val["font-family"] ? val["font-family"] : fontFamily)
-            newText.setAttributeNS(null, "class", [...this.evaluator.affectedKeys(val["value"]), FuSvg._paperClass(idx)].join(' '));
+            newText.setAttributeNS(null, "class", [...this.evaluator.affectedKeys(val["value"]), ...val["update-for"], FuSvg._paperClass(idx)].join(' '));
             newText.setAttributeNS(null, "data-line-height", val["line-height"] ? val["line-height"] : lineHeight);
             newText.setAttributeNS(null, "text-anchor", val["text-anchor"] ? val["text-anchor"] : textAnchor);
             let textNode = document.createTextNode("");
