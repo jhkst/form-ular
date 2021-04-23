@@ -22,6 +22,10 @@ function uc(url) {
     return (document.location.hash === '#uncache') ?  `${url}?${Date.now()}` : url;
 }
 
+function isBot() {
+    return /bot|googlebot|crawler|spider|robot|crawling/i.test(navigator.userAgent);
+}
+
 function modalWarning(text, okCallback) {
     $('.modal-body', d_warningModal).text(text);
     let warningYes = $('#warning-yes', d_warningModal);
@@ -63,8 +67,12 @@ $(document).ready(async function() {
     $('#title-abbrev').text(formSpec["name-abbrev"]);
     $('#title-full').text(`${formSpec["name-abbrev"]} - ${formSpec["name"]}`);
     document.title = `${formSpec["name-abbrev"]} - ${formSpec["name"]}`;
+    $('head').append($('<meta>', {'name': 'keywords', 'content': formSpec['keywords'].join(',')}));
+    $('head').append($('<meta>', {'name': 'description', 'content': formSpec['description']}));
 
-    onLoadModal(formSpec.warnings["disclaimer"], 'https://github.com/');
+    if(!isBot()) {
+        onLoadModal(formSpec.warnings["disclaimer"], 'https://github.com/');
+    }
 
     if(!formSpec) {
         alert(`Formulář "${formId}" nenalezen!`);

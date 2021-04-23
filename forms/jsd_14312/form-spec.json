@@ -7,6 +7,8 @@
   "svg-background": "forms/jsd_14312/jsd_plain_curves.svg",
   "pdf-background": "forms/jsd_14312/jsd.pdf",
   "paper-schema": "forms/jsd_14312/jsd-paper-schema.json",
+  "keywords": ["JSD", "formulář", "celní prohlášení", "celní deklarace", "celní formulář", "vyplnění", "jednotný správní doklad", "dovoz", "zdarma", "dhl", "fedex", "clo", "zásilka"],
+  "description": "Aplikace na vyplňení a k tisku JSD formuláře (Jednotného správního dokladu) pro dovoz online a zdarma. Formulář slouží k proclení dovážených věcí a podává se na celním úřadě",
   "locale": "cs-CZ",
   "fonts": [
     {"name": "TeX Gyre Heros Cn", "style": "normal", "weight": "400", "url": "forms/jsd_14312/fonts/texgyreheroscn-regular.otf"},
