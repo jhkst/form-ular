@@ -21,6 +21,22 @@ class FuUiform {
             let card = $('<div>', {'class': 'form-card anchor-point', 'id': FuUiform._navAnchor(pageItem)});
             let title = $('<legend>', {'class': 'fs-title'}).text(`${pageItem.nav.title}. ${pageItem.title}`);
             card.append(title);
+
+            if(pageItem['clickFill']) {
+                let clickFillGrp = $('<div>');
+                pageItem['clickFill'].forEach((item) => {
+                    let btn = $('<div>', {'class': 'btn btn-primary btn-sm', 'type': 'button'}).text(item['title']);
+                    clickFillGrp.append(btn);
+                    btn.click((evt) => {
+                        pageItem.items.forEach((itm, idx) => {
+                            let id = itm['id'] ? itm['id'] : itm;
+                            $(document.getElementById(id)).val(item['fill'][idx]).change();
+                        });
+                    });
+                });
+                card.append(clickFillGrp);
+            }
+
             for (let itemRec of pageItem.items) {
                 let group = $('<div class="form-group">');
                 let formItem = (typeof itemRec === 'object') ? itemRec : {"id": itemRec};
