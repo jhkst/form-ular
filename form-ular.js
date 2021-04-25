@@ -202,11 +202,6 @@ $(document).ready(async function() {
                 .then(txt => new DOMParser().parseFromString(txt, "text/xml"))
                 .then(xslt => xsltProcessor.importStylesheet(xslt));
 
-            let pad = (number) => (number < 10) ? `0${number}` : number;
-            let tzo = new Date().getTimezoneOffset();
-            let timeZone = (tzo >= 0 ? '-' : '+') + pad(Math.abs(tzo) / 60) + ':' + pad(Math.abs(tzo) % 60);
-
-            xsltProcessor.setParameter(null, "timezone", timeZone); //FixMe: TimeZone should be set according to date in xml (e.g. daylight saving tz is different for different dates and not the same as today)
             let jsonStrDoc = xsltProcessor.transformToDocument(xml);
             let jsonStr = jsonStrDoc.children[0].textContent;
 

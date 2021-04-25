@@ -2,13 +2,13 @@
   "id": "jsd_14312",
   "name": "Jednotný správní doklad (dovoz)",
   "name-abbrev": "JSD 14312",
+  "description": "Aplikace na vyplňení a k tisku JSD formuláře (Jednotného správního dokladu) pro dovoz online a zdarma. Formulář slouží k proclení dovážených věcí a podává se na celním úřadě",
+  "keywords": ["JSD", "formulář", "dokument", "celní prohlášení", "celní deklarace", "celní formulář", "vyplnění", "jednotný správní doklad", "dovoz", "zdarma", "dhl", "fedex", "clo", "proclení", "zásilka"],
   "data-schema": "forms/jsd_14312/jsd-schema.json",
   "ui-form": "forms/jsd_14312/jsd-ui-form.json",
   "svg-background": "forms/jsd_14312/jsd_plain_curves.svg",
   "pdf-background": "forms/jsd_14312/jsd.pdf",
   "paper-schema": "forms/jsd_14312/jsd-paper-schema.json",
-  "keywords": ["JSD", "formulář", "celní prohlášení", "celní deklarace", "celní formulář", "vyplnění", "jednotný správní doklad", "dovoz", "zdarma", "dhl", "fedex", "clo", "zásilka"],
-  "description": "Aplikace na vyplňení a k tisku JSD formuláře (Jednotného správního dokladu) pro dovoz online a zdarma. Formulář slouží k proclení dovážených věcí a podává se na celním úřadě",
   "locale": "cs-CZ",
   "fonts": [
     {"name": "TeX Gyre Heros Cn", "style": "normal", "weight": "400", "url": "forms/jsd_14312/fonts/texgyreheroscn-regular.otf"},
@@ -25,7 +25,7 @@
     "downloadXML": "Exportujete do souboru XML - AIS - D_N_PODD - CZ415A. Validita tohoto souboru není zaručena a nemusí být přijata softwarem, který jej umí zpracovávat. Do souboru se neukládají všechna data z formuláře. Pokud chcete uložit data z formuláře na disk, využijte možnost stažení souboru JSON.",
     "uploadJSON": null,
     "uploadXML": "Import z XML(CZ415A) smaže aktuální data. Neobsahuje všechna potřebná data.",
-    "cleanForm": "Opravdu chcete smazat všechna data ve formulři?",
+    "cleanForm": "Opravdu chcete smazat všechna data ve formuláři?",
     "startWizard": "Průvodce vyplněním formuláře ještě není implementován! Sorry jako."
   }
 }

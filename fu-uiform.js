@@ -124,9 +124,9 @@ class FuUiform {
             let val = jsonDataObj.get(id);
 
             if ($el.attr('type') === 'date') {
-                val = val ? FuUiform._formatDate(val) : '';
+                val = val ? val.toString() : '';
             } else if ($el.attr('type') === 'datetime-local') {
-                val = val ? FuUiform._formatDateTime(val) : '';
+                val = val ? val.toString() : '';
             } else if (typeof val === 'boolean') {
                 val = val.toString();
             }
@@ -184,10 +184,10 @@ class FuUiform {
                     val = (val === '') ? '' : parseFloat(val);
                     break;
                 case 'date':
-                    val = (val === '') ? '' : new Date(val + 'T00:00');
+                    val = FDate.isParsable(val) ? FDate.parse(val) : '';
                     break;
                 case 'datetime':
-                    val = (val ==='') ? '' : new Date(val);
+                    val = FDateTime.isParsable(val) ? FDateTime.parse(val) : '';
                     break;
             }
 

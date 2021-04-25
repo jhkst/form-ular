@@ -32,14 +32,6 @@ class FuPdf {
         this.mmx = page.getWidth() / 210;
         this.mmy = page.getHeight() / 297;
 
-        // let fontSize = this.paperSchema.global["font-size"];
-        // let fontSizePt = FuPdf._mm2pt(fontSize);
-        // let lineHeightEm = parseInt(this.paperSchema.global["line-height"].replace(/em$/,''));
-
-        // page.setFontSize(fontSizePt);
-        // page.setFont(font);
-        // page.setLineHeight(font.heightAtSize(fontSize) * lineHeightEm);
-
         this._fillTexts(page, font, jsonDataObj);
 
         return await pdfDoc.save();
@@ -82,23 +74,6 @@ class FuPdf {
 
         })
     }
-
-    // _pos(page, x, y, font, fontSize, lineHeight, textAnchor, text) {
-    //     let textWidth = font.widthOfTextAtSize(text, fontSize);
-    //     let anchorShiftLeft = 0;
-    //     switch(textAnchor) {
-    //         case 'start': anchorShiftLeft = 0; break;
-    //         case 'middle': anchorShiftLeft = textWidth / 2; break;
-    //         case 'end': anchorShiftLeft = textWidth; break;
-    //     }
-    //
-    //     return {
-    //         x: x*this.mmx - anchorShiftLeft,
-    //         y: page.getHeight() - y*this.mmy,
-    //         size: fontSize,
-    //         lineHeight: lineHeight * font.heightAtSize(fontSize)
-    //     };
-    // }
 
     _pickAttr(item, name, defaultValue) {
         return [item[name], this.paperSchema.global[name], defaultValue].find(x => x);

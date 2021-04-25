@@ -1861,6 +1861,7 @@
               "type": "string",
               "$comment": "form:54",
               "description": "Uvede se datum a čas vyplnění prohlášení.\nPovinné pro všechny dovozní režimy.",
+              "hints": ["Pokud prohlížeč neotevře dialog na výběr data a času, vložte ve formátu 'yyyy-MM-dd HH:mm'"],
               "format": "date-time"
             }
           }

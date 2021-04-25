@@ -4,8 +4,6 @@
 
     <xsl:output method="text" encoding="UTF-8" media-type="application/json"/>
 
-    <xsl:param name="timezone"/>
-
     <xsl:strip-space elements="*"/>
 
     <xsl:template name="date">
@@ -14,7 +12,7 @@
         <xsl:variable name="MM" select="substring($value, 5, 2)"/>
         <xsl:variable name="dd" select="substring($value, 7, 2)"/>
 
-        <xsl:value-of select="concat($yyyy, '-', $MM, '-', $dd, 'T00:00:00', $timezone)"/>
+        <xsl:value-of select="concat($yyyy, '-', $MM, '-', $dd)"/>
 
     </xsl:template>
 
@@ -27,7 +25,7 @@
         <xsl:variable name="mm" select="substring($value, 12, 2)"/>
         <xsl:variable name="ss" select="substring($value, 14, 2)"/>
 
-        <xsl:value-of select="concat($yyyy, '-', $MM, '-', $dd, 'T', $HH, ':', $mm, ':', $ss, $timezone)"/>
+        <xsl:value-of select="concat($yyyy, '-', $MM, '-', $dd, 'T', $HH, ':', $mm, ':', $ss)"/>
     </xsl:template>
 
     <xsl:template match="/">
