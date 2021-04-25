@@ -56,23 +56,27 @@ class FuPdf {
 
             let fontSizePt = FuPdf._mm2pt(fontSize);
             let lineHeightEm = parseInt(lineHeight.replace(/em$/, ''));
+            let lineHeightPx = lineHeightEm * this.fonts[fontFace].heightAtSize(fontSize)
 
             let text = this.evaluator.templateValue(jsonDataObj.data(), value);
 
+            let textLines = text.split('\n');
 
-
-            let textWidth = this.fonts[fontFace].widthOfTextAtSize(text, fontSize);
-            let anchorShiftX = {'start': 0, 'middle': textWidth / 2, 'end': textWidth }[textAnchor] || 0;
-
-            page.drawText(text, {
-                x: x * this.mmx - anchorShiftX,
-                y: page.getHeight() - y * this.mmy,
-                size: fontSize,
-                lineHeight: lineHeightEm * this.fonts[fontFace].heightAtSize(fontSize),
-                font: this.fonts[fontFace]
-            });
+            textLines.forEach((line, idx) => this._drawLine(page, x, y, line, idx, lineHeightPx, fontFace, fontSize, textAnchor));
 
         })
+    }
+
+    _drawLine(page, x, y, text, lineIndex, lineHeight, fontFace, fontSize, textAnchor) {
+        let textWidth = this.fonts[fontFace].widthOfTextAtSize(text, fontSize);
+        let anchorShiftX = {'start': 0, 'middle': textWidth / 2, 'end': textWidth }[textAnchor] || 0;
+
+        page.drawText(text, {
+            x: x * this.mmx - anchorShiftX,
+            y: page.getHeight() - y * this.mmy - lineHeight * lineIndex,
+            size: fontSize,
+            font: this.fonts[fontFace]
+        });
     }
 
     _pickAttr(item, name, defaultValue) {

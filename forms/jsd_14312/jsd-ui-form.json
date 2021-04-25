@@ -118,7 +118,7 @@
     {
       "title": "Nákladové kusy a popis zboží, značky a čísla, číslo (čísla) kontejneru, počet a druh",
       "nav":  { "title": "31" },
-      "items": [{"id" : "CZ415A[G][0][G04]", "type": "textarea", "rows": 4}]
+      "items": [{"id" : "CZ415A[G][0][G04]", "type": "textarea", "rows": 4}, "CZ415A[G][0][GP][0][GP03]"]
     },
     {
       "title": "Pořadové číslo položky",
