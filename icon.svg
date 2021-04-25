@@ -37,40 +37,48 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:1.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect833"
+     width="24.636353"
+     height="36.157974"
+     x="0.87500042"
+     y="0.87500042"
+     ry="4.5053611" />
   <g
-     id="layer1"
-     transform="translate(-21.82476,-22.791019)">
-    <rect
-       style="fill:none;stroke:#000000;stroke-width:1.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect833"
-       width="24.636353"
-       height="36.157974"
-       x="22.69976"
-       y="23.666019"
-       ry="4.5053611" />
+     id="g935"
+     transform="translate(0,0.04763231)">
     <rect
        style="fill:none;stroke:#000000;stroke-width:1.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect837"
        width="16.740776"
        height="4.7374487"
-       x="26.540844"
-       y="28.59783"
+       x="4.8227887"
+       y="4.7661142"
        ry="2.3687243" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:1.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect837-3"
+       id="rect837-5"
        width="16.740776"
        height="4.7374487"
-       x="26.540842"
-       y="36.780342"
+       x="4.8227887"
+       y="12.613809"
+       ry="2.3687243" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1.74995;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect837-5-3"
+       width="7.4603858"
+       height="4.7374496"
+       x="4.8521066"
+       y="20.461477"
        ry="2.3687243" />
     <rect
        style="fill:none;stroke:#000000;stroke-width:1.75;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect868"
-       width="8.4714651"
-       height="4.6505289"
-       x="26.540842"
-       y="44.57423"
-       ry="2.2641559" />
+       id="rect837-5-3-5"
+       width="7.4377565"
+       height="4.7374496"
+       x="4.857667"
+       y="28.309147"
+       ry="2.3687243" />
   </g>
 </svg>
