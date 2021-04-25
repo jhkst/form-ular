@@ -30,7 +30,10 @@ class FuUiform {
                     btn.click((evt) => {
                         pageItem.items.forEach((itm, idx) => {
                             let id = itm['id'] ? itm['id'] : itm;
-                            $(document.getElementById(id)).val(item['fill'][idx]).change();
+                            let val = item['fill'][idx];
+                            if(val != null) {
+                                $(document.getElementById(id)).val(val).change();
+                            }
                         });
                     });
                 });

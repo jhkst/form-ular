@@ -81,6 +81,11 @@
       "items": ["CZ415A[DODP][DODP01]", "CZ415A[DODP][DODP02]", "CZ415A[DODP][DODP03]"]
     },
     {
+      "title": "Poznávací značka a státní příslušnost aktivního dopravního prostředku překračujícího hranici",
+      "nav": { "title": "21"},
+      "items": ["UCD[fm21][registration_mark]", "UCD[fm21][country]"]
+    },
+    {
       "title": "Měna a fakturovaná částka",
       "nav":  { "title": "22" },
       "items": ["CZ415A[TRAN][TRAN01]", "CZ415A[TRAN][TRAN02]"]
@@ -186,7 +191,8 @@
     {
       "title": "Zvláštní záznamy, předložené doklady, osvědčení a povolení",
       "nav":  { "title": "44" },
-      "items": ["CZ415A[GU][GU01]", {"id": "UCD[fm44][documents]", "type": "textarea", "rows": 4}],
+      "clickFill": [{ "title": "DPH-0", "fill": [null, null, "DPH-0"]}],
+      "items": ["CZ415A[GU][GU01]", {"id": "UCD[fm44][documents]", "type": "textarea", "rows": 4}, "UCD[fm44][vat]"],
       "$comment": "TODO: add to svg/pdf"
     },
     {
@@ -287,7 +293,6 @@
         "UCD[fm47][E00][base]", "UCD[fm47][E00][rate]", "UCD[fm47][E00][amount]", "UCD[fm47][E00][paymethod]"
       ]
     },
-
     {
       "title": "Místo a datum, podpis a jméno deklaranta nebo jeho zástupce",
       "nav": { "title": "54", "descritpion": "Místo a datum, podpis a jméno deklaranta nebo jeho zástupce"},

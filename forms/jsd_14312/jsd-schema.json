@@ -1954,6 +1954,7 @@
             },
             "vat": {
               "title": "DPH",
+              "description": "Od 1.7.2005 uvede deklarant nebo jeho zástupce nad tečkovaně vyznačené okénko v případě, že **není deklarant (zastoupená osoba) registrován k DPH v České republice**, kód „DPH“, pomlčku a částku vedlejších výdajů podle § 38 odst. 1 písm. b) zákona o DPH. Jsou jimi zejména pojistné, balné, provize a dopravné z hranic Společenství do místa určení ve Společenství (§ 36 odst. 4 zákona o DPH),\na) v případě prokázaných nulových vedlejších výdajů se do této kolonky uvede číslice 0,\nb) v případě, že deklarant prokáže, že dopravné z hranic Společenství do místa určení ve Společenství je již zahrnuto v celní hodnotě, do údaje v této kolonce se již nezapočítává.",
               "type": "string"
             }
           }
