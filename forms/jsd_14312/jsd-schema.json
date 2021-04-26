@@ -1393,7 +1393,8 @@
                             "GVMJD01": {
                               "title": "Měrná jednotka",
                               "type": "string",
-                              "$comment": "form:41"
+                              "$comment": "form:41",
+                              "$ref": "../../codebooks/units.json#/definitions/unit"
                             },
                             "GVMJD02": {
                               "title": "Množství zboží v měrné jednotce",
@@ -1424,7 +1425,8 @@
                         "GPAGMJ01": {
                           "type": "string",
                           "title": "Měrná jednotka",
-                          "$comment": "form:41"
+                          "$comment": "form:41",
+                          "$ref": "../../codebooks/units.json#/definitions/unit"
                         },
                         "GPAGMJ02": {
                           "type": "number",
@@ -1451,7 +1453,8 @@
                           "GPAGMJD01": {
                             "title": "Měrná jednotka",
                             "type": "string",
-                            "$comment": "form:31"
+                            "$comment": "form:31",
+                            "$ref": "../../codebooks/units.json#/definitions/unit"
                           },
                           "GPAGMJD02": {
                             "title": "Množství zboží v měrné jednotce",
@@ -1779,7 +1782,8 @@
                     "title": "Měrná jednotka",
                     "description": "Měrná jednotka",
                     "type": "string",
-                    "$comment": "form:41"
+                    "$comment": "form:41",
+                    "$ref": "../../codebooks/units.json#/definitions/unit"
                   },
                   "GMJ02": {
                     "title": "Množství zboží v měrné jednotce",

@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "definitions": {
+    "unit": {
+      "docHint": "enum",
+      "type": "string",
+      "anyOf": [
+        {"const": "CCT", "description": "nosná kapacita v tunách metrických"},
+        {"const": "CEN", "description": "100 kusů"},
+        {"const": "CTM", "description": "Počet karátů 1 metrický karát = 2 x 10$-$4 kg"},
+        {"const": "GFI", "description": "Gram štěpných izotopů"},
+        {"const": "GRM", "description": "Gram"},
+        {"const": "KGM", "description": "Kilogram"},
+        {"const": "KGM-E", "description": "Kilogram - Čistá suchá váha"},
+        {"const": "KMA", "description": "Kilogram methyaminů"},
+        {"const": "KNI", "description": "Kilogram dusíku"},
+        {"const": "KNS", "description": "Kilogram peroxidu vodíku"},
+        {"const": "KPH", "description": "Kilogram hydroxidu draselného  louh draselný"},
+        {"const": "KPO", "description": "Kilogram oxidu draselného"},
+        {"const": "KPP", "description": "Kilogram oxidu fosforečného"},
+        {"const": "KSD", "description": "Kilogram přepočtený na 90 % sušiny"},
+        {"const": "KSH", "description": "Kilogram hydroxidu sodného  louh sodný"},
+        {"const": "KUR", "description": "Kilogram uranu"},
+        {"const": "LPA", "description": "Litr čistého 100 % alkoholu"},
+        {"const": "LTR", "description": "Litr"},
+        {"const": "MIL", "description": "1000 kusů"},
+        {"const": "MTK", "description": "Metr čtvereční"},
+        {"const": "MTQ", "description": "Metr krychlový"},
+        {"const": "MTQ-C", "description": "Metr krychlový - 1 000"},
+        {"const": "MTR", "description": "Metr"},
+        {"const": "MWH", "description": "1000 kilowatthodin"},
+        {"const": "NAR", "description": "Počet kusů"},
+        {"const": "NCL", "description": "Počet článků"},
+        {"const": "NPR", "description": "Počet párů"},
+        {"const": "TJO", "description": "Terajoule  spalné teplo"}
+      ]
+    }
+  }
+}
