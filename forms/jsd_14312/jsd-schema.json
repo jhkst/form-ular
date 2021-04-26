@@ -72,7 +72,7 @@
               "type": "string",
               "$comment": "form:17a",
               "description": "Dvoumístný kód země dle Nařízení komise č. 1833/2006 (aktualizováno dle potřeby).\nČlenský stát (Společenství) určení zboží známý v okamžiku dovozu.\n\nPoslední známá země  určení ve společenství.\n\nNení-li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden pro všechny dovozní režimy.",
-              "$ref": "../../codebooks/country_codes_1833_2006.json#/definitions/country_code"
+              "$ref": "codebooks/country_codes_1833_2006.json#/definitions/country_code"
             },
             "H06": {
               "title": "Referenční číslo (UCR)",
@@ -86,7 +86,7 @@
               "type": "string",
               "$comment": "form:15a",
               "description": "Dvoumístný kód země dle Nařízení komise č. 1833/2006 (aktualizováno dle potřeby).\nPokud nedošlo při přepravě ze země odeslání do země určení ke zdržení z jiných důvodů než přepravních, uvede se v poli 15a příslušný kód Společenství z přílohy 38 pro zemi, ze které bylo zboží původně odesláno do členského státu dovozu. Pokud k takovému zadržení nebo zásahu došlo, považuje se za zemi odeslání nebo vývozu  ta země, ve které došlo ke zdržení z jiných důvodů než přepravních. V praxi se však toto zdržení, a tudíž i země, těžko zjišťuje i prokazuje.\n\n\nZemě kde byla zahájena přeprava zboží - vhodné pro statistiky, ale nemusí být pravdivý.\n\nPovinné pro všechny dovozní režimy.\n\nNení-li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden.\n",
-              "$ref": "../../codebooks/country_codes_1833_2006.json#/definitions/country_code"
+              "$ref": "codebooks/country_codes_1833_2006.json#/definitions/country_code"
             },
             "H16N": {
               "title": "Kód zastupování",
@@ -107,7 +107,7 @@
               "description": "Pomocí odpovídajícího kódu Společenství z přílohy 38 se uvede druh dopravy při příjezdu.\n1 námořní doprava\n2 železniční doprava \n3 silniční doprava \n4 letecká doprava \n5 poštovní doprava \n7 doprava potrubím a vedením \n8 říční doprava \n9 vlastní pohon",
               "minimum": 1,
               "maximum": 9,
-              "$ref": "../../codebooks/transport_types.json#/definitions/transport_type"
+              "$ref": "codebooks/transport_types.json#/definitions/transport_type"
             },
             "H17H": {
               "title": "Druh dopravy na hranici",
@@ -116,7 +116,7 @@
               "description": "Pomocí odpovídajícího kódu Společenství z přílohy 38 se uvede druh dopravy odpovídající aktivním dopravním prostředkům, na kterých zboží vstoupilo na celní území Společenství\n1 námořní doprava\n2 železniční doprava \n3 silniční doprava \n4 letecká doprava \n5 poštovní doprava \n7 doprava potrubím a vedením \n8 říční doprava \n9 vlastní pohon",
               "minimum": 1,
               "maximum": 9,
-              "$ref": "../../codebooks/transport_types.json#/definitions/transport_type"
+              "$ref": "codebooks/transport_types.json#/definitions/transport_type"
             },
             "H25": {
               "title": "Kontejner",
@@ -209,7 +209,7 @@
                 "type": "string",
                 "$comment": "form:18",
                 "description": "Dvoumístný kód země dle Nařízení komise č. 1833/2006 (aktualizováno dle potřeby).",
-                "$ref": "../../codebooks/country_codes_1833_2006.json#/definitions/country_code"
+                "$ref": "codebooks/country_codes_1833_2006.json#/definitions/country_code"
               }
             }
           }
@@ -250,7 +250,7 @@
               "type": "string",
               "$comment": "form:14",
               "description": "Země deklaranta. Dvoumístný kód země dle Nařízení komise č. 1833/2006 (aktualizováno dle potřeby).",
-              "$ref": "../../codebooks/country_codes_1833_2006.json#/definitions/country_code"
+              "$ref": "codebooks/country_codes_1833_2006.json#/definitions/country_code"
             },
             "TDKL07": {
               "title": "EORI",
@@ -315,7 +315,7 @@
               "type": "string",
               "$comment": "form:14",
               "description": "Země zástupce. Dvoumístný kód země dle Nařízení komise č. 1833/2006 (aktualizováno dle potřeby).",
-              "$ref": "../../codebooks/country_codes_1833_2006.json#/definitions/country_code"
+              "$ref": "codebooks/country_codes_1833_2006.json#/definitions/country_code"
             },
             "REP07N": {
               "title": "EORI",
@@ -344,7 +344,7 @@
             "CCR01": {
               "title": "Země vydání",
               "type": "string",
-              "$ref": "../../codebooks/country_codes_1833_2006.json#/definitions/country_code"
+              "$ref": "codebooks/country_codes_1833_2006.json#/definitions/country_code"
             },
             "CCR02": {
               "title": "Číslo povolení",
@@ -400,7 +400,7 @@
               "type": "string",
               "$comment": "form:2",
               "description": "Země odesílatele. Dvoumístný kód země dle Nařízení komise č. 1833/2006 (ročně aktualizováno).",
-              "$ref": "../../codebooks/country_codes_1833_2006.json#/definitions/country_code"
+              "$ref": "codebooks/country_codes_1833_2006.json#/definitions/country_code"
             },
             "TCR07": {
               "title": "EORI",
@@ -447,7 +447,7 @@
               "type": "string",
               "$comment": "form:8",
               "description": "Země příjemce. Dvoumístný kód země dle Nařízení komise č. 1833/2006 (aktualizováno dle potřeby).",
-              "$ref": "../../codebooks/country_codes_1833_2006.json#/definitions/country_code"
+              "$ref": "codebooks/country_codes_1833_2006.json#/definitions/country_code"
             },
             "TCE07": {
               "title": "EORI",
@@ -526,7 +526,7 @@
               "type": "string",
               "$comment": "form:22.1",
               "description": "Pomocí odpovídajícího kódu z přílohy 38 se v prvním pododdílu uvede měna, ve které byla vystavena obchodní faktura.\nMěna faktury se označuje pomocí měnového kódu ISO alfa-3 (ISO 4217 pro měny a peněžní prostředky).\n\nPovinné pro režimy H ( propuštění do volného oběhu) a  I ( umístění do celního režimu s ekonomickým účinkem jiným než režim uskladňování v celním skladu (aktivní zušlechťovací styk v podmíněném systému, dočasné použití, přepracování pod celním dohledem)), a K - pro propuštění do celního skladu typu D.\nNepoužije se u J režimů  71XY, 78XY (s výjimkou skladu typu D).",
-              "$ref": "../../codebooks/currency_codes.json#/definitions/currency_code"
+              "$ref": "codebooks/currency_codes.json#/definitions/currency_code"
             },
             "TRAN02": {
               "title": "Fakturovaná částka",
@@ -570,7 +570,7 @@
               "title": "Země vydání povolení",
               "type": "string",
               "description": "Dvoumístný kód země dle Nařízení komise č. 1833/2006 (aktualizováno dle potřeby).\nOd roku 2012 bude tento datový prvek sloužit ke směrování kontroly ZJP do příslušné země vydání povolení.",
-              "$ref": "../../codebooks/country_codes_1833_2006.json#/definitions/country_code"
+              "$ref": "codebooks/country_codes_1833_2006.json#/definitions/country_code"
             },
             "RHU02": {
               "title": "Číslo povolení",
@@ -593,7 +593,7 @@
               "title": "Země vydání druhého povolení",
               "type": "string",
               "description": "Dvoumístný kód země dle Nařízení komise č. 1833/2006 (aktualizováno dle potřeby).\nOd roku 2012 bude tento datový prvek sloužit ke směrování kontroly ZJP do příslušné země vydání povolení.",
-              "$ref": "../../codebooks/country_codes_1833_2006.json#/definitions/country_code"
+              "$ref": "codebooks/country_codes_1833_2006.json#/definitions/country_code"
             },
             "RHU08": {
               "title": "Číslo druhého povolení",
@@ -675,7 +675,7 @@
                       "type": "string",
                       "title": "Země",
                       "description": "Země žadatele. Dvoumístný kód země dle Nařízení komise č. 1833/2006 (aktualizováno dle potřeby).",
-                      "$ref": "../../codebooks/country_codes_1833_2006.json#/definitions/country_code"
+                      "$ref": "codebooks/country_codes_1833_2006.json#/definitions/country_code"
                     },
                     "TOP07": {
                       "title": "EORI",
@@ -714,7 +714,7 @@
                       "type": "string",
                       "title": "Země",
                       "description": "Země zpracovatele. Dvoumístný kód země dle Nařízení komise č. 1833/2006 (aktualizováno dle potřeby).",
-                      "$ref": "../../codebooks/country_codes_1833_2006.json#/definitions/country_code"
+                      "$ref": "codebooks/country_codes_1833_2006.json#/definitions/country_code"
                     },
                     "TMAN07": {
                       "title": "EORI",
@@ -750,7 +750,7 @@
             "ZJP01": {
               "title": "Země vydání",
               "type": "string",
-              "$ref": "../../codebooks/country_codes_1833_2006.json#/definitions/country_code"
+              "$ref": "codebooks/country_codes_1833_2006.json#/definitions/country_code"
             },
             "ZJP02": {
               "title": "Číslo povolení",
@@ -769,7 +769,7 @@
               "title": "Druh zajištění",
               "type": "string",
               "description": "Seznam kódů dle vyhlášky 171/2011 Sb.\n9110 Souborná jistota povolená v České republice\n9120 Souborná jistota povolená v jiném členském státě Evropské unie\n92ZL Jednotlivá jistota s použitím záruční listiny\n93CJ Celní jistota složením hotovosti na účet celního orgánu\n9ZD1 Jednotlivá jistota s použitím záručního dokladu povolená v České republice\n9ZD2 Jednotlivá jistota s použitím záručního dokladu povolená v jiném členském státě Evropské unie\n95ZP Poskytnutí jistoty zřízením zástavního práva podle daňového řádu\n9N01 Nepožadování jistoty podle čl. 51 nebo 88 celního kodexu\n9NCK Nepožadování jistoty podle čl. 189 celního kodexu\n9NPH Nepožadování jistoty při placení v hotovosti\n9NPV Nezajišťování celního dluhu při jeho vyměřování formou výměru\n9NPP Nepožadování jistoty při jeho úhradě před propuštění zboží\n9NJZ Nepožadování jistoty z jiného důvodu",
-              "$ref": "../../codebooks/protection_type_codes.json#/definitions/protection_type"
+              "$ref": "codebooks/protection_type_codes.json#/definitions/protection_type"
             },
             "GUF": {
               "title": "OZNAČENÍ ZAJIŠTĚNÍ",
@@ -958,7 +958,7 @@
                 "type": "string",
                 "$comment": "form:34a",
                 "description": "Dvoumístný kód země dle Nařízení komise č. 1833/2006 (aktualizováno dle potřeby).\nV poli 34a se uvede odpovídající kód pro zemi země původu podle definice v hlavě II kodexu.\n\nPovinné pro všechny dovozní režimy.\n\nNení-li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden.",
-                "$ref": "../../codebooks/country_codes_1833_2006.json#/definitions/country_code"
+                "$ref": "codebooks/country_codes_1833_2006.json#/definitions/country_code"
               },
               "G23": {
                 "title": "Režim",
@@ -1000,7 +1000,7 @@
                 "title": "Kód země první zušlechťující operace",
                 "type": "string",
                 "description": "Kód země, ve které byla nebo měla být provedena první zušlechťovatelská operace.\nPoužije se pro režimy XX51 a XX53.",
-                "$ref": "../../codebooks/country_codes_1833_2006.json#/definitions/country_code"
+                "$ref": "codebooks/country_codes_1833_2006.json#/definitions/country_code"
               },
               "G38": {
                 "title": "Základ pro vyměření poplatku(celní hodnota)",
@@ -1248,7 +1248,7 @@
                       "type": "string",
                       "$comment": "form:49",
                       "description": "Dvoumístný kód země dle Nařízení komise č. 1833/2006 (aktualizováno dle potřeby).\nOd roku 2012 bude tento datový prvek sloužit ke směrování kontroly ZJP do příslušné země vydání povolení.",
-                      "$ref": "../../codebooks/country_codes_1833_2006.json#/definitions/country_code"
+                      "$ref": "codebooks/country_codes_1833_2006.json#/definitions/country_code"
                     },
                     "QGPA15": {
                       "title": "Celní hodnota odepisovaného množství v MJ",
@@ -1320,7 +1320,7 @@
                           "type": "string",
                           "$comment": "form:34a",
                           "description": "Dvoumístný kód země dle Nařízení komise č. 1833/2006 (aktualizováno dle potřeby).\nV poli 34a se uvede odpovídající kód pro zemi země původu podle definice v hlavě II kodexu.\n\nPovinné pro všechny dovozní režimy.\n\nNení-li použit ZJP NCP a vyžadují-li podmínky daného režimu použití tohoto údaje, musí být tento údaj povinně uveden.",
-                          "$ref": "../../codebooks/country_codes_1833_2006.json#/definitions/country_code"
+                          "$ref": "codebooks/country_codes_1833_2006.json#/definitions/country_code"
                         },
                         "GV38": {
                           "title": "Základ pro vyměření poplatku(celní hodnota)",
@@ -1394,7 +1394,7 @@
                               "title": "Měrná jednotka",
                               "type": "string",
                               "$comment": "form:41",
-                              "$ref": "../../codebooks/units.json#/definitions/unit"
+                              "$ref": "codebooks/units.json#/definitions/unit"
                             },
                             "GVMJD02": {
                               "title": "Množství zboží v měrné jednotce",
@@ -1426,7 +1426,7 @@
                           "type": "string",
                           "title": "Měrná jednotka",
                           "$comment": "form:41",
-                          "$ref": "../../codebooks/units.json#/definitions/unit"
+                          "$ref": "codebooks/units.json#/definitions/unit"
                         },
                         "GPAGMJ02": {
                           "type": "number",
@@ -1454,7 +1454,7 @@
                             "title": "Měrná jednotka",
                             "type": "string",
                             "$comment": "form:31",
-                            "$ref": "../../codebooks/units.json#/definitions/unit"
+                            "$ref": "codebooks/units.json#/definitions/unit"
                           },
                           "GPAGMJD02": {
                             "title": "Množství zboží v měrné jednotce",
@@ -1506,7 +1506,7 @@
                       "type": "string",
                       "$comment": "form:44",
                       "description": "Dvoumístný kód země dle Nařízení komise č. 1833/2006 (aktualizováno dle potřeby).",
-                      "$ref": "../../codebooks/country_codes_1833_2006.json#/definitions/country_code"
+                      "$ref": "codebooks/country_codes_1833_2006.json#/definitions/country_code"
                     },
                     "GPD04": {
                       "title": "Doplňující záznamy k dokladu",
@@ -1601,7 +1601,7 @@
                     "type": "string",
                     "$comment": "form:ex02",
                     "description": "Země odesílatele. Dvoumístný kód země dle Nařízení komise č. 1833/2006 (aktualizováno dle potřeby).",
-                    "$ref": "../../codebooks/country_codes_1833_2006.json#/definitions/country_code"
+                    "$ref": "codebooks/country_codes_1833_2006.json#/definitions/country_code"
                   },
                   "GTCR07": {
                     "title": "EORI",
@@ -1646,7 +1646,7 @@
                     "type": "string",
                     "$comment": "form:ex08",
                     "description": "Země příjemce. Dvoumístný kód země dle Nařízení komise č. 1833/2006 (aktualizováno dle potřeby).",
-                    "$ref": "../../codebooks/country_codes_1833_2006.json#/definitions/country_code"
+                    "$ref": "codebooks/country_codes_1833_2006.json#/definitions/country_code"
                   },
                   "GTCE07": {
                     "title": "EORI",
@@ -1783,7 +1783,7 @@
                     "description": "Měrná jednotka",
                     "type": "string",
                     "$comment": "form:41",
-                    "$ref": "../../codebooks/units.json#/definitions/unit"
+                    "$ref": "codebooks/units.json#/definitions/unit"
                   },
                   "GMJ02": {
                     "title": "Množství zboží v měrné jednotce",
@@ -1944,7 +1944,7 @@
             "country": {
               "title": "Státní příslušnost aktivního dopravního prostředku překračujícího hranice",
               "type": "string",
-              "$ref": "../../codebooks/country_codes_1833_2006.json#/definitions/country_code"
+              "$ref": "codebooks/country_codes_1833_2006.json#/definitions/country_code"
             }
           }
         },
