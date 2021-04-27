@@ -80,7 +80,7 @@ $(document).ready(async function() {
     }
 
     let localStoreKey = formSpec["id"];
-    let jsonSchemaObj = await new JsonSchema().loadFile(formSpec["data-schema"]);
+    let jsonSchemaObj = await new JsonSchema().loadFile(uc(formSpec["data-schema"]));
     let jsonDataObj = new JsonData({}, jsonSchemaObj); // place where data are stored
     let paperSchemaJson = await fetch(uc(formSpec["paper-schema"])).then(res => res.json());
 

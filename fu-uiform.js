@@ -19,7 +19,12 @@ class FuUiform {
 
         for (let pageItem of this.uiForm['pages']) {
             let card = $('<div>', {'class': 'form-card anchor-point', 'id': FuUiform._navAnchor(pageItem)});
-            let title = $('<legend>', {'class': 'fs-title'}).text(`${pageItem.nav.title}. ${pageItem.title}`);
+            let title = $('<legend>', {'class': 'fs-title'});
+            if(pageItem['schema-description']) {
+                let helpIcon = FuUiform._createHelpIconWithModal(pageItem['schema-description'], pageItem.title, [this.getSchemaItem(pageItem['schema-description'])['description']]);
+                title.append(helpIcon);
+            }
+            title.append(document.createTextNode(` ${pageItem.nav.title}. ${pageItem.title}`));
             card.append(title);
 
             if(pageItem['clickFill']) {
@@ -46,31 +51,23 @@ class FuUiform {
                 let schemaItem = this.getSchemaItem(formItem.id);
 
                 let type = schemaItem['type'];
-                let helpId = `help-modal-${formItem.id}`;
-                let helpIcon = $('<i>', {'class': 'button-icon icon-help', 'role': 'button', 'data-toggle': 'modal', 'data-target': `#${helpId}`});
-                helpIcon.click((evt) => {
-                    $(document.getElementById(helpId)).modal({
-                        show: true,
-                        closeOnEscape: true
-                    });
-                });
-
                 let label = $('<label>', {'for': formItem.id});
                 let labelSpan = $('<span>', {'class': 'form-label-text'}).text(schemaItem['title']);
-                label.append(helpIcon);
-                label.append(labelSpan)
-                let formInput = this._createFormInputForSchema(schemaItem, formItem);
 
                 let descriptions = [];
                 let hints = schemaItem['hints'];
                 if(schemaItem['description']) { descriptions.push(schemaItem['description'])}
                 if(Array.isArray(hints)) { descriptions = [...descriptions, ...hints]}
+                if(descriptions.length > 0) {
+                    let helpIcon = FuUiform._createHelpIconWithModal(formItem.id, schemaItem['title'], descriptions);
+                    label.append(helpIcon);
+                }
 
-                let documentation = FuUiform._createHelpModal(helpId, schemaItem['title'], descriptions);
+                label.append(labelSpan)
+                let formInput = this._createFormInputForSchema(schemaItem, formItem);
 
                 group.append(label);
                 group.append(formInput);
-                $('body').append(documentation); //putting modal in the root
 
                 card.append(group);
 
@@ -95,6 +92,22 @@ class FuUiform {
 
             // console.log(text(), $('.anchor-point').position().top);
         return form;
+    }
+
+    static _createHelpIconWithModal(id, title, descriptions) {
+        let helpId = `help-modal-${id}`;
+        let helpIcon = $('<i>', {'class': 'button-icon icon-help', 'role': 'button', 'data-toggle': 'modal', 'data-target': `#${helpId}`});
+        helpIcon.click((evt) => {
+            $(document.getElementById(helpId)).modal({
+                show: true,
+                closeOnEscape: true
+            });
+        });
+
+        let documentation = FuUiform._createHelpModal(helpId, title, descriptions);
+        $('body').append(documentation); //putting modal in the root
+
+        return helpIcon;
     }
 
     static _createHelpModal(helpId, title, textsArr) {
@@ -196,31 +209,6 @@ class FuUiform {
 
             callback($(this).attr('id'), val, origVal);
         });
-    }
-
-    static _formatDate(date) {
-        if(!FuUiform._dateValid(date)) {
-            return '';
-        }
-        return `${date.getFullYear()}-${this._pad0(date.getMonth() + 1)}-${date.getDate()}`;
-    }
-
-    static _formatDateTime(dt) {
-        if(!FuUiform._dateValid(dt)) {
-            return '';
-        }
-        return `${dt.getFullYear()}-${this._pad0(dt.getMonth() + 1)}-${this._pad0(dt.getDate())}T${this._pad0(dt.getHours())}:${this._pad0(dt.getMinutes())}:${this._pad0(dt.getSeconds())}.${this._pad0(dt.getMilliseconds(), 3)}`;
-    }
-
-    static _dateValid(date) {
-        // If the date object is invalid it
-        // will return 'NaN' on getTime()
-        // and NaN is never equal to itself.
-        return date != null && date.getTime() === date.getTime();
-    }
-
-    static _pad0(num, digits = 2) {
-        return num.toString().padStart(digits, '0');
     }
 
     _createNav(scrollableEl) {

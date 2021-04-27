@@ -7,6 +7,7 @@
     },
     {
       "title": "Odesílatel nebo vývozce",
+      "schema-description": "CZ415A[TCR]",
       "nav":  { "title": "2" },
       "items": [
         { "id": "CZ415A[TCR][TCR01]", "type": "textarea" },
@@ -16,6 +17,7 @@
     },
     {
       "title": "Tiskopisy",
+      "schema-description": "UCD[fm3]",
       "nav":  { "title": "3" },
       "items": ["UCD[fm3][count]", "UCD[fm3][total]"]
     },
@@ -36,6 +38,7 @@
     },
     {
       "title": "Příjemce",
+      "schema-description": "CZ415A[TCE]",
       "nav":  { "title": "8" },
       "clickFill": [{ "title": "Různí", "fill": ["různí 00200", "", "", "", "", null, null]}],
       "items": [
