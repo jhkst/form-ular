@@ -49,10 +49,10 @@ class FuPdf {
             let x = item.pos.x;
             let y = item.pos.y;
             let value = item.value;
-            let fontFace = this._pickAttr(item, 'font-face', 'Liberation Sans')
-            let fontSize = this._pickAttr(item, 'font-size', 10);
-            let lineHeight = this._pickAttr(item, 'line-height', '1em');
-            let textAnchor = this._pickAttr(item, 'text-anchor', 'start');
+            let fontFace = this._pickAttr(item, 'font-face', this.paperSchema.global['font-family'])
+            let fontSize = this._pickAttr(item, 'font-size', this.paperSchema.global['font-size']);
+            let lineHeight = this._pickAttr(item, 'line-height', this.paperSchema.global['line-height']);
+            let textAnchor = this._pickAttr(item, 'text-anchor', this.paperSchema.global['text-anchor']);
 
             let fontSizePt = FuPdf._mm2pt(fontSize);
             let lineHeightEm = parseInt(lineHeight.replace(/em$/, ''));

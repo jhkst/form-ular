@@ -1,7 +1,7 @@
 {
   "global": {
-    "font-family": "Liberation Sans",
-    "font-size": 10,
+    "font-family": "TeX Gyre Heros Bold",
+    "font-size": 11 ,
     "units": "",
     "line-height": "1em",
     "text-anchor": "start"
@@ -193,7 +193,7 @@
       "type": "text",
       "$comment": "form:31.1",
       "pos": {"x": 26, "y": 118},
-      "font-size": 8,
+      "font-size": 10,
       "value": "{{CZ415A.G[0].G04}}"
     },
     {
@@ -211,13 +211,15 @@
     },{
       "type": "text",
       "$comment": "form:33.1",
-      "pos": {"x": 139, "y": 117.5},
+      "text-anchor": "middle",
+      "pos": {"x": 146.5, "y": 117.5},
       "value": "{{CZ415A.G[0].GZB.GZB01}}"
     },
     {
       "type": "text",
       "$comment": "form:33.2",
-      "pos": {"x": 159, "y": 117.5},
+      "text-anchor": "middle",
+      "pos": {"x": 162, "y": 117.5},
       "value": "{{CZ415A.G[0].GZB.GZB02}}"
     },
     {
@@ -262,21 +264,7 @@
       "$comment": "form:40",
       "font-size": 8,
       "pos": {"x": 139, "y": 143},
-      "value": "{{CZ415A.G[0].GPA[0].GPA03}}-{{CZ415A.G[0].GPA[0].GPA01}}-{{CZ415A.G[0].GPA[0].GPA02}}"
-    },
-    {
-      "type": "text",
-      "$comment": "form:40",
-      "font-size": 8,
-      "pos": {"x": 183, "y": 143},
-      "value": "{{CZ415A.G[0].GPA[0].QGPA02.asDate()}}"
-    },
-    {
-      "type": "text",
-      "$comment": "form:40",
-      "font-size": 8,
-      "pos": {"x": 200, "y": 143},
-      "value": "{{CZ415A.G[0].GPA[0].QGPA04}}"
+      "value": "{{CZ415A.G[0].GPA[0].GPA03}}-{{CZ415A.G[0].GPA[0].GPA01}}-{{CZ415A.G[0].GPA[0].GPA02}}-{{CZ415A.G[0].GPA[0].QGPA02.formatDate('yyyymmdd')}}-{{CZ415A.G[0].GPA[0].QGPA04}}"
     },
     {
       "type": "text",
@@ -286,16 +274,16 @@
     },
     {
       "type": "text",
+      "$comment": "form:42",
+      "pos": {"x": 170, "y": 151},
+      "value": "{{CZ415A.G[0].G13}}"
+    },
+    {
+      "type": "text",
       "$comment": "form:43",
       "pos": {"x": 197, "y": 151},
       "text-anchor": "middle",
       "value": "{{CZ415A.G[0].G14}}"
-    },
-    {
-      "type": "text",
-      "$comment": "form:42",
-      "pos": {"x": 170, "y": 151},
-      "value": "{{CZ415A.G[0].G13}}"
     },
     {
       "type": "text",
@@ -431,6 +419,13 @@
         "UCD[fm47][A00][amount]", "UCD[fm47][A10][amount]", "UCD[fm47][A20][amount]", "UCD[fm47][A30][amount]", "UCD[fm47][A35][amount]", "UCD[fm47][A40][amount]", "UCD[fm47][A45][amount]", "UCD[fm47][B00][amount]", "UCD[fm47][B10][amount]", "UCD[fm47][B20][amount]", "UCD[fm47][D00][amount]", "UCD[fm47][D10][amount]", "UCD[fm47][E00][amount]",
         "UCD[fm47][A00][paymethod]", "UCD[fm47][A10][paymethod]", "UCD[fm47][A20][paymethod]", "UCD[fm47][A30][paymethod]", "UCD[fm47][A35][paymethod]", "UCD[fm47][A40][paymethod]", "UCD[fm47][A45][paymethod]", "UCD[fm47][B00][paymethod]", "UCD[fm47][B10][paymethod]", "UCD[fm47][B20][paymethod]", "UCD[fm47][D00][paymethod]", "UCD[fm47][D10][paymethod]", "UCD[fm47][E00][paymethod]"
       ]
+    },
+    {
+      "type": "text",
+      "$comment": "form:47.6",
+      "text-anchor": "end",
+      "pos": {"x": 105, "y": 210.8},
+      "value": "{{UCD[fm47][total].toFixed(2)}}"
     }
   ]
 }

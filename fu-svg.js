@@ -61,7 +61,9 @@ class FuSvg {
                         tspan.setAttributeNS(null, "x", x);
                         tspan.setAttributeNS(null, "dy", lineHeight);
                     }
-                    tspan.textContent = line === '' ? '\u00A0' : line; // SVG ignores empty lines
+                    line = line.replace(/ /g, '\u00A0'); // SVG shrinks multiple spaces, this is workaround
+                    tspan.textContent = line === '' ? '\u00A0' : line; // SVG ignores empty lines; added hadr space for such lines
+
                     el.appendChild(tspan);
                 });
         })

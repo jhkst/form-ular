@@ -2015,8 +2015,11 @@
             "E00": {
               "title": "Cla vybíraná jménem jiných zemí",
               "$ref": "#/$defs/$fees"
+            },
+            "total": {
+              "title": "Celkem",
+              "type": "number"
             }
-
           }
         }
 

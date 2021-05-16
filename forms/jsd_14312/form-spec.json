@@ -15,7 +15,8 @@
     {"name": "TeX Gyre Heros Cn Bold", "style": "normal", "weight": "700", "url": "forms/jsd_14312/fonts/texgyreheroscn-bold.otf"},
     {"name": "TeX Gyre Heros", "style": "normal", "weight": "400", "url": "forms/jsd_14312/fonts/texgyreheros-regular.otf"},
     {"name": "TeX Gyre Heros Bold", "style": "normal", "weight": "700", "url": "forms/jsd_14312/fonts/texgyreheros-bold.otf"},
-    {"name": "Liberation Sans", "style": "normal", "weight": "400", "url": "forms/jsd_14312/fonts/LiberationSans-Regular.ttf"}
+    {"name": "Liberation Sans", "style": "normal", "weight": "400", "url": "forms/jsd_14312/fonts/LiberationSans-Regular.ttf"},
+    {"name": "Liberation Sans Bold", "style": "normal", "weight": "400", "url": "forms/jsd_14312/fonts/LiberationSans-Bold.ttf"}
   ],
   "warnings": {
     "disclaimer": "Tato aplikace slouží primárně ke studijním účelům. Za jakékoli její použití, zejména k tisku formulářů, autor nenese žádnou zodpovědnost a to při jakékoli újmě – ať psychické, finanční či jiné. Autor aktivně nezjišťuje jakým způsobem, v jaké formě a jak správně vyplňěný příjmá celní úřad tento dokument a toto je ponecháno na uživateli, pokud se k vyplnění rozhodne. Aplikace neukládá žádná data na server (GitHub toto ani neumožňuje) včetně cookies a veškerá data jsou přítomna pouze ve Vašem prohlížeči či v souboru po uložení. Pokud nesouhlasíte, aplikaci nedůvěřujete, nebo nechcete nést zodpovědnost, opusťte stránku a aplikaci nepoužívejte.",
