@@ -16,6 +16,11 @@
       ]
     },
     {
+      "title": "Ložné listy",
+      "nav": { "title": "4"},
+      "items": ["UCD[fm4]"]
+    },
+    {
       "title": "Tiskopisy",
       "schema-description": "UCD[fm3]",
       "nav":  { "title": "3" },
@@ -55,6 +60,7 @@
     {
       "title": "Deklarant / zástupce",
       "nav":  { "title": "14" },
+      "schema-description": "CZ415A[TDKL]",
       "clickFill": [{ "title": "Příjemce", "fill": [null, "PŘÍJEMCE 00500", "", "", "", "", null, ""]}],
       "items": ["CZ415A[H][H16N]", "CZ415A[TDKL][TDKL01]", "CZ415A[TDKL][TDKL02]", "CZ415A[TDKL][TDKL03]", "CZ415A[TDKL][TDKL04]", "CZ415A[TDKL][TDKL05]", "CZ415A[TDKL][TDKL07]", "CZ415A[TDKL][TDKL09]"]
     },
@@ -71,6 +77,7 @@
     {
       "title": "Poznávací značka a státní příslušnost dopravního prostředku při příjezdu",
       "nav":  { "title": "18" },
+      "schema-description": "CZ415A[DOPRPR]",
       "items": ["CZ415A[DOPRPR][0][DOPRPR01]", "CZ415A[DOPRPR][0][DOPRPR02]"]
     },
     {
@@ -81,16 +88,19 @@
     {
       "title": "Dodací podmínky",
       "nav":  { "title": "20" },
+      "schema-description": "CZ415A[DODP]",
       "items": ["CZ415A[DODP][DODP01]", "CZ415A[DODP][DODP02]", "CZ415A[DODP][DODP03]"]
     },
     {
       "title": "Poznávací značka a státní příslušnost aktivního dopravního prostředku překračujícího hranici",
       "nav": { "title": "21"},
+      "schema-description": "UCD[fm21]",
       "items": ["UCD[fm21][registration_mark]", "UCD[fm21][country]"]
     },
     {
       "title": "Měna a fakturovaná částka",
       "nav":  { "title": "22" },
+      "schema-description": "CZ415A[TRAN]",
       "items": ["CZ415A[TRAN][TRAN01]", "CZ415A[TRAN][TRAN02]"]
     },
     {
@@ -121,6 +131,7 @@
     {
       "title": "Nákladové kusy a popis zboží, značky a čísla, číslo (čísla) kontejneru, počet a druh",
       "nav":  { "title": "31" },
+      "schema-description": "UCD[fm31]",
       "items": [{"id" : "CZ415A[G][0][G04]", "type": "textarea", "rows": 4}, "CZ415A[G][0][GP][0][GP03]"]
     },
     {
@@ -177,6 +188,7 @@
     },
     {
       "title": "Doplňkové měrné jednotky",
+      "schema-description": "CZ415A[G][0][GMJ]",
       "nav":  { "title": "41" },
       "items": ["CZ415A[G][0][GMJ][GMJ02]", "CZ415A[G][0][GMJ][GMJ01]", "CZ415A[G][0][GMJ][GMJ03]"],
       "$comment": "fold CZ415A[G][0][GMJ][GMJ01] CZ415A[G][0][GMJ][GMJ03]"
@@ -194,6 +206,7 @@
     {
       "title": "Zvláštní záznamy, předložené doklady, osvědčení a povolení",
       "nav":  { "title": "44" },
+      "schema-description": "UCD[fm44][description]",
       "clickFill": [{ "title": "DPH-0", "fill": [null, null, "DPH-0"]}],
       "items": ["CZ415A[GU][GU01]", {"id": "UCD[fm44][documents]", "type": "textarea", "rows": 4}, "UCD[fm44][vat]"],
       "$comment": "TODO: add to svg/pdf"
@@ -295,13 +308,14 @@
       ]
     },
     {
-      "title": "Výpočet poplatknů - Celkem",
+      "title": "Výpočet poplatků - Celkem",
       "nav": { "title": "47" },
       "items": ["UCD[fm47][total]"]
     },
     {
       "title": "Místo a datum, podpis a jméno deklaranta nebo jeho zástupce",
-      "nav": { "title": "54", "descritpion": "Místo a datum, podpis a jméno deklaranta nebo jeho zástupce"},
+      "schema-description": "UCD[fm54]",
+      "nav": { "title": "54" },
       "items": ["CZ415A[H][H48]", "CZ415A[REP][REP01]", "CZ415A[REP][REP02]", "CZ415A[QPOD][QPOD01]"],
       "$comment": "fold: CZ415[REP][REP02]"
     }
