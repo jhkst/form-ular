@@ -3,7 +3,7 @@
   "name": "Jednotný správní doklad (dovoz)",
   "name-abbrev": "JSD 14312",
   "description": "Chcete si zdarma vyplnit JSD formulář (Jednotný správní doklad) k proclení dováženého balíku? Tato aplikace vám to umožní!",
-  "keywords": ["JSD", "formulář", "dokument", "celní prohlášení", "celní deklarace", "celní formulář", "vyplnění", "jednotný správní doklad", "dovoz", "zdarma", "dhl", "fedex", "clo", "proclení", "zásilka"],
+  "keywords": ["JSD", "formulář", "dokument", "celní prohlášení", "celní deklarace", "celní formulář", "vyplnění", "jednotný správní doklad", "dovoz", "zdarma", "dhl", "fedex", "clo", "proclení", "zásilka", "online", "vzor", "tisk", "pdf", "jak vyplnit"],
   "data-schema": "forms/jsd_14312/jsd-schema.json",
   "ui-form": "forms/jsd_14312/jsd-ui-form.json",
   "svg-background": "forms/jsd_14312/jsd_plain_curves.svg",
