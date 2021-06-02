@@ -58,7 +58,7 @@ function onLoadModal(text, redirectUrl) {
 
 $(document).ready(async function() {
 
-    let formId = window.location.search.substr(1);
+    let formId = window.location.search.substr(1).split('&')[0];;
 
     let formSpec = await fetch(`forms/${formId}/form-spec.json`)
         .then(res => res.json())
